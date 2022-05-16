@@ -9,7 +9,7 @@ orbs:
 default_environment: &default_environment
   working_directory: ~/DOCTORS_APPOINTMENT
   docker:
-    - image: cimg/ruby:3.0.3
+    - image: cimg/ruby:3.0.3-node
       environment:
         BUNDLE_JOBS: 4
         BUNDLE_PATH: vendor/bundle
@@ -26,3 +26,77 @@ default_environment: &default_environment
         POSTGRES_PASSWORD: ""
         POSTGRES_USER: circleci
     - image: redis
+
+jobs:
+  create_git_tag:
+    docker:
+      - image: alpine/git
+    steps:
+      - checkout
+      - run:
+          name: "Create git tag"
+          command: |
+            echo "Fetching the lastest tag..."
+            CURRENT_TAG=$(git tag --sort=committerdate | tail -1)
+            echo "Latest tag is: " $CURRENT_TAG
+            if [ -z "${CURRENT_TAG}" ]; then
+                NEW_TAG=v1
+            else
+                VERSION=$(echo $CURRENT_TAG | cut -d'v' -f 2)
+                NEW_VERSION=$((VERSION+1))
+                NEW_TAG="v${NEW_VERSION}"
+            fi
+            git tag $NEW_TAG
+            git push origin $NEW_TAG
+  build:
+    <<: *default_environment
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - rails-build-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Install bundler
+          command: gem install bundler:2.3.8
+
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+      - run:
+          name: Database Setup
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:migrate
+
+      - save_cache:
+          key: rails-build-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+  security:
+    <<: *default_environment
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - rails-build-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Brakeman
+          command: bundle exec brakeman -5 -w3
+
+workflows:
+  version: 2
+  build_deploy_app:
+      jobs:
+        - build:
+            filters:
+              branches:
+                ignore:
+                  - master
+        - security:
+            requires:
+              - build
