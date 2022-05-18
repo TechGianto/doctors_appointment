@@ -9,7 +9,7 @@ orbs:
 default_environment: &default_environment
   working_directory: ~/DOCTORS_APPOINTMENT
   docker:
-    - image: cimg/ruby:3.0.3-node
+    - image: cimg/ruby:3.0.4-node
       environment:
         BUNDLE_JOBS: 4
         BUNDLE_PATH: vendor/bundle
