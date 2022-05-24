@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ /*
+  *$ to use the variable eg 
+  .test {
+      color: $light_grey;
+  }
+ */
+
+ @import "bootstrap";
+ @import "variables";
+
+ 

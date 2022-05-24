@@ -30,6 +30,12 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
+# bootstrap to disign the user interface
+# Note: there is no jumbotron in this version
+gem 'bootstrap', '~> 5.1.3'
+
+gem 'jquery-rails'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
