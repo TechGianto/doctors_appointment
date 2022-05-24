@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @landing_page %>
+
+<div>
+  <%= link_to "Edit this landing page", edit_landing_page_path(@landing_page) %> |
+  <%= link_to "Back to landing pages", landing_pages_path %>
+
+  <%= button_to "Destroy this landing page", @landing_page, method: :delete %>
+</div>
