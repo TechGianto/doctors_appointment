@@ -1,0 +1,34 @@
+<nav class=" navbar navbar-expand-md sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><%=image_tag('header_svgs/logo.svg', alt: "logo") %> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link nav-link-color">Find doctor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-color" href="#">Hospitals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-color" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-color" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-color" href="#">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-color" href="#">FAQ</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <%= link_to "Log in", new_user_session_path , class: "btn auth-btn small-btn login-btn" %>
+        <%= link_to "Register", new_user_registration_path , class: "btn auth-btn register-btn small-btn" %>
+      </div>
+    </div>
+  </div>
+</nav>
