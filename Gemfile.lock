@@ -244,6 +244,7 @@ DEPENDENCIES
   fakeredis
   importmap-rails
   jbuilder
+  jquery-rails
   pg (= 1.3.5)
   pry
   puma (~> 5.0)
