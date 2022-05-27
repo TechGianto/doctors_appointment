@@ -244,6 +244,11 @@ $colors:
     .counter-show{
         height: 300px;
         background: #814A95;
+        width: 100%;
+        
+    }
+    .row{
+        margin-left:0px !important; 
     }
     .counter-show .inner-counter{
         display: flex;
@@ -288,6 +293,9 @@ $colors:
         
             .easyway{
                 display: none;
+            }
+            .row{
+                margin-left:0px !important; 
             }
             .consultation .imagebox .globe{
                 position: absolute;
@@ -442,6 +450,9 @@ $colors:
                 .counter-show{
                     height: 300px;
                     background: #814A95;
+                }
+                .row{
+                    margin-left:0px !important; 
                 }
                 .counter-show .inner-counter h2{
                     width: 113px;
