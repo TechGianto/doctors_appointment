@@ -68,6 +68,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'brakeman'
   gem 'pry'
   gem 'fakeredis'
   gem 'rspec-rails'
