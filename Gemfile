@@ -70,7 +70,6 @@ end
 group :test do
   gem 'pry'
   gem 'fakeredis'
-  gem 'pry'
   gem 'rspec-rails'
 end
 
