@@ -203,7 +203,7 @@ $colors:
 
     .consultation .imagebox .cross{
         position: absolute;
-        right:380px;
+        right:384px;
         top: 123px;
         transform: matrix(-1, 0, 0, 1, 0, 0);
         }
@@ -283,7 +283,7 @@ $colors:
     .counter-show .first {
     background-image: image-url("services-section-img/Vector.png");;
     }
-    @media only screen and (min-width: 1000px) {
+    @media only screen and (max-width: 1200px) {
         .consultation .imagebox .signal{
             position: absolute;
             right:1%;
@@ -304,7 +304,7 @@ $colors:
                 transform: matrix(-1, 0, 0, 1, 0, 0);
                 }
         
-            .consultation .imagebox .cross{
+            .consultation .imagebox .cross-md{
                 position: absolute;
                 right:340px;
                 top: 123px;
