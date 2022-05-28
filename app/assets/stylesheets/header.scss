@@ -1,12 +1,13 @@
 @import "variables";
 
 .navbar {
-  font-family: "Open Sans", sans-serif;
-  background-color: #fefefe;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FEFEFE;
+    min-height: 96px;
 }
 
 .navbar > .container-fluid {
-  padding: 0 50px;
+    padding: 0 80px;
 }
 
 .btn.auth-btn {
@@ -51,4 +52,155 @@
   font-size: 16px;
   line-height: 27px;
   margin-left: 24px;
+}
+
+/* main body css disign*/
+.main_header {
+    background-color: $primary_green_blue;
+    height: calc(827px - 220px);
+    position: relative;
+    overflow: hidden;
+}
+
+.discription-col {
+  margin-left: 100px;
+  color: #fff;
+}
+.z-index-handler {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+}
+
+.discription-header {
+    font-family: 'Lora';
+    font-weight: 700;
+    font-size: 54px;
+}
+
+@-moz-document url-prefix() {
+    .discription-header {
+        font-size:53px;
+    }
+}
+
+.discription-header_sub {
+    font-size: 20px;
+}
+
+.doctor-search {
+ padding: 24px;
+ background-color: #EBEBEB;
+ border-radius: 24px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ margin-top: 2rem;
+ margin-bottom: 1rem;
+}
+
+
+.search-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    background-color: $white;
+    border-radius: $button_border_radius;
+}
+
+.doctor-search > .d-lg-flex {
+    width: 100%;
+}
+
+.doctor-search > .d-lg-flex > .col:not(:last-child) {
+    margin-right: 10px;
+}
+
+.doctor-search > .d-lg-flex > .col {
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.search-input > .no-border{
+    border: none;
+    background-color: inherit;
+    width: 100%;
+    outline: none;
+}
+
+.search-input > .no-border:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: inherit;
+}
+
+.doctor-search > .search-btn {
+    background-color: $primary_purple;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.doctor-search > .search-btn:hover {
+    color: $white;
+}
+
+.doctor-search > .search-btn:focus {
+    border:  none;
+    box-shadow: none;
+}
+.complain_field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 10px 10px;
+    overflow: hidden;
+}
+.complain_field > .complain-input {
+    padding: 1rem 0.3rem;
+    background-color: inherit;
+    border: none;
+}
+
+.complain_field > .complain-input:focus {
+    box-shadow: none;
+}
+
+ .complain_field > .complain-dropdown-btn {
+    background-color: $primary_purple;
+    width: 5rem;
+    height: 3rem;
+}
+
+.left-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.right-dot {
+    position: absolute;
+    right: 0;
+    top: 0;
+} 
+
+.wave {position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .discription-col {
+        margin: 10px;
+    } 
+
+    
 }
