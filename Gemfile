@@ -57,9 +57,16 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'pry-byebug'
+  gem 'pry-rescue'
+  gem 'rubocop', '~> 1.27.0', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :test do
+  gem 'pry'
   gem 'brakeman'
   gem 'fakeredis'
   gem 'pry'
@@ -69,11 +76,14 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem 'pry-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem 'spring' # auto-reload lib & gems
+  gem 'spring-commands-rspec', require: false
+  gem 'spring-commands-rubocop', require: false
 end
 

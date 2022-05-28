@@ -87,6 +87,51 @@ jobs:
       - run:
           name: Brakeman
           command: bundle exec brakeman -5 -w3
+  lint:
+    <<: *default_environment
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - rails-build-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Check for changed files with Rubocop violations
+          command: bundle exec ruby .circleci/rubocop.rb --against `git rev-parse development`
+
+      - store_artifacts:
+          path: lint
+  test:
+    <<: *default_environment
+    parallelism: 6
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - rails-build-{{ checksum "Gemfile.lock" }}
+
+      - run: mkdir -p /tmp/test-results/rspec
+
+      # When profiling tests, set RUBYOPT=-W2
+      - run:
+          name: Parallel RSpec
+          command: |
+            TESTFILES=$(circleci tests glob "spec/**/*spec.rb" | circleci tests split --split-by=timings)
+            RUBYOPT=-W0 bundle exec rspec ${TESTFILES} --color -f p -f RspecJunitFormatter -o /tmp/test-results/rspec/results.xml
+
+      # Save test results for timing analysis
+      - store_test_results:
+          path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/ruby-warnings.txt
+
+      # Store generated coverage for each build
+      - store_artifacts:
+          path: coverage
 
 workflows:
   version: 2
