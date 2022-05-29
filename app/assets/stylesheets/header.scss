@@ -67,10 +67,8 @@
   color: #fff;
 }
 .z-index-handler {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: transparent;
+    position: relative;
+    z-index: 23;
 }
 
 .discription-header {
