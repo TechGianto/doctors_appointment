@@ -62,6 +62,10 @@ jobs:
       - run:
           name: Install bundler
           command: gem install bundler:2.3.8
+      
+      - run:
+          name: Install Breakman
+          command: gem install breakman
 
       - run:
           name: Install dependencies
