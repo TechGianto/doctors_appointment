@@ -268,10 +268,6 @@ Style/CollectionMethods:
 Style/Documentation:
   Enabled: false
 
-CustomCops/EnumOrComposedValues:
-  Description: Limit number of enum values that can be composed in an enum or scopes
-  Max: 4
-
 Gemspec/DateAssignment: # new in 1.10
   Enabled: true
 Layout/LineEndStringConcatenationIndentation: # new in 1.18
