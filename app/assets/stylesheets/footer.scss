@@ -1,0 +1,131 @@
+@import "variables";
+
+.footer-container {
+   position: relative;
+   margin-top: 100px;
+}
+
+.see-doctor-container {
+    position: absolute;
+    left: 50%;
+    top: -0%;
+    transform: translate(-50%, -50%);
+    background-color: $primary_green_blue;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: #ffffff;
+    width: 85%;
+    border-radius: $border_radius;
+    z-index: 10;
+}
+
+.see-doctor-container h2 {
+    margin-right: 62px;
+}
+
+.btn.auth-btn.see-doctor {
+    background-color: $white;
+    color: black;
+    width: 240px;
+    padding: 14px;
+}
+
+.main-footer {
+     background-color: $primary_purple;
+     padding: 0 100px;
+     padding-top:150px ;
+     padding-bottom: 50px;
+     color: #ffffff;
+     position: relative;
+}
+
+.links-container {
+    z-index: 23;
+    position: relative;
+}
+
+.links-header {
+    font-size: 24px;
+    margin-bottom: 24px;
+    z-index: 23;
+}
+
+.links-para {
+    width: 70%;
+    z-index: 23;
+}
+
+.links-para.subscribe {
+    width: 100%;
+}
+
+.form-control.subscribe-input {
+    background-color: $primary_dark_grey;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.form-control.subscribe-input:focus {
+    box-shadow: none;
+    background-color: $primary_dark_grey;
+    color: white;
+}
+
+.btn.subscribe-btn {
+    width: 50%;
+}
+
+.logo-and-social-container {
+    margin: 40px 0;
+}
+
+.footer-logo {
+    width: 200px;
+    height: 100px;
+}
+
+.social-media-header {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.social-media-icons {
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-icons:not(:last-child) {
+    margin-right: 25px;
+} 
+
+.go-up-button {
+    position: absolute;
+    bottom: 230px;
+    right: 100px;
+    height: 72px;
+    width: 72px;
+    background-color: $primary_green_blue;
+    border-radius: $button_border_radius;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 600px) {
+    .right-dot {
+        display: none;
+    }
+
+    .go-up-button {
+        display: none;
+    }
+
+    .main-footer {
+        padding: 10px;
+        padding-top:150px ;
+    }
+}
