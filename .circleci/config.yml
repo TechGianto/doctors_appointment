@@ -60,10 +60,6 @@ jobs:
       - run:
           name: Install bundler
           command: gem install bundler:2.3.8
-      
-      - run:
-          name: Install Breakman
-          command: gem install brakeman
 
       - run:
           name: Install dependencies
@@ -87,7 +83,9 @@ jobs:
       - restore_cache:
           keys:
             - rails-build-{{ checksum "Gemfile.lock" }}
-
+      - run:
+          name: Install Brakeman
+          command: gem install brakeman
       - run:
           name: Brakeman
           command: bundle exec brakeman -5 -w3
