@@ -5,8 +5,8 @@
   width: 24%;
   height: 340px;
   background: $background;
-  border: 1px solid #ffffff;
-  box-shadow: 0px 2px 26px rgba(42, 42, 42, 0.1);
+  border: 1px solid #fff;
+  box-shadow: 0 2px 26px rgb(42 42 42 / 10%);
   border-radius: $border_radius;
   display: flex;
   flex-direction: column;
@@ -33,27 +33,27 @@
 }
 
 @mixin servicedivh6 {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 1.7rem;
   line-height: 44px;
   text-align: center;
-  color: #000000;
+  color: $black;
   margin-bottom: 16px;
 }
+
 @mixin servicedivpara {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 1 rem;
   line-height: 27px;
   text-align: center;
-  color: #000000;
+  color: $black;
   padding: 10px;
   height: 81px;
   width: 240px;
 }
+
 @mixin btn($bordercolor: #19b698) {
   box-sizing: border-box;
   width: 208px;
@@ -61,15 +61,23 @@
   border: 2px solid $bordercolor;
   border-radius: 16px;
   margin-right: 10px;
-  color:$bordercolor;
+  color: $bordercolor;
 }
-$colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
+
+$colors: #848484,
+  #7e8560,
+  #8c5a83,
+  #528c58,
+  #3f7182,
+  #748138,
+  #445d81,
+  #848484;
 
 .section-service .heading {
   width: 676px;
   height: 61px;
   font-style: normal;
-  font-family: "Lora";
+  font-family: Lora, sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 61px;
@@ -77,10 +85,10 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
   text-align: center;
   margin: 0 auto;
 }
+
 .section-service .sub-heading {
   width: 531px;
   height: 54px;
-  font-family: "Open Sans";
   font-style: normal;
   font-size: 20px;
   font-weight: 400;
@@ -89,6 +97,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
   color: $black;
   margin: 0 auto;
 }
+
 .section-service .services {
   display: flex;
   flex-wrap: wrap;
@@ -97,70 +106,95 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
   box-sizing: border-box;
   justify-content: space-between;
 }
+
 .section-service .services :nth-child(1) {
   @include servicesdiv($background: #e8e8e8);
 }
+
 .section-service .services :nth-child(2) {
   @include servicesdiv($background: #edf0de);
 }
+
 .section-service .services :nth-child(3) {
   @include servicesdiv($background: #f1e0ee);
 }
+
 .section-service .services :nth-child(4) {
   @include servicesdiv($background: #e0f0e2);
-  margin-right: 0px;
+
+  margin-right: 0;
 }
+
 .section-service .services :nth-child(5) {
   @include servicesdiv($background: #e0e0e0);
-  margin-right: 0px;
+
+  margin-right: 0;
 }
+
 .section-service .services :nth-child(6) {
   @include servicesdiv($background: #f3fdc2);
-  margin-right: 0px;
+
+  margin-right: 0;
 }
+
 .section-service .services :nth-child(7) {
   @include servicesdiv($background: #d2e5ff);
-  margin-right: 0px;
+
+  margin-right: 0;
 }
+
 .section-service .services :nth-child(8) {
   @include servicesdiv($background: #dedede);
-  margin-right: 0px;
+
+  margin-right: 0;
 }
 
 .section-service .services :not(:last-child) {
   @for $i from 1 through length($colors) {
     .service_icon_div#{$i} {
       all: initial;
+
       @include service_icon_div($background: nth($colors, $i));
     }
   }
 
   h6 {
     all: initial;
+
     @include servicedivh6;
   }
+
   p {
     all: initial;
+
     @include servicedivpara;
   }
 }
+
 .section-service .services :last-child {
   .service_icon_div {
     all: initial;
+
     @include service_icon_div($background: #848484);
   }
+
   h6 {
     all: initial;
+
     @include servicedivh6;
   }
+
   p {
     all: initial;
+
     @include servicedivpara;
   }
 }
+
 .consultation {
   margin-bottom: 127px;
 }
+
 .consultation .imagebox {
   box-sizing: border-box;
   height: 553px;
@@ -185,7 +219,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
 .consultation .imagebox .globe {
   position: absolute;
   right: 34px;
-  bottom: 0px;
+  bottom: 0;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
@@ -201,33 +235,40 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
   height: 566.57px;
   padding-left: 30px;
 }
+
 .consultation .textdiv h2 {
-  font-family: "Lora";
+  font-family: Lora;
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 51px;
   color: $primary_purple;
 }
+
 .consultation .textdiv p {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 27px;
-  color: #000000;
+  color: #000;
   margin-bottom: 36px;
 }
+
 /* Vector */
+
 .btn-container {
   display: flex;
 }
+
 .consultation .btn-container .btn-personal {
   @include btn($bordercolor: #19b698);
 }
+
 .consultation .btn-container .btn-family {
   @include btn($bordercolor: #814a95);
 }
+
 .counter-show {
   height: 300px;
   background: #814a95;
@@ -235,7 +276,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
 }
 
 .row {
-  margin-left: 0px !important;
+  margin-left: 0 !important;
 }
 
 .counter-show .inner-counter {
@@ -287,13 +328,15 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
   .easyway {
     display: none;
   }
+
   .row {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
   }
+
   .consultation .imagebox .globe {
     position: absolute;
     right: 34px;
-    bottom: 0px;
+    bottom: 0;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
@@ -304,7 +347,9 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
+
 @media only screen and (max-width: 600px) {
   @mixin btn($bordercolor: #19b698) {
     box-sizing: border-box;
@@ -313,16 +358,18 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     border: 2px solid $bordercolor;
     border-radius: 16px;
     margin-right: 10px;
-    color:$bordercolor;
+    color: $bordercolor;
   }
-  @mixin servicesdiv($background: rgb(255, 255, 255)) {
+
+@mixin servicesdiv($background: rgb(255,255,255)) {
     box-sizing: border-box;
     width: 48%;
     height: 184.29px;
     margin-bottom: 24.7px;
     padding: 2px;
   }
-  @mixin service_icon_div($background: rgb(255, 255, 255)) {
+
+@mixin service_icon_div($background: rgb(255,255,255)) {
     width: 58.64px;
     height: 58.64px;
     padding: 10px;
@@ -335,6 +382,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     align-items: center;
     align-content: center;
   }
+
   @mixin servicedivh6 {
     height: 23.04px;
     font-weight: 600;
@@ -343,6 +391,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     text-align: center;
     color: #2b2b2b;
   }
+
   @mixin servicedivpara {
     height: 61px;
     font-weight: 400;
@@ -351,6 +400,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     text-align: center;
     padding: 2px;
   }
+
   .section-service .heading {
     width: 21.625rem;
     height: 2.0652rem;
@@ -359,6 +409,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     line-height: 2.056rem;
     margin-bottom: 16px;
   }
+
   .section-service .sub-heading {
     width: auto;
     font-weight: 400;
@@ -366,15 +417,18 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     line-height: 1.375rem;
     color: #2b2b2b;
   }
+
   .section-service .services {
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
   .consultation {
     margin-top: 24px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     height: auto;
   }
+
   .consultationbgr {
     background-color: #f2f2f2;
   }
@@ -391,11 +445,13 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     padding: 70px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
+
   .consultation .textdiv {
-    padding-left: 0px;
+    padding-left: 0;
     margin-top: 24px;
     height: 400px;
   }
+
   .consultation .textdiv p {
     font-weight: 400;
     font-size: 16px;
@@ -403,9 +459,11 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     color: $black;
     padding: 1px;
   }
+
   .consultation .textdiv h2 {
     display: none;
   }
+
   .consultation .imagebox .signal {
     display: none;
     position: absolute;
@@ -425,11 +483,12 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     color: $primary_purple;
     margin-bottom: 19px;
   }
+
   .consultation .imagebox .globe {
     display: none;
     position: absolute;
     right: 34px;
-    bottom: 0px;
+    bottom: 0;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
@@ -440,13 +499,16 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     top: 123px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
+
   .counter-show {
     height: 300px;
     background: #814a95;
   }
+
   .row {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
   }
+
   .counter-show .inner-counter h2 {
     width: 113px;
     height: 65px;
@@ -457,6 +519,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     line-height: 65px;
     color: #fcffef;
   }
+
   .counter-show .inner-counter p {
     width: 176px;
     height: 22px;
@@ -467,74 +530,96 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     line-height: 22px;
     color: #fcffef;
   }
+
   .consultation .btn-container .btn-personal {
     @include btn($bordercolor: #19b698);
   }
+
   .consultation .btn-container .btn-family {
     @include btn($bordercolor: #814a95);
   }
+
   .section-service .services :nth-child(1) {
     @include servicesdiv($background: #e8e8e8);
   }
+
   .section-service .services :nth-child(2) {
     @include servicesdiv($background: #edf0de);
   }
+
   .section-service .services :nth-child(3) {
     @include servicesdiv($background: #f1e0ee);
   }
+
   .section-service .services :nth-child(4) {
     @include servicesdiv($background: #e0f0e2);
-    margin-right: 0px;
+
+    margin-right: 0;
   }
+
   .section-service .services :nth-child(5) {
     @include servicesdiv($background: #e0e0e0);
-    margin-right: 0px;
+
+    margin-right: 0;
   }
+
   .section-service .services :nth-child(6) {
     @include servicesdiv($background: #f3fdc2);
-    margin-right: 0px;
+
+    margin-right: 0;
   }
+
   .section-service .services :nth-child(7) {
     @include servicesdiv($background: #d2e5ff);
-    margin-right: 0px;
+
+    margin-right: 0;
   }
+
   .section-service .services :nth-child(8) {
     @include servicesdiv($background: #dedede);
-    margin-right: 0px;
+
+    margin-right: 0;
   }
+
   .section-service .services :not(:last-child) {
     @for $i from 1 through length($colors) {
       .service_icon_div#{$i} {
         all: initial;
+
         @include service_icon_div($background: nth($colors, $i));
       }
     }
 
     h6 {
       all: initial;
+
       @include servicedivh6;
     }
+
     p {
       all: initial;
+
       @include servicedivpara;
     }
   }
+
   .section-service .services :last-child {
     .service_icon_div {
       all: initial;
+
       @include service_icon_div($background: #848484);
     }
+
     h6 {
       all: initial;
+
       @include servicedivh6;
     }
+
     p {
       all: initial;
+
       @include servicedivpara;
     }
   }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
 }
