@@ -24,7 +24,7 @@
 }
 
 .see-doctor-container h2 {
-  margin-right: 62px;
+  margin-right: 82px;
 }
 
 .btn.auth-btn.see-doctor {
@@ -63,14 +63,14 @@
   width: 100%;
 }
 
-.form-control.subscribe-input {
+.form-control-lg.subscribe-input {
   background-color: $primary_dark_grey;
   color: white;
   margin-bottom: 20px;
   border: none;
 }
 
-.form-control.subscribe-input:focus {
+.form-control-lg.subscribe-input:focus {
   box-shadow: none;
   background-color: $primary_dark_grey;
   color: white;
@@ -108,11 +108,45 @@
   position: absolute;
   bottom: 230px;
   right: 100px;
-  height: 72px;
-  width: 72px;
+  height: 62px;
+  width: 62px;
   background-color: $primary_green_blue;
   border-radius: $button_border_radius;
   font-size: 32px;
+}
+
+.copy-write {
+  font-size: 14px;
+  color: #c5a8d9;
+}
+
+@media screen and (min-width: 1600px) {
+  .links-header {
+    font-size: 32px;
+  }
+
+  .links-para {
+    font-size: 20px;
+  }
+
+  .social-media-header {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .social-media-icons {
+    width: 60px;
+    height: 48.84px;
+  }
+
+  .social-media-icons:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  .footer-logo {
+    width: 353px;
+    height: 140px;
+  }
 }
 
 @media screen and (max-width: 600px) {
