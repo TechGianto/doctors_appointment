@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: doctors_appointment_appointment
+  database: doctors_appointment_development
   # username: akin
   # password: rooted
 
