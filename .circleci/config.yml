@@ -83,6 +83,25 @@ jobs:
       - restore_cache:
           keys:
             - rails-build-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Install bundler
+          command: gem install bundler:2.3.8
+
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+      - run:
+          name: Database Setup
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:migrate
+
+      - save_cache:
+          key: rails-build-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - run:
           name: Install Brakeman
           command: gem install brakeman
@@ -97,6 +116,24 @@ jobs:
       - restore_cache:
           keys:
             - rails-build-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install bundler
+          command: gem install bundler:2.3.8
+
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+      - run:
+          name: Database Setup
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:migrate
+
+      - save_cache:
+          key: rails-build-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
 
       - run:
           name: Check for changed files with Rubocop violations
@@ -113,6 +150,24 @@ jobs:
       - restore_cache:
           keys:
             - rails-build-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install bundler
+          command: gem install bundler:2.3.8
+
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+      - run:
+          name: Database Setup
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:migrate
+
+      - save_cache:
+          key: rails-build-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
 
       - run: mkdir -p /tmp/test-results/rspec
 
@@ -138,18 +193,18 @@ jobs:
 workflows:
   version: 2
   build_deploy_app:
-      jobs:
-        - build:
-            filters:
-              branches:
-                ignore:
-                  - master
-        - security:
-            requires:
-              - build
-        - test:
-            requires:
-              - security
-        - lint:
-            requires:
-              - security
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
+      - security:
+          requires:
+            - build
+      - test:
+          requires:
+            - security
+      - lint:
+          requires:
+            - security
