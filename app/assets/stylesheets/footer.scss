@@ -2,7 +2,7 @@
 
 .footer-container {
   position: relative;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .see-doctor-container {
@@ -76,20 +76,17 @@
   width: 100%;
 }
 
-.form-control-lg.subscribe-input {
+.form-control.subscribe-input {
   background-color: $primary_dark_grey;
-  color: #898989;
+  color: white;
   margin-bottom: 20px;
   border: none;
-  width: 100%;
 }
 
-.form-control-lg.subscribe-input:focus {
+.form-control.subscribe-input:focus {
   box-shadow: none;
   background-color: $primary_dark_grey;
-  color: #898989;
-  border: none;
-  outline: none;
+  color: white;
 }
 
 .btn.subscribe-btn {
@@ -113,8 +110,8 @@
 }
 
 .social-media-icons {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 .social-media-icons:not(:last-child) {
