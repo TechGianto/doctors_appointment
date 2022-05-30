@@ -1,7 +1,9 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @import "variables";
 
 .navbar {
-  background-color: #FEFEFE;
+  background-color: #fefefe;
   min-height: 96px;
 }
 
@@ -19,18 +21,20 @@
   font-size: 20px;
 }
 
-.btn.login-btn:hover {
-  border: 1px solid $primary_green_blue;
-  background-color: $white;
-  color: $primary_green_blue;
-}
 .small-btn {
   width: 130px;
   height: 46px;
 }
+
 .btn.login-btn {
   background-color: $primary_green_blue;
   margin-right: 24px;
+}
+
+.btn.login-btn:hover {
+  border: 1px solid $primary_green_blue;
+  background-color: $white;
+  color: $primary_green_blue;
 }
 
 .btn.register-btn {
@@ -51,8 +55,9 @@
   margin-left: 24px;
 }
 
-/* main body css disign*/
-.main_header {
+/* main body css disign */
+
+.main-header {
   background-color: $primary_green_blue;
   min-height: calc(827px - 220px);
   position: relative;
@@ -63,6 +68,7 @@
   margin-left: 100px;
   color: #fff;
 }
+
 .z-index-handler {
   position: relative;
   z-index: 23;
@@ -74,13 +80,13 @@
   font-size: 53px;
 }
 
-.discription-header_sub {
+.discription-header-sub {
   font-size: 20px;
 }
 
 .doctor-search {
   padding: 24px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -106,17 +112,16 @@
   width: 100%;
 }
 
+.doctor-search > .d-lg-flex > .col {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .doctor-search > .d-lg-flex > .col:not(:last-child) {
   margin-right: 10px;
 }
 
-.doctor-search > .d-lg-flex > .col {
-  width: 100%;
-  margin-bottom: 10px;
-    
-}
-
-.search-input > .no-border{
+.search-input > .no-border {
   border: none;
   background-color: inherit;
   width: 100%;
@@ -141,30 +146,32 @@
 }
 
 .doctor-search > .search-btn:focus {
-  border:  none;
+  border: none;
   box-shadow: none;
 }
-.complain_field {
+
+.complain-field {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   border-radius: 24px;
-  padding: 10px 10px;
+  padding: 10px;
   overflow: hidden;
 }
-.complain_field > .complain-input {
+
+.complain-field > .complain-input {
   padding: 1rem 0.3rem;
   background-color: inherit;
   border: none;
 }
 
-.complain_field > .complain-input:focus {
+.complain-field > .complain-input:focus {
   box-shadow: none;
 }
 
- .complain_field > .complain-dropdown-btn {
+.complain-field > .complain-dropdown-btn {
   background-color: $primary_purple;
   width: 5rem;
   height: 3rem;
@@ -175,11 +182,12 @@
   left: 0;
   top: 0;
 }
+
 .right-dot {
   position: absolute;
   right: 0;
   top: 0;
-} 
+}
 
 .wave {
   position: absolute;
@@ -189,13 +197,12 @@
 }
 
 @media screen and (max-width: 1200px) {
-
   .discription-col {
     margin: 10px;
-  } 
+  }
 }
 
-.man-section--600 {
+.man-section-600 {
   display: none;
 }
 
@@ -207,10 +214,12 @@
   .man-section {
     display: none;
   }
+
   .discription-header {
     font-size: 32px;
   }
-  .man-section--600 {
+
+  .man-section-600 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +238,7 @@
     display: none;
   }
 
-  .complain_field {
+  .complain-field {
     margin-bottom: 30px;
   }
 }
