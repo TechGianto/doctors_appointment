@@ -73,7 +73,6 @@ jobs:
             bundle exec rake db:create
             bundle exec rake db:migrate
       - run: yarn
-      - run: echo "Checking if lockfiles changed..." && git diff --exit-code
       - save_cache:
           key: v1-dependency-cache-{{ checksum "yarn.lock" }}
           paths:
@@ -231,5 +230,8 @@ workflows:
           requires:
             - security
       - lint:
+          requires:
+            - security
+      - stylecheck:
           requires:
             - security
