@@ -1,12 +1,12 @@
 <%= render 'home/main_header' %>
 <%= render "ourservices" %>
-<div class="section-special_doctors">
+<div class="container section-special-doctors">
     <div class="section-heading">
         <h1>Our special doctor team</h1>
-        <span class="section-heading-span">Consulting a doctor who speaks your language gives you<br>peace of mind and contribute to better care</span>
+        <span class="section-heading-span sub-heading col-12">Consulting a doctor who speaks your language gives you<br>peace of mind and contribute to better care</span>
     </div>
     <div class="doctor-cards">
-        <div class="card border-light justify-content-start mb-3" style="width: 24rem;">
+        <div class="card border-light justify-content-start mb-4">
             <%= image_tag("doctor_svgs/heart.svg", alt: "pic of a doc", class: "heart-icon") %>
             <%= image_tag("doctor_svgs/first_doc.svg", alt: "pic of a doc", class: "image") %>
             <div class="doctor-info">
@@ -24,39 +24,39 @@
                 </div>
             </div>
         </div>
-        <div class="card border-light justify-content-start mb-3 hover-card hover-border-success hover-mb-3" style="width: 24rem;">
+        <div class="card border-light justify-content-start mb-4">
             <%= image_tag("doctor_svgs/heart.svg", alt: "pic of a doc", class: "heart-icon") %>
             <%= image_tag("doctor_svgs/second_doc.svg", alt: "pic of a doc", class: "image") %>
             <div class="doctor-info">
                 <h4>Dr. Okafor Victoria</h4>
-                <h6>Surgeon</h6>
+                <h6>Medical Doctor</h6>
                 <div class="doctor-rating d-flex align-items-center">
                     <div class="doctor-stars d-flex align-items-center">
                         <%= image_tag("doctor_svgs/star.svg", alt: "rating", class: "icon") %>
-                        <h6>4.5</h6>
+                        <h6>4.4</h6>
                     </div>
                     <div class="doctor-hospital">
                         <%= image_tag("doctor_svgs/hospital.svg", alt: "rating", class: "icon") %>
-                        <h6>12 years</h6>
+                        <h6>10 years</h6>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card border-light mb-3" style="width: 24rem;">
+        <div class="card border-light mb-4">
             <%= image_tag("doctor_svgs/heart.svg", alt: "pic of a doc", class: "heart-icon") %>
             <%# <div class="card-image-1" style="background-image: url(<%= image_url("doctor_svgs/third_doc.svg"))" ></div> %>
             <%= image_tag("doctor_svgs/third_doc.svg", alt: "pic of a doc", class: "image") %>
             <div class="doctor-info">
                 <h4>Dr. Adekunle Johnsons</h4>
-                <h6>Surgeon</h6>
+                <h6>Orthopaedics</h6>
                 <div class="doctor-rating">
                     <div class="doctor-stars">
                         <%= image_tag("doctor_svgs/star.svg", alt: "rating", class: "icon") %>
-                        <h6>4.5</h6>
+                        <h6>4.7</h6>
                     </div>
                     <div class="doctor-hospital">
                         <%= image_tag("doctor_svgs/hospital.svg", alt: "rating", class: "icon") %>
-                        <h6>12 years</h6>
+                        <h6>8 years</h6>
                     </div>
                 </div>
             </div>

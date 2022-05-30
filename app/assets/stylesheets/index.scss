@@ -1,12 +1,12 @@
 @import "variables";
 
 .section-special-doctors {
-  width: 100%;
+  margin-top: 150px;
 }
 
 .section-heading {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .section-heading h1 {
@@ -15,6 +15,7 @@
   font-size: 48px;
   font-weight: 700;
   text-transform: capitalize;
+  padding-bottom: 30px;
 }
 
 .section-heading span {
@@ -25,6 +26,7 @@
 }
 
 .card {
+  margin-top: 10px;
   border: 0 transparent !important;
 }
 
