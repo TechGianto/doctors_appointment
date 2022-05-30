@@ -26,6 +26,7 @@ default_environment: &default_environment
         POSTGRES_PASSWORD: ""
         POSTGRES_USER: circleci
     - image: redis
+    - image: circleci/node:12
 
 jobs:
   create_git_tag:
@@ -56,6 +57,7 @@ jobs:
       - restore_cache:
           keys:
             - rails-build-{{ checksum "Gemfile.lock" }}
+            - v1-dependency-cache-{{ checksum "yarn.lock" }}
 
       - run:
           name: Install bundler
@@ -70,7 +72,16 @@ jobs:
           command: |
             bundle exec rake db:create
             bundle exec rake db:migrate
-
+      - run: yarn
+      - run: echo "Checking if lockfiles changed..." && git diff --exit-code
+      - save_cache:
+          key: v1-dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - persist_to_workspace:
+          root: '.'
+          paths:
+            - yarn.lock
       - save_cache:
           key: rails-build-{{ checksum "Gemfile.lock" }}
           paths:
@@ -141,6 +152,20 @@ jobs:
 
       - store_artifacts:
           path: lint
+  stylecheck:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - attach_workspace:
+          at: '.'
+      - run: yarn
+      - restore_cache:
+          keys:
+            - v1-dependency-cache-{{ checksum "yarn.lock" }}
+            - v1-dependency-cache-
+      - run: ./node_modules/.bin/stylelint "**/*.scss"
+    
   test:
     <<: *default_environment
     parallelism: 1
