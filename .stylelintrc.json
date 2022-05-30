@@ -1,5 +1,9 @@
 {
     "extends": "stylelint-config-standard",
     "customSyntax": "postcss-scss",
-    "stylelint.validate": ["css", "scss"]
+    "stylelint.validate": ["css", "scss"],
+    "rules": {
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true
+    }
 }
