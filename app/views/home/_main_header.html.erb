@@ -1,0 +1,48 @@
+<div class="main-header"> 
+    <div>
+        <%=image_tag("header_svgs/header-dot-right", alt: "dot left", class: "left-dot")%>
+        <%=image_tag("header_svgs/header-dot-left", alt: "dot rigth", class: "right-dot")%>
+        <div class="d-lg-flex flex-row flex-wrap z-index-handler">
+            <div class="col discription-col ">
+                <div class="main-discription">
+                    <h1 class="discription-header" >We Take Care of Your Healthy Health</h1>
+                    <p class = "discription-header-sub"> 
+                    Discover the best doctors, clinics and hospitals in the city nearest to you.
+                    </p>
+                     <div class="man-section-600">
+                        <%= image_tag("header_svgs/man.svg", alt: "man", class:  "img-fluid doctor-img no-border") %>
+                    </div>
+                    <div class = "doctor-search">
+                        <div class="d-lg-flex d-md-flex d-sm-flex flex-align justify-content-betweens">
+                            <div class="col">
+                                <div class ="search-input">
+                                    <%= image_tag("header_svgs/small_person.svg", alt: "message") %>
+                                    <input type="text" class="form-control no-border" placeholder="Find a Doctor" aria-label="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class ="search-input">
+                                    <%= image_tag("header_svgs/small_location.svg", alt: "message", class: "img-fluid") %>
+                                    <input type="text" class="form-control no-border" placeholder="Select Location" aria-label="Last name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn search-btn auth-btn">Start Search</button>
+                    </div>
+
+                    <p class = "discription-header-sub">Have a health complain?</p>
+
+                    <div class="complain-field">
+                        <input type="text" class="form-control no-border complain-input" placeholder="Find a Doctor" aria-label="">
+                        <button class="btn auth-btn complain-dropdown-btn"><%= image_tag("header_svgs/arrow-down.svg", alt: "arrow") %></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col man-section">
+                <%= image_tag("header_svgs/man.svg", alt: "man", class:  "img-fluid doctor-img no-border") %>
+            </div>
+        </div>
+    </div>
+    <%= image_tag("header_svgs/wave-haikei.svg", class: "wave" )%>
+</div>
