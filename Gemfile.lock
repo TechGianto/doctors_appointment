@@ -144,6 +144,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.6-x86_64-darwin)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.0)
@@ -181,6 +183,10 @@ GEM
       activesupport (= 7.0.3)
       bundler (>= 1.15.0)
       railties (= 7.0.3)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -203,6 +209,10 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rspec (3.11.0)
+      rspec-core (~> 3.11.0)
+      rspec-expectations (~> 3.11.0)
+      rspec-mocks (~> 3.11.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -220,6 +230,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    rspec_junit_formatter (0.5.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (1.27.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
@@ -264,6 +276,8 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.3)
+    stub_env (1.0.4)
+      rspec (>= 2.0, < 4.0)
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.3.0)
@@ -288,6 +302,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-darwin-20
 
 DEPENDENCIES
   bootsnap
@@ -306,8 +321,11 @@ DEPENDENCIES
   pry-rescue
   puma (~> 5.0)
   rails (~> 7.0.3)
+  rails-controller-testing
   redis (~> 4.0)
+  rspec
   rspec-rails
+  rspec_junit_formatter
   rubocop (~> 1.27.0)
   rubocop-performance
   rubocop-rails
@@ -317,6 +335,7 @@ DEPENDENCIES
   spring-commands-rubocop
   sprockets-rails
   stimulus-rails
+  stub_env
   turbo-rails
   tzinfo-data
   web-console
@@ -325,4 +344,4 @@ RUBY VERSION
    ruby 3.0.4p157
 
 BUNDLED WITH
-   2.3.11
+   2.3.13
