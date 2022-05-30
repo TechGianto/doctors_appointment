@@ -4,6 +4,7 @@
     "stylelint.validate": ["css", "scss"],
     "rules": {
         "at-rule-no-unknown": null,
-        "scss/at-rule-no-unknown": true
+        "scss/at-rule-no-unknown": true,
+        "font-family-name-quotes": "always-unless-keyword"
     }
 }
