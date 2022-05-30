@@ -61,6 +61,7 @@
   border: 2px solid $bordercolor;
   border-radius: 16px;
   margin-right: 10px;
+  color:$bordercolor;
 }
 $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
 
@@ -312,6 +313,7 @@ $colors: #848484, #7e8560, #8c5a83, #528c58, #3f7182, #748138, #445d81, #848484;
     border: 2px solid $bordercolor;
     border-radius: 16px;
     margin-right: 10px;
+    color:$bordercolor;
   }
   @mixin servicesdiv($background: rgb(255, 255, 255)) {
     box-sizing: border-box;
