@@ -78,6 +78,7 @@
   font-family: Lora;
   font-weight: 700;
   font-size: 53px;
+  margin-top: 40px;
 }
 
 .discription-header-sub {
@@ -159,6 +160,7 @@
   border-radius: 24px;
   padding: 10px;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .complain-field > .complain-input {
@@ -194,6 +196,12 @@
   bottom: 0;
   left: 0;
   z-index: 88;
+}
+
+@media screen and (min-width: 1500px) {
+  .discription-header {
+    font-size: 78px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
