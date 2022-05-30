@@ -6,7 +6,7 @@
   height: 340px;
   background: $background;
   border: 1px solid #fff;
-  box-shadow: 0 2px 26px rgba(42, 42, 42, 10%);
+  box-shadow: 0 2px 26px rgba(42, 42, 42, 0.1%);
   border-radius: $border_radius;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 @mixin servicedivh6 {
   font-style: normal;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 32px;
   line-height: 44px;
   text-align: center;
   color: $black;
@@ -45,7 +45,7 @@
 @mixin servicedivpara {
   font-style: normal;
   font-weight: 400;
-  font-size: 1 rem;
+  font-size: 20px;
   line-height: 27px;
   text-align: center;
   color: $black;
@@ -74,8 +74,6 @@ $colors: #848484,
   #848484;
 
 .section-service .heading {
-  width: 676px;
-  height: 61px;
   font-style: normal;
   font-family: "Lora", sans-serif;
   font-weight: 700;
