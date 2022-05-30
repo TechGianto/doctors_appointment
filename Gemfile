@@ -57,9 +57,10 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'brakeman', require: false
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug'
   gem 'pry-rescue'
+  gem 'rspec-rails'
   gem 'rubocop', '~> 1.27.0', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
@@ -67,9 +68,12 @@ group :development, :test do
 end
 
 group :test do
-  gem 'pry'
   gem 'fakeredis'
-  gem 'rspec-rails'
+  gem 'pry'
+  gem 'rails-controller-testing'
+  gem 'rspec'
+  gem 'rspec_junit_formatter'
+  gem 'stub_env'
 end
 
 group :development do
