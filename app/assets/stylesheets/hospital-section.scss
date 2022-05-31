@@ -1,8 +1,8 @@
 @import "variables";
+
 .hospital-container {
   background-color: $light_red;
   top: 4602px;
-
   background-blend-mode: normal;
 }
 
@@ -10,9 +10,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 2rem 0 3rem 0;
 }
+
 .hospital-container-header h3 {
   font-family: "Lora";
   font-style: normal;
@@ -22,10 +22,9 @@
   color: $primary_purple;
   text-transform: capitalize;
 }
+
 .hospital-container-header h6 {
   text-align: center;
-
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 200;
   font-size: 20px;
@@ -36,7 +35,6 @@
 .table .col-2 {
   text-align: center;
   text-transform: uppercase;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -45,10 +43,8 @@
 
 .row-design {
   box-sizing: border-box;
-
   height: 80px;
-
-  background: #ffffff;
+  background: $white;
   border: 1px solid $primary_purple;
   border-radius: 32px;
   margin-bottom: 20px;
@@ -59,11 +55,8 @@
   text-align: center;
   display: flex;
   justify-content: center;
-
   align-items: center;
   font-size: 14px;
-
-  font-family: "Open Sans";
   font-style: normal;
 }
 
@@ -75,7 +68,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   margin-top: 3rem;
 }
 
