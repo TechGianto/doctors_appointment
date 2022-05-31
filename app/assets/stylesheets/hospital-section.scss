@@ -4,6 +4,7 @@
   background-color: $light_grey;
   top: 4602px;
   background-blend-mode: normal;
+  padding-top: 80px;
 }
 
 .hospital-container-header {
@@ -60,7 +61,7 @@
 }
 
 .row-color-ash {
-  background-color: #f2f2f2;
+  background-color: $light_grey;
 }
 
 .container-btn {
