@@ -1,0 +1,94 @@
+@import "variables";
+.hospital-container {
+  background-color: $light_red;
+
+  background-blend-mode: normal;
+}
+
+.hospital-container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 2rem 0 3rem 0;
+}
+.hospital-container-header h3 {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.813rem;
+  color: $primary_purple;
+  text-transform: capitalize;
+}
+.hospital-container-header h6 {
+  text-align: center;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.table .col-2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.row-design {
+  box-sizing: border-box;
+
+  height: 80px;
+
+  background: #ffffff;
+  border: 1px solid $primary_purple;
+  border-radius: 32px;
+  margin-bottom: 20px;
+}
+
+.row-design .col-2 {
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  font-size: 14px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+}
+
+.row-color-ash {
+  background-color: $light_red;
+}
+
+.container-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-top: 3rem;
+}
+
+.btn.view-btn {
+  background-color: $primary_purple;
+}
+
+.btn.view-btn:hover {
+  border: 1px solid $primary_purple;
+  background-color: $white;
+  color: $primary_purple;
+}
+
+.row-img {
+  height: 50px;
+  width: 50px;
+}
