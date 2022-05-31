@@ -5,6 +5,7 @@
   top: 4602px;
   background-blend-mode: normal;
   padding-top: 80px;
+  height: 1000px;
 }
 
 .hospital-container-header {
@@ -64,24 +65,24 @@
   background-color: $light_grey;
 }
 
+.row-img {
+  height: 70px;
+  width: 70px;
+}
+
 .container-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 3rem;
+  margin: 72px 0;
 }
 
-.btn.view-btn {
-  background-color: $primary_purple;
-}
-
-.btn.view-btn:hover {
-  border: 1px solid $primary_purple;
-  background-color: $white;
-  color: $primary_purple;
-}
-
-.row-img {
-  height: 70px;
-  width: 70px;
+.btn-view {
+  width: 208px;
+  height: 72px;
+  border: 2px solid #814a95;
+  border-radius: 16px;
+  color: #814a95;
+  background-color: #fff;
+  text-transform: capitalize;
 }
