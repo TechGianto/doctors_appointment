@@ -66,6 +66,7 @@
 .links-para {
   width: 70%;
   z-index: 23;
+  text-decoration: underline;
 }
 
 .modile-col {
@@ -78,15 +79,18 @@
 
 .form-control-lg.subscribe-input {
   background-color: $primary_dark_grey;
-  color: white;
+  color: #898989;
   margin-bottom: 20px;
   border: none;
+  width: 100%;
 }
 
 .form-control-lg.subscribe-input:focus {
   box-shadow: none;
   background-color: $primary_dark_grey;
-  color: white;
+  color: #898989;
+  border: none;
+  outline: none;
 }
 
 .btn.subscribe-btn {
@@ -110,8 +114,8 @@
 }
 
 .social-media-icons {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .social-media-icons:not(:last-child) {
@@ -177,11 +181,6 @@
   }
 }
 
-.copy-write {
-  font-size: 14px;
-  color: #c5a8d9;
-}
-
 @media screen and (min-width: 1600px) {
   .links-header {
     font-size: 32px;
@@ -198,7 +197,7 @@
 
   .social-media-icons {
     width: 60px;
-    height: 48.84px;
+    height: 60px;
   }
 
   .social-media-icons:not(:last-child) {
