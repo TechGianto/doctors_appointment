@@ -1,7 +1,7 @@
 @import "variables";
 
 .hospital-container {
-  background-color: $light_red;
+  background-color: $light_gray;
   top: 4602px;
   background-blend-mode: normal;
 }
@@ -14,7 +14,7 @@
 }
 
 .hospital-container-header h3 {
-  font-family: Lora, sans-serif;
+  font-family: "Lora", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 3rem;
