@@ -5,21 +5,32 @@
     </div>
     <div class="main-footer">
         <div class="links-container">
-            <div class="row">
-                <div class="col">
+            <div class="grid-row">
+                <div class="grid-col grid-col-item1">
                     <h1 class="links-header">About Us</h1>
                     <p class="links-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in r</p>
                 </div>
-                <div class="col">
+                <div class="grid-col grid-col-destop">
                     <h1 class="links-header">Find A Doctor</h1>
                     <p class="links-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
                 </div>
-                <div class="col">
+                <div class="grid-col grid-col-destop">
                     <h1 class="links-header">Services</h1>
                     <p class="links-para ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
                 </div>
-                <div class="col">
+                <div class="modile-col">
+                    <div class="col">
+                        <h1 class="links-header">Find A Doctor</h1>
+                        <p class="links-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+                    </div>
+                    <div class="col">
+                        <h1 class="links-header">Services</h1>
+                        <p class="links-para ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                    </div>
+                </div>
+                <div class="grid-col grid-col-item2">
                     <h1 class="links-header">Email Newsletter</h1>
                     <p class="links-para subscribe">Sign up with your name and email to get fresh updates</p>
                     <input type="email" class="form-control-lg subscribe-input"  placeholder="Email Address" />
@@ -28,7 +39,7 @@
             </div>
         </div>
         <div class="logo-and-social-container  d-flex flex-wrap align-items-center justify-content-between">
-            <div> <%= image_tag("footer_svgs/footer-logo.svg", alt: "footer logo", class: "footer-logo") %> </div>
+            <div class="footer-logo-container"> <%= image_tag("footer_svgs/footer-logo.svg", alt: "footer logo", class: "footer-logo") %> </div>
             <div class="social-media-container">
                 <h3 class="social-media-header" >Social Media</h3>
                 <div class="social-media d-flex align-items-center">
