@@ -1,0 +1,99 @@
+@import "variables";
+
+.section-special-doctors {
+  margin-top: 150px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h1 {
+  font-family: "Lora", sans-serif;
+  color: $primary_purple;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+
+.section-heading span {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27px;
+}
+
+.card {
+  margin-top: 10px;
+  border: 0 transparent !important;
+}
+
+.doctor-cards {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.card-image-1 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 310px;
+  height: 350px;
+}
+
+.heart-icon {
+  top: 36px;
+  right: 37px;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+}
+
+.doctor-rating {
+  display: flex;
+}
+
+.doctor-info h4 {
+  font-weight: 600;
+}
+
+.doctor-info h6 {
+  font-weight: 400;
+  color: #595959;
+}
+
+.doctor-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+  line-height: 27px;
+}
+
+.doctor-stars h6 {
+  color: #595959;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.doctor-hospital {
+  display: flex;
+  align-items: center;
+  line-height: 27px;
+}
+
+.doctor-hospital h6 {
+  color: #595959;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+}
