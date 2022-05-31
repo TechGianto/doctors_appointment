@@ -1,160 +1,161 @@
 @import "variables";
+
 .cardtest {
-    background: #E7EBD8;
-    border-radius: 32px;
+  background: #E7EBD8;
+  border-radius: 32px;
 }
 
 .cardcon {
-    padding: 30px;
+  padding: 30px;
 }
 
 .card-title {
-    font-family: "Lora";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
 }
 
 .test-body {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .test-img {
-    border-radius: 50px 50px 0px 0px;
-    padding: 2rem;
+  border-radius: 50px 50px 0px 0px;
+  padding: 2rem;
 }
 
 .test-text {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #2B2B2B;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2B2B2B;
 }
 
 .docname {
-    color: #814A95;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 1;
+  color: #814A95;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1;
 }
 
 .testimonial .pic img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .test-doc {
-    filter: drop-shadow(5px 0px 10px rgba(0, 0, 0, 0.15));
-    border-radius: 32px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    padding: 0.5rem;
+  filter: drop-shadow(5px 0px 10px rgba(0, 0, 0, 0.15));
+  border-radius: 32px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  padding: 0.5rem;
 }
 
 .coro {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .carousel-control-prev-icon {
-    filter: invert(46.9%) grayscale(100%);
+  filter: invert(46.9%) grayscale(100%);
 }
 
 .carousel-control-next-icon {
-    filter: invert(46.9%) grayscale(100%);
+  filter: invert(46.9%) grayscale(100%);
 }
 
 .test-but {
-    background-color: #FCFFEF;
-    height: 40px;
-    padding: 5px;
-    margin-left: 10px;
+  background-color: #FCFFEF;
+  height: 40px;
+  padding: 5px;
+  margin-left: 10px;
 }
 
 .test-coro {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 .test-spec {
-    line-height: 0.1;
-    font-size: 12px;
-    color: #2B2B2B
+  line-height: 0.1;
+  font-size: 12px;
+  color: #2B2B2B
 }
 
 .testimony .iconio {
-    border-Radius: 20px;
-    background-color: rgb(255, 255, 255);
-    height: 80px;
-    bottom: 80px;
-    text-align: center;
-    padding: 10px;
-    width: 60%;
-    position: relative;
-    margin-left: 45px;
-    margin-top: 25px;
+  border-Radius: 20px;
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  bottom: 80px;
+  text-align: center;
+  padding: 10px;
+  width: 60%;
+  position: relative;
+  margin-left: 45px;
+  margin-top: 25px;
 }
 
 .rev-no {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 35px;
-    color: #000000;
-    line-height: 0.1;
-    margin-top: 10px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  color: #000000;
+  line-height: 0.1;
+  margin-top: 10px;
 }
 
 .reviews {
-    line-height: 0.8rem;
-    font-size: 11px;
-    width: 100%;
+  line-height: 0.8rem;
+  font-size: 11px;
+  width: 100%;
 }
 
 .rating5 {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    margin-left: 7px;
-    margin-top: 5px;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-left: 7px;
+  margin-top: 5px;
 }
 
 .rating4 {
-    width: 80%;
-    height: 2px;
-    background-color: black;
-    margin-left: 7px;
-    margin-top: 5px;
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  margin-left: 7px;
+  margin-top: 5px;
 }
 
 .rating3 {
-    width: 60%;
-    height: 2px;
-    background-color: black;
-    margin-left: 7px;
-    margin-top: 5px;
+  width: 60%;
+  height: 2px;
+  background-color: black;
+  margin-left: 7px;
+  margin-top: 5px;
 }
 
 .rating2 {
-    width: 40%;
-    height: 2px;
-    background-color: black;
-    margin-left: 7px;
-    margin-top: 5px;
+  width: 40%;
+  height: 2px;
+  background-color: black;
+  margin-left: 7px;
+  margin-top: 5px;
 }
 
 .rating1 {
-    width: 20%;
-    height: 2px;
-    background-color: black;
-    margin-left: 7px;
-    margin-top: 5px;
+  width: 20%;
+  height: 2px;
+  background-color: black;
+  margin-left: 7px;
+  margin-top: 5px;
 }
 
 .fa-star {
-    margin-top: 20px;
-    color: #ff9d20;
+  margin-top: 20px;
+  color: #ff9d20;
 }
 
 .carousel-x {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
