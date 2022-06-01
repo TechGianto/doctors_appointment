@@ -1,5 +1,10 @@
-@import "variables";
-
+/*
+  General color
+*/
+/*
+  General border line
+  button_border_radius is for buttons and input except the complain input
+*/
 .cardtest {
   background: #e7ebd8;
   border-radius: 32px;
@@ -47,7 +52,7 @@
 }
 
 .test-doc {
-  filter: drop-shadow(5px 0 10px rgba(0, 0, 0, 15%));
+  filter: drop-shadow(5px 0 10px rgba(0, 0, 0, 0.15));
   border-radius: 32px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   padding: 0.5rem;
@@ -86,7 +91,7 @@
 
 .testimony .iconio {
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   height: 80px;
   bottom: 80px;
   text-align: center;
