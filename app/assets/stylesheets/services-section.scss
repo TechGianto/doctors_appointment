@@ -139,7 +139,7 @@ $colors: #848484,
 .consultation .textdiv {
   box-sizing: border-box;
   height: 566.57px;
-  padding-left: 30px;
+  padding-left: 60px;
 }
 
 .consultation .textdiv h2 {
@@ -155,7 +155,7 @@ $colors: #848484,
   font-style: normal;
   font-weight: 400;
   font-size: 1.2rem;
-  line-height: 27px;
+  line-height: 25px;
   color: #000;
   margin-bottom: 36px;
 }
@@ -313,6 +313,74 @@ $colors: #848484,
 }
 
 @media only screen and (max-width: 1200px) {
+  @mixin servicesdiv($background: rgb(255, 255, 255)) {
+    box-sizing: border-box;
+    width: 24%;
+    height: 320px;
+    background: $background;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 26px rgba(42, 42, 42, 0.1%);
+    border-radius: $border_radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 80px;
+  }
+
+  .section-service .services :nth-child(1) {
+    @include servicesdiv($background: #e8e8e8);
+  }
+
+  .section-service .services :nth-child(2) {
+    @include servicesdiv($background: #edf0de);
+  }
+
+  .section-service .services :nth-child(3) {
+    @include servicesdiv($background: #f1e0ee);
+  }
+
+  .section-service .services :nth-child(4) {
+    @include servicesdiv($background: #e0f0e2);
+
+    margin-right: 0;
+  }
+
+  .section-service .services :nth-child(5) {
+    @include servicesdiv($background: #e0e0e0);
+
+    margin-right: 0;
+  }
+
+  .section-service .services :nth-child(6) {
+    @include servicesdiv($background: #f3fdc2);
+
+    margin-right: 0;
+  }
+
+  .section-service .services :nth-child(7) {
+    @include servicesdiv($background: #d2e5ff);
+
+    margin-right: 0;
+  }
+
+  .section-service .services :nth-child(8) {
+    @include servicesdiv($background: #dedede);
+
+    margin-right: 0;
+  }
+
+  .section-service .services :not(:last-child) {
+    @for $i from 1 through length($colors) {
+      .service_icon_div#{$i} {
+        all: initial;
+
+        @include service_icon_div($background: nth($colors, $i));
+      }
+    }
+  }
+
   .consultation .imagebox .signal {
     position: absolute;
     right: 1%;
@@ -341,6 +409,70 @@ $colors: #848484,
     top: 123px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
+
+  .consultation .textdiv h2 {
+    font-family: "Lora", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 51px;
+    color: #814a95;
+  }
+
+  .consultation .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 25px;
+    color: #000;
+    margin-bottom: 36px;
+  }
+
+  .section-service .services :not(:last-child) h6 {
+    all: initial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 34px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .section-service .services :not(:last-child) p {
+    all: initial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    padding: 10px;
+    height: 81px;
+  }
+
+  .section-service .services :last-child h6 {
+    all: initial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 44px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .section-service .services :last-child p {
+    all: initial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    padding: 10px;
+    height: 81px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -365,8 +497,8 @@ $colors: #848484,
   }
 
   @mixin service_icon_div($background: rgb(255,255,255)) {
-    width: 58.64px;
-    height: 58.64px;
+    width: 48.64px;
+    height: 48.64px;
     padding: 10px;
     margin-bottom: 8.38px;
     background: $background;
@@ -376,6 +508,7 @@ $colors: #848484,
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-top: 8px;
   }
 
   @mixin servicedivh6 {
@@ -393,7 +526,7 @@ $colors: #848484,
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    padding: 2px;
+    padding: 8px;
   }
 
   .section-service .heading {
