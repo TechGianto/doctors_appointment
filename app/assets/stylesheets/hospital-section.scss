@@ -1,0 +1,88 @@
+@import "variables";
+
+.hospital-container {
+  background-color: $light_grey;
+  top: 4602px;
+  background-blend-mode: normal;
+  padding-top: 80px;
+  height: 1000px;
+}
+
+.hospital-container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0 3rem;
+}
+
+.hospital-container-header h3 {
+  font-family: "Lora", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.813rem;
+  color: $primary_purple;
+  text-transform: capitalize;
+}
+
+.hospital-container-header h6 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.table .col-2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.row-design {
+  box-sizing: border-box;
+  height: 80px;
+  background: $white;
+  border: 1px solid $primary_purple;
+  border-radius: 32px;
+  margin-bottom: 20px;
+}
+
+.row-design .col-2 {
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.row-color-ash {
+  background-color: $light_grey;
+}
+
+.row-img {
+  height: 70px;
+  width: 70px;
+}
+
+.container-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 72px 0;
+}
+
+.btn-view {
+  width: 208px;
+  height: 72px;
+  border: 2px solid #814a95;
+  border-radius: 16px;
+  color: #814a95;
+  background-color: #fff;
+  text-transform: capitalize;
+}
