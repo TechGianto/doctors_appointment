@@ -1,7 +1,12 @@
 @import "variables";
 
 .section-special-doctors {
+  display: flex;
+  flex-direction: column;
   margin-top: 150px;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .section-heading {
@@ -18,11 +23,13 @@
   padding-bottom: 30px;
 }
 
-.section-heading span {
+.section-sub-heading {
+  width: 550px;
   font-size: 20px;
   font-weight: 400;
   font-style: normal;
   line-height: 27px;
+  align-items: center;
 }
 
 .card {
@@ -32,20 +39,14 @@
 
 .doctor-cards {
   display: flex;
+  width: 100%;
   position: relative;
-  justify-content: center;
-}
-
-.card-image-1 {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 310px;
-  height: 350px;
+  justify-content: space-between;
 }
 
 .heart-icon {
-  top: 36px;
-  right: 37px;
+  top: 10%;
+  right: 10%;
   width: 36px;
   height: 36px;
   position: absolute;
@@ -96,4 +97,47 @@
   width: 30px;
   height: 30px;
   padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .section-special-doctors {
+    margin-top: 80px;
+  }
+
+  .section-heading {
+    margin-bottom: 0;
+  }
+
+  .section-heading h1 {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 0;
+    font-family: "Open Sans";
+    line-height: 2.056rem;
+    text-align: center;
+  }
+
+  .section-sub-heading {
+    width: 290px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .doctor-cards {
+    display: flex;
+  }
+  
+  .center {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .image {
+
+
+  .slic-slider {
+    display: flex;
+  }
 }
