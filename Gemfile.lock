@@ -261,6 +261,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    slick_rails (1.5.9)
+      railties (>= 3.1)
     spring (3.1.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -330,6 +332,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
+  slick_rails
   spring
   spring-commands-rspec
   spring-commands-rubocop
