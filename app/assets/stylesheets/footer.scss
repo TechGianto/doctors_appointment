@@ -43,7 +43,7 @@
   padding: 0 100px;
   padding-top: 150px;
   padding-bottom: 50px;
-  color: #fff;
+  color: #fcffef;
   position: relative;
 }
 
@@ -55,6 +55,7 @@
 .grid-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  font-weight: 400;
 }
 
 .links-header {
