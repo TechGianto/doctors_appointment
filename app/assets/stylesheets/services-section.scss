@@ -92,14 +92,7 @@
   @include btnprop();
 }
 
-$colors: #848484,
-  #7e8560,
-  #8c5a83,
-  #528c58,
-  #3f7182,
-  #748138,
-  #445d81,
-  #848484;
+$colors: #848484,#7e8560,#8c5a83,#528c58,#3f7182,#748138,#445d81,#848484;
 
 .section-service .heading {
   font-style: normal;
@@ -454,7 +447,7 @@ $colors: #848484,
   @mixin servicesdiv($background: rgb(255,255,255)) {
     box-sizing: border-box;
     width: 48%;
-    height: 184.29px;
+    height: 200.29px;
     margin-bottom: 24.7px;
     padding: 2px;
   }
@@ -464,7 +457,6 @@ $colors: #848484,
     height: 48.64px;
     padding: 10px;
     margin-bottom: 8.38px;
-    margin-top: 8px;
     background: $background;
 
     @include service_icon_divprop();
@@ -790,20 +782,21 @@ $colors: #848484,
   .consultation .imagebox {
     box-sizing: border-box;
     height: 374px;
+    background-size: center center;
   }
 
   .consultation .textdiv {
-    margin-top: 24px;
+    margin-top: 10px !important;
     height: 400px;
-    padding-left: 30px;
+    padding-left: 10px;
   }
 
   .consultation .textdiv p {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 10px;
     color: $black;
-    padding: 1px;
+    padding: 1px !important;
   }
 
   .consultation .textdiv h2 {
