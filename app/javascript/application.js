@@ -7,7 +7,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 $(document).ready(function(){
-    $('.center').slick({
+    $('.doctor-slider').slick({
       centerMode: true,
       centerPadding: '60px',
       slidesToShow: 3,
