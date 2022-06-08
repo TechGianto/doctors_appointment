@@ -34,6 +34,8 @@ gem "redis", "~> 4.0"
 # Note: there is no jumbotron in this version
 gem 'bootstrap', '~> 5.1.3'
 
+gem 'slick_rails'
+
 gem 'jquery-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]

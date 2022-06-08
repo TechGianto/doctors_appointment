@@ -12,13 +12,15 @@
  *
  *= require_tree .
  *= require_self
+ *= require slick
+ *= require slick-theme
  */
 
 /*
   *$ to use the variable eg
   .test {
-      color: $light_grey;
-  }
+    color: $light_grey;
+}
  */
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @import "bootstrap";
