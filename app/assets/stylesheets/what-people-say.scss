@@ -9,6 +9,17 @@
   padding: 30px;
 }
 
+.cardx {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #e7ebd8;
+  background-clip: border-box;
+  border-radius: .25rem;
+}
+
 .card-title {
   font-family: "Lora";
   font-style: normal;
