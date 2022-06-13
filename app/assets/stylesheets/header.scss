@@ -4,7 +4,7 @@
 
 .navbar {
   background-color: #fefefe;
-  height: 96px;
+  min-height: 96px;
 }
 
 .navbar > .container-fluid {
@@ -299,7 +299,7 @@
   }
 
   .mobile-icon {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   .man-section-600 {
