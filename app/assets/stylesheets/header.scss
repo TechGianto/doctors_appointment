@@ -4,7 +4,7 @@
 
 .navbar {
   background-color: #fefefe;
-  height: 96px;
+  min-height: 96px;
 }
 
 .navbar > .container-fluid {
@@ -81,12 +81,12 @@
 .discription-header {
   font-family: "Lora";
   font-weight: 700;
-  font-size: 53px;
+  font-size: calc(32px + (100vw/44));
   margin-top: 40px;
 }
 
 .discription-header-sub {
-  font-size: 20px;
+  font-size: calc(24px + (100vw/216));
 }
 
 .doctor-search {
@@ -202,13 +202,23 @@
   z-index: 88;
 }
 
-@media screen and (min-width: 1500px) {
-  .discription-header {
-    font-size: 78px;
-  }
-}
-
 @media screen and (max-width: 1200px) {
+  .navbar > .container-fluid {
+    padding: 0 10px;
+  }
+
+  .nav-item {
+    .find-doc {
+      display: none;
+    }
+  }
+
+  .d-flex {
+    .btn.auth-btn {
+      width: 100px;
+    }
+  }
+
   .discription-col {
     margin: 10px;
   }
@@ -221,6 +231,10 @@
 @media screen and (max-width: 600px) {
   .navbar {
     height: 88px;
+  }
+
+  .navbar-toggler {
+    display: none !important;
   }
 
   .navbar > .container-fluid {
@@ -285,11 +299,7 @@
   }
 
   .mobile-icon {
-    padding: 0 15px;
-  }
-
-  .discription-header {
-    font-size: 32px;
+    padding: 0 10px;
   }
 
   .man-section-600 {

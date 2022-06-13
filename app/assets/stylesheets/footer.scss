@@ -132,6 +132,10 @@
   background-color: $primary_green_blue;
   border-radius: $button_border_radius;
   font-size: 32px;
+
+  .go-up-image {
+    margin: auto;
+  }
 }
 
 .copy-write {
@@ -165,6 +169,13 @@
   .footer-logo {
     width: 353px;
     height: 140px;
+  }
+}
+
+@media screen and (max-width: 1027px) {
+  .grid-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
   }
 }
 
