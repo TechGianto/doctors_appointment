@@ -78,7 +78,7 @@ jobs:
           paths:
             - node_modules
       - persist_to_workspace:
-          root: '.'
+          root: "."
           paths:
             - yarn.lock
       - save_cache:
@@ -97,6 +97,10 @@ jobs:
       - run:
           name: Install bundler
           command: gem install bundler:2.3.8
+
+      - run:
+          name: Install Breakman
+          command: gem install breakman
 
       - run:
           name: Install dependencies
@@ -157,14 +161,14 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: '.'
+          at: "."
       - run: yarn
       - restore_cache:
           keys:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
-    
+
   test:
     <<: *default_environment
     parallelism: 1
@@ -230,8 +234,5 @@ workflows:
           requires:
             - security
       - lint:
-          requires:
-            - security
-      - stylecheck:
           requires:
             - security
