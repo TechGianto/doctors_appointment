@@ -213,12 +213,6 @@
     }
   }
 
-  .d-flex {
-    .btn.auth-btn {
-      width: 100px;
-    }
-  }
-
   .discription-col {
     margin: 10px;
   }
@@ -285,6 +279,7 @@
       .signout {
         color: $primary_purple;
         margin: 0 5px;
+        margin-top: 5px;
       }
     }
 
