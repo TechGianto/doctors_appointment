@@ -40,7 +40,10 @@
         <%= image_tag("header_svgs/search.svg", alt: "search", class: "search-icon mobile-icon")%>
       </div>
       <% if user_signed_in? %>
-        <%= button_to "Sign Out", destroy_user_session_path , method: :delete , class: "btn auth-btn register-btn small-btn" %>
+        <a href= <%= destroy_user_session_path %> class="mobile-login-btn">
+          <%= image_tag("header_svgs/user-logout.svg", alt: "user", class: "auth-user-icon ") %>
+          <h3 class="signout">SignOut</h3>
+        </a>
       <% else %>
         <a href= <%= new_user_session_path%> class="mobile-login-btn">
           <%= image_tag("header_svgs/green-user.svg", alt: "user", class: "auth-user-icon ") %>

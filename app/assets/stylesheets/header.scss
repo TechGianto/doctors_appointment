@@ -262,6 +262,11 @@
       border-right: 1px solid #89898966;
     }
 
+    .auth-user-icon {
+      width: 20px;
+      height: 20px;
+    }
+
     & > .mobile-login-btn {
       color: $primary_green_blue;
       border-right: 1px solid #89898966;
@@ -274,6 +279,12 @@
       & h3 {
         font-size: 12px;
         margin-top: 5px;
+        margin-bottom: 0;
+      }
+
+      .signout {
+        color: $primary_purple;
+        margin: 0 5px;
       }
     }
 
@@ -287,6 +298,7 @@
 
       & h3 {
         font-size: 12px;
+        margin-bottom: 0;
       }
     }
   }
