@@ -4,6 +4,5 @@
     "stylelint-config-standard": "^25.0.0",
     "postcss-scss": "^4.0.4"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

@@ -11,6 +11,10 @@
   padding: 0 80px;
 }
 
+.mobile-path {
+  display: none;
+}
+
 .btn.auth-btn {
   color: $white;
   border-radius: $button_border_radius;
@@ -77,12 +81,12 @@
 .discription-header {
   font-family: "Lora";
   font-weight: 700;
-  font-size: 53px;
+  font-size: calc(32px + (100vw/44));
   margin-top: 40px;
 }
 
 .discription-header-sub {
-  font-size: 20px;
+  font-size: calc(24px + (100vw/216));
 }
 
 .doctor-search {
@@ -198,13 +202,23 @@
   z-index: 88;
 }
 
-@media screen and (min-width: 1500px) {
-  .discription-header {
-    font-size: 78px;
-  }
-}
-
 @media screen and (max-width: 1200px) {
+  .navbar > .container-fluid {
+    padding: 0 10px;
+  }
+
+  .nav-item {
+    .find-doc {
+      display: none;
+    }
+  }
+
+  .d-flex {
+    .btn.auth-btn {
+      width: 100px;
+    }
+  }
+
   .discription-col {
     margin: 10px;
   }
@@ -215,16 +229,77 @@
 }
 
 @media screen and (max-width: 600px) {
+  .navbar {
+    height: 88px;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
   .navbar > .container-fluid {
     padding: 0 10px;
   }
 
-  .man-section {
+  .main-logo {
+    width: 141.25px;
+    height: 56px;
+  }
+
+  .nav-bar-destop {
     display: none;
   }
 
-  .discription-header {
-    font-size: 32px;
+  .mobile-path {
+    display: flex;
+    align-self: center;
+
+    & > .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-right: 1px solid #89898966;
+    }
+
+    & > .mobile-login-btn {
+      color: $primary_green_blue;
+      border-right: 1px solid #89898966;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      text-decoration: none;
+
+      & h3 {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+
+    & > .mobile-register-btn {
+      color: $primary_purple;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+
+      & h3 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .man-section {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+  }
+
+  .mobile-icon {
+    padding: 0 10px;
   }
 
   .man-section-600 {
