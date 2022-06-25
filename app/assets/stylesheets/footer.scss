@@ -66,6 +66,17 @@
 .links-para {
   width: 70%;
   z-index: 23;
+  margin: 0;
+  font-size: 16px;
+  line-height: 32px;
+
+  &.service {
+    display: block;
+  }
+
+  &.extra {
+    margin-top: 30px;
+  }
 }
 
 .modile-col {
@@ -77,24 +88,23 @@
 }
 
 .form-control-lg.subscribe-input {
-  background-color: $primary_dark_grey;
-  color: #898989;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   border: none;
   width: 100%;
+  margin-top: 32px;
+  padding: 16px 40px;
 }
 
 .form-control-lg.subscribe-input:focus {
   box-shadow: none;
-  background-color: $primary_dark_grey;
-  color: #898989;
   border: none;
   outline: none;
 }
 
 .btn.subscribe-btn {
-  width: 50%;
-  padding: 15px;
+  width: 156px;
+  padding: 16px 40px;
+  mix-blend-mode: color;
 }
 
 .logo-and-social-container {
