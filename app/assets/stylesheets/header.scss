@@ -51,12 +51,31 @@
   color: $primary_purple;
 }
 
+.nav-item {
+  position: relative;
+  margin-left: 24px;
+}
+
 .nav-item > .nav-link.nav-link-color {
   color: #898989;
   font-weight: 600;
   font-size: 16px;
   line-height: 27px;
-  margin-left: 24px;
+  transition: all 0.4s;
+}
+
+.active {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background-color: $primary_purple;
+    text-align: center;
+  }
 }
 
 /* main body css disign */
