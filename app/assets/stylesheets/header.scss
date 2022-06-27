@@ -64,7 +64,7 @@
   transition: all 0.4s;
 }
 
-.active {
+.nav-link.nav-link-color.active {
   &::after {
     content: "";
     position: absolute;
@@ -88,8 +88,11 @@
 }
 
 .discription-col {
-  margin-left: 100px;
   color: #fff;
+}
+
+.main-discription {
+  margin-left: 100px;
 }
 
 .z-index-handler {
@@ -232,6 +235,10 @@
     }
   }
 
+  .main-discription {
+    margin-left: 50px;
+  }
+
   .discription-col {
     margin: 10px;
   }
@@ -315,6 +322,10 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  .main-discription {
+    margin: 0;
   }
 
   .man-section {
