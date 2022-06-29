@@ -99,10 +99,6 @@ jobs:
           command: gem install bundler:2.3.8
 
       - run:
-          name: Install Breakman
-          command: gem install breakman
-
-      - run:
           name: Install dependencies
           command: bundle install
 
@@ -234,5 +230,8 @@ workflows:
           requires:
             - security
       - lint:
+          requires:
+            - security
+      - stylecheck:
           requires:
             - security
