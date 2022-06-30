@@ -37,8 +37,8 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'slick_rails'
 
 #Using Omniauth for Authentication
-gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0.1'
 gem 'omniauth-facebook', '~> 9.0'
+gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0.1'
 gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
 
 gem 'jquery-rails'
