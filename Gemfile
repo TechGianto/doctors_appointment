@@ -63,6 +63,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rescue'
   gem 'rspec-rails'
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'rubocop', '~> 1.27.0', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
