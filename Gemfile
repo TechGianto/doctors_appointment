@@ -76,6 +76,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'rspec'
   gem 'rspec_junit_formatter'
+  gem 'shoulda-matchers', '~> 5.1'
   gem 'stub_env'
 end
 
