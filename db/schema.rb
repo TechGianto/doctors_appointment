@@ -10,9 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_06_29_112903) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_07_01_221250) do
+>>>>>>> 922303d (gemfile unstashed)
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "auctions", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "bids", force: :cascade do |t|
+    t.integer "bidder_id"
+    t.integer "auction_id"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "doctor_specialities", force: :cascade do |t|
+    t.bigint "doctor_id", null: false
+    t.bigint "speciality_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_doctor_specialities_on_doctor_id"
+    t.index ["speciality_id"], name: "index_doctor_specialities_on_speciality_id"
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string "certificate"
+    t.string "hospital_address"
+    t.string "qualifications"
+    t.decimal "rate"
+    t.time "available_time"
+    t.bigint "user_id", null: false
+    t.bigint "hospital_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hospital_id"], name: "index_doctors_on_hospital_id"
+    t.index ["user_id"], name: "index_doctors_on_user_id"
+  end
+
+  create_table "hospitals", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.integer "types", default: 0
+    t.integer "status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "specialities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -38,4 +98,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_112903) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "doctor_specialities", "doctors"
+  add_foreign_key "doctor_specialities", "specialities"
+  add_foreign_key "doctors", "hospitals"
+  add_foreign_key "doctors", "users"
 end
