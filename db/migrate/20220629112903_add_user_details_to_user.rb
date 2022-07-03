@@ -11,6 +11,6 @@ class AddUserDetailsToUser < ActiveRecord::Migration[7.0]
     add_column :users, :state, :string
     add_column :users, :nationality, :string
     add_column :users, :LGA, :string
-    add_column :users, :status, :integer 
+    add_column :users, :status, :integer, default: 1 
   end
 end
