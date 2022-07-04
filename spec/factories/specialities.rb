@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :speciality do
-    name { "Akin" }
+    name { 'Akin' }
   end
 end
