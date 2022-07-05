@@ -7,7 +7,7 @@
     <div class="collapse nav-bar-destop navbar-collapse" id="navbarTogglerDemo01" >
       <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link find-doc nav-link-color" href="#">Find doctor</a>
+          <a class='nav-link find-doc nav-link-color' href="#" >Find doctor</a>
         </li>
         <li class="nav-item">
           <a class="nav-link nav-link-color" href="#">Hospitals</a>
@@ -27,7 +27,7 @@
       </ul>
       <div class="d-flex">
         <% if user_signed_in?%>
-           <%= button_to "Sign Out", destroy_user_session_path , method: :delete , class: "btn auth-btn register-btn small-btn" %>
+           <%= link_to "Sign Out", destroy_user_session_path , method: :delete , class: "btn auth-btn register-btn" %>
         <% else %>
           <%= link_to "Log in", new_user_session_path , class: "btn auth-btn small-btn login-btn" %>
           <%= link_to "Register", new_user_registration_path , class: "btn auth-btn register-btn small-btn" %>
@@ -40,7 +40,10 @@
         <%= image_tag("header_svgs/search.svg", alt: "search", class: "search-icon mobile-icon")%>
       </div>
       <% if user_signed_in? %>
-        <%= button_to "Sign Out", destroy_user_session_path , method: :delete , class: "btn auth-btn register-btn small-btn" %>
+        <a href= <%= destroy_user_session_path %> class="mobile-login-btn">
+          <%= image_tag("header_svgs/user-logout.svg", alt: "user", class: "auth-user-icon ") %>
+          <h3 class="signout">SignOut</h3>
+        </a>
       <% else %>
         <a href= <%= new_user_session_path%> class="mobile-login-btn">
           <%= image_tag("header_svgs/green-user.svg", alt: "user", class: "auth-user-icon ") %>

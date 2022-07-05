@@ -96,6 +96,13 @@ GEM
     digest (3.1.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     fakeredis (0.8.0)
       redis (~> 4.1)
     ffi (1.15.5)
@@ -148,8 +155,6 @@ GEM
     nokogiri (1.13.6-x64-mingw32)
       racc (~> 1.4)
     nokogiri (1.13.6-x86_64-darwin)
-    nokogiri (1.13.6-x86_64-linux)
-      racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.0)
@@ -268,6 +273,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    shoulda-matchers (5.1.0)
+      activesupport (>= 5.2.0)
     slick_rails (1.5.9)
       railties (>= 3.1)
     spring (3.1.1)
@@ -315,6 +322,7 @@ PLATFORMS
   arm64-darwin-21
   x64-mingw32
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -322,6 +330,8 @@ DEPENDENCIES
   brakeman
   debug
   devise (~> 4.8, >= 4.8.1)
+  factory_bot_rails (~> 6.2)
+  faker
   fakeredis
   importmap-rails
   jbuilder
@@ -342,6 +352,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
+  shoulda-matchers (~> 5.1)
   slick_rails
   spring
   spring-commands-rspec
@@ -354,7 +365,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.0.4p157
+   ruby 3.0.2p107
 
 BUNDLED WITH
    2.3.13

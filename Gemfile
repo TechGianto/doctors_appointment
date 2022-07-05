@@ -60,6 +60,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'brakeman', require: false
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'pry-byebug'
   gem 'pry-rescue'
   gem 'rspec-rails'
@@ -70,11 +71,13 @@ group :development, :test do
 end
 
 group :test do
+  gem 'faker'
   gem 'fakeredis'
   gem 'pry'
   gem 'rails-controller-testing'
   gem 'rspec'
   gem 'rspec_junit_formatter'
+  gem 'shoulda-matchers', '~> 5.1'
   gem 'stub_env'
 end
 
