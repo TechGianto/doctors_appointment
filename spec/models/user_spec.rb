@@ -40,30 +40,30 @@ RSpec.describe User, type: :model do
     it 'is invalid when email address is already taken' do
       create(:user, email: 'peter@gmail.com')
       user2 = build(:user, email: 'peter@gmail.com')
-      user2.save
+      user2.valid?
       expect(user2.errors.full_messages).to include('Email has already been taken')
     end
   end
 
   describe 'format' do
     it 'is valid when phone number contain only numbers' do
-      expect(user1.phone).to match(/\A[+-]?\d+\z/)
+      expect(user1.errors.full_messages).not_to include('Phone is invalid') 
     end
 
     it 'is invalid when it contain alphabet' do
       user = build(:user, phone: '123eerffetf')
-      user.save
-      expect(user.phone).not_to match(/\A[+-]?\d+\z/)
+      user.valid?
+      expect(user.errors.full_messages).to include('Phone is invalid')
     end
 
     it 'is valid when email contain @ between two words' do
-      expect(user1.email).to match(/\A[^@\s]+@[^@\s]+\z/)
+      expect(user1.errors.full_messages).not_to include('Email is invalid')
     end
 
     it 'is invalid when it does not contain the @ between two words' do
       user = build(:user, email: 'qwertgmail.com')
-      user.save
-      expect(user.email).not_to match(/\A[^@\s]+@[^@\s]+\z/)
+      user.valid?
+      expect(user.errors.full_messages).to include('Email is invalid')
     end
   end
 end
