@@ -47,7 +47,7 @@ RSpec.describe User, type: :model do
 
   describe 'format' do
     it 'is valid when phone number contain only numbers' do
-      expect(user1.errors.full_messages).not_to include('Phone is invalid') 
+      expect(user1.errors.full_messages).not_to include('Phone is invalid')
     end
 
     it 'is invalid when it contain alphabet' do
