@@ -1,27 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user1) { build(:user) }
+  let(:user1) { create(:user) }
 
   describe 'validations' do
-    it 'is valid with this attribute' do
+    it 'is valid when all user detail are filled' do
       expect(user1).to be_valid
     end
 
-    it 'is valid with email error' do
-      user = build(:user)
-      user.save
+    it 'is invalid when none of the user detail are filled' do
+      user = described_class.create
+      expect(user).not_to be_valid
+    end
+
+    it 'is valid when email error is not in the user.errors.full_messages' do
+      user = create(:user)
       expect(user.errors.full_messages).not_to include('Email is invalid', 'Email can"t be blank')
     end
 
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:password) }
     it { is_expected.to validate_presence_of(:last_name) }
-    it { is_expected.to validate_presence_of(:middle_name) }
+    it { is_expected.to validate_presence_of(:middle_name).allow_nil }
     it { is_expected.to validate_presence_of(:first_name) }
     it { is_expected.to validate_presence_of(:phone) }
     it { is_expected.to validate_length_of(:password).is_at_least(5) }
-    it { is_expected.to validate_length_of(:phone).is_at_least(11).is_at_most(11) }
+    it { is_expected.to validate_length_of(:phone).is_at_least(11).is_at_most(15) }
     it { is_expected.to validate_presence_of(:LGA).allow_nil }
     it { is_expected.to validate_presence_of(:profile_pic).allow_nil }
     it { is_expected.to validate_presence_of(:nationality).allow_nil }
@@ -33,23 +37,33 @@ RSpec.describe User, type: :model do
 
 
   describe 'uniqueness' do
-    it 'is a invalid with if email is the same' do
-      user1.save
-      user = build(:user)
-      user.save
-      expect(user).not_to be_valid
+    it 'is invalid when email address is already taken' do
+      create(:user, email: 'peter@gmail.com')
+      user2 = build(:user, email: 'peter@gmail.com')
+      user2.save
+      expect(user2.errors.full_messages).to include('Email has already been taken')
     end
   end
 
   describe 'format' do
-    it 'is a valid phone number' do
-      user = build(:user)
-      expect(user.phone).to match(/\A[+-]?\d+\z/)
+    it 'is valid when phone number contain only numbers' do
+      expect(user1.phone).to match(/\A[+-]?\d+\z/)
     end
 
-    it 'is a valid email' do
-      user = build(:user)
-      expect(user.email).to match(/\A[^@\s]+@[^@\s]+\z/)
+    it 'is invalid when it contain alphabet' do
+      user = build(:user, phone: '123eerffetf')
+      user.save
+      expect(user.phone).not_to match(/\A[+-]?\d+\z/)
+    end
+
+    it 'is valid when email contain @ between two words' do
+      expect(user1.email).to match(/\A[^@\s]+@[^@\s]+\z/)
+    end
+
+    it 'is invalid when it does not contain the @ between two words' do
+      user = build(:user, email: 'qwertgmail.com')
+      user.save
+      expect(user.email).not_to match(/\A[^@\s]+@[^@\s]+\z/)
     end
   end
 end

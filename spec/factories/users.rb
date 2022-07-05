@@ -1,18 +1,18 @@
 FactoryBot.define do
   factory :user do
-    email { 'Stan@gmail.com' }
-    password { 'qwerty' }
-    last_name { 'Isaiah' }
-    first_name { 'Peter' }
-    middle_name { 'James' }
-    date_of_birth { '2020-6-26' }
-    phone { '08104663471' }
-    profile_pic { 'https://www.howtogeek.com/wp-content/uploads/2018/06/shutterstock_1006988770.png?width=1198&trim=1,1&bg-color=000&pad=1,1' }
-    address { 'No.30 adekule street ojaokuta lagos' }
-    gender { 'Male' }
-    state { 'Lagos' }
-    nationality { 'Nigeria' }
-    LGA { 'Isolo' }
-    status { 3 }
+    email { Faker::Internet.email }
+    password { Faker::Lorem.characters(number: 10, min_alpha: 5) }
+    last_name { Faker::Name.last_name }
+    first_name { Faker::Name.first_name }
+    middle_name { Faker::Name.middle_name }
+    date_of_birth { Faker::Date.between(from: '2014-09-23', to: '2014-09-25') }
+    phone { Faker::PhoneNumber.cell_phone_in_e164 }
+    profile_pic { Faker::Fillmurray.image }
+    address { Faker::Address.full_address }
+    gender { Faker::Gender.binary_type }
+    state { Faker::Address.state }
+    nationality { Faker::Nation.nationality }
+    LGA { Faker::Address.country_code_long }
+    status { rand(1..3) }
   end
 end
