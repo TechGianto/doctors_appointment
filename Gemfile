@@ -71,6 +71,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'faker'
   gem 'fakeredis'
   gem 'pry'
   gem 'rails-controller-testing'
