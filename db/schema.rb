@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2022_06_29_112903) do
-=======
-ActiveRecord::Schema[7.0].define(version: 2022_07_01_221250) do
->>>>>>> 922303d (gemfile unstashed)
+ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_01_221250) do
     t.string "qualifications"
     t.decimal "rate"
     t.time "available_time"
+    t.integer "application_status", default: 0
     t.bigint "user_id", null: false
     t.bigint "hospital_id", null: false
     t.datetime "created_at", null: false
@@ -62,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_01_221250) do
   create_table "hospitals", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "types", default: 0
+    t.integer "h_type", default: 0
     t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
