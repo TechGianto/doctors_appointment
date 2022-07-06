@@ -4,8 +4,8 @@ RSpec.describe DoctorSpeciality, type: :model do
   let(:doctor_speciality1) { build(:doctor_speciality) }
 
   describe 'Association' do
-  it { is_expected.to belong_to(:speciality).with_foreign_key('speciality_id') }
-  it { is_expected.to belong_to(:doctor).with_foreign_key('doctor_id') }
+  it { is_expected.to belong_to(:speciality) }
+  it { is_expected.to belong_to(:doctor) }
   end
 
   describe 'Validations' do
