@@ -21,8 +21,8 @@ RSpec.describe Doctor, type: :model do
     it { is_expected.to validate_presence_of(:rate) }
     it { is_expected.to validate_presence_of(:available_time) }
     it { is_expected.to validate_presence_of(:application_status) }
-    it { is_expected.to validate_presence_of(:user_id)}
-    it { is_expected.to validate_presence_of(:hospital_id)}
-    it { should define_enum_for(:application_status) }
+    it { is_expected.to validate_presence_of(:user_id) }
+    it { is_expected.to validate_presence_of(:hospital_id) }
+    it { is_expected.to define_enum_for(:application_status) }
   end
 end
