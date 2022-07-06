@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :hospital do
-    name { 'Dideolu General Hospital' }
-    address { 'Ikenne-Odogbolu way Ikenne, Ogun State' }
-    types { 0 }
-    status { 0 }
+    name { Faker::Name.name }
+    address { Faker::Address.street_address }
+    h_type { rand(0..4) }
+    status { rand(0..1)}
   end
 end

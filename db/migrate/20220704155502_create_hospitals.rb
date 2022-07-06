@@ -3,11 +3,10 @@ class CreateHospitals < ActiveRecord::Migration[7.0]
     create_table :hospitals do |t|
       t.string :name
       t.string :address
-      t.integer :type, default: 0
+      t.integer :h_type, default:0
       t.integer :status, default:0
 
       t.timestamps
     end
   end
-  
 end

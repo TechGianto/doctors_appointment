@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :speciality do
-    name { 'Akin' }
+    name { Faker::Name.name }
   end
 end

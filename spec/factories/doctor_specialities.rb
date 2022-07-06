@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :doctor_speciality do
-    doctor_id { 1 }
-    speciality_id { 1 }
+   association :doctor
+   association :speciality
   end
 end

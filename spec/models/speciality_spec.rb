@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Speciality, type: :model do
-  let(:speciality1) { build(:speciality) }
+  let(:speciality1) { create(:speciality) }
 
   describe 'Association' do
     it { is_expected.to have_many(:doctor_specialities) }
