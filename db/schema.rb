@@ -14,23 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "auctions", force: :cascade do |t|
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string "title"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
-
-  create_table "bids", force: :cascade do |t|
-    t.integer "bidder_id"
-    t.integer "auction_id"
-    t.integer "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "doctor_specialities", force: :cascade do |t|
     t.bigint "doctor_id", null: false
