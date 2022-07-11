@@ -32,15 +32,19 @@ class User < ApplicationRecord
   end
   validates :gender, inclusion: {in: ['Male', 'Female']}
 
-          after_create :assign_default_role
-         
+    after_create :assign_default_role  
 
-          def assign_default_role
-            if User.count == 1
-            self.add_role(:admin) if self.roles.blank?
-            else
-              self.add_role(:Patient) if self.roles.blank?
+      validate :must_have_a_role, on: :update
+
+        private
+
+          def must_have_a_role
+            unless roles.any?
+            errors.add(:roles, 'Must have at least 1 role')
             end
           end
-      
+
+          def assign_default_role
+              self.add_role(:Patient) if self.roles.blank?
+          end
 end
