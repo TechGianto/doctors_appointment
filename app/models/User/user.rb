@@ -45,6 +45,6 @@ class User < ApplicationRecord
           end
 
           def assign_default_role
-              self.add_role(:Patient) if self.roles.blank?
+            self.add_role(:Patient) if self.roles.blank?
           end
 end
