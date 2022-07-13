@@ -27,7 +27,6 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_length_of(:password).is_at_least(5) }
     it { is_expected.to validate_length_of(:phone).is_at_least(11).is_at_most(15) }
     it { is_expected.to validate_presence_of(:LGA).allow_nil }
-    it { is_expected.to validate_presence_of(:profile_pic).allow_nil }
     it { is_expected.to validate_presence_of(:nationality).allow_nil }
     it { is_expected.to validate_presence_of(:gender).allow_nil }
     it { is_expected.to validate_presence_of(:state).allow_nil }
