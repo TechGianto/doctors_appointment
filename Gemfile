@@ -100,3 +100,5 @@ group :development do
   gem 'spring-commands-rspec', require: false
   gem 'spring-commands-rubocop', require: false
 end
+
+gem "rolify"

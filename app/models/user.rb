@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_one_attached :profile_pic
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -29,4 +30,17 @@ class User < ApplicationRecord
     )
     user
   end
+  validates :gender, inclusion: {in: ['Male', 'Female']}
+
+          after_create :assign_default_role
+         
+
+          def assign_default_role
+            if User.count == 1
+            self.add_role(:admin) if self.roles.blank?
+            else
+              self.add_role(:Patient) if self.roles.blank?
+            end
+          end
+      
 end
