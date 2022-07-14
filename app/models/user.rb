@@ -12,15 +12,17 @@ class User < ApplicationRecord
   validates :phone, length: {minimum: 11, maximum: 15}, format: {with: /\A[+-]?\d+\z/}, allow_nil: true
   validates :profile_pic, :state, :gender, :middle_name, :nationality, :LGA, :status, presence: true, allow_nil: true
   #validates :gender, inclusion: {in: ['Male', 'Female']}, allow_nil: false
-         
 
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.where(email: data['email']).first
-
     # Uncomment the section below if you want users to be created if they don't exist
     user ||= User.create(
       email: data['email'],
+      first_name: data['first_name'],
+      last_name: data['last_name'],
+      middle_name: data['middle_name'],
+      state: data['location'],
       password: Devise.friendly_token[0, 20],
     )
     user
