@@ -12,19 +12,18 @@ class User < ApplicationRecord
   validates :profile_pic, :state, :gender, :middle_name, :nationality, :LGA, :status, presence: true, allow_nil: true
   validates :gender, inclusion: {in: ['Male', 'Female']}
 
-    after_create :assign_default_role  
+  after_create :assign_default_role  
+  validate :must_have_a_role, on: :update
 
-      validate :must_have_a_role, on: :update
+  private
 
-        private
+    def must_have_a_role
+      unless roles.any?
+      errors.add(:roles, 'Must have at least 1 role')
+      end
+    end
 
-          def must_have_a_role
-            unless roles.any?
-            errors.add(:roles, 'Must have at least 1 role')
-            end
-          end
-
-          def assign_default_role
-            self.add_role(:Patient) if self.roles.blank?
-          end
+    def assign_default_role
+      self.add_role(:Patient) if self.roles.blank?
+    end
 end

@@ -4,8 +4,9 @@
         <%= user.roles.pluck(:name) %>
         <%= link_to "Edit Roles", edit_user_path(user) %>
     <% else %>
-        <%= user.email %>
-        <%= user.roles.pluck(:name) %>
+        <% user.email %>
+        <% user.roles.pluck(:name) %>
+        
    <% end %>
     </br>
 <% end %>
