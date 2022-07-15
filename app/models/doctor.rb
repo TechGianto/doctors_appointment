@@ -7,5 +7,3 @@ class Doctor < ApplicationRecord
   validates :user_id, :hospital_id, :hospital_address, :qualifications, :rate, :available_time, :application_status, presence: true
   enum :application_status, {approved: 0, rejected: 1, pending: 2}
 end
-
-

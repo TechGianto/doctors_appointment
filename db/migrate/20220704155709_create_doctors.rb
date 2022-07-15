@@ -1,7 +1,7 @@
 class CreateDoctors < ActiveRecord::Migration[7.0]
   def change
     create_table :doctors do |t|
-      t.string :certificate
+      t.string  :certificate
       t.string :hospital_address
       t.string :qualifications
       t.decimal :rate
