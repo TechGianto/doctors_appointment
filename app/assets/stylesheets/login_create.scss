@@ -1,0 +1,232 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@500&display=swap");
+
+
+.welcome-message{
+font-family: "Open Sans";
+font-style: normal;
+font-size: 20px;
+margin-bottom: 35px;
+font-weight: 40;
+line-height: 27px;
+color:$black;
+flex: none;
+order:1;
+flex-grow: 0;
+align-items: center;
+}
+
+
+
+/*main body */
+.form-container{
+ display: flex;
+ width: 100%;
+ height: 1535px;
+ background: $primary_green_blue;
+ flex: none;
+ order: 0;
+ flex-grow: 0;
+ border-radius: 10px 12px;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.container-login{
+    width: 941px;
+    height: 1131px;
+    border-radius: 16px;
+    background: $primary_white;
+    align-items:center;
+    padding-left: 111px;
+    }
+
+
+.login-login{
+width: hug(102px);
+height: hug(49px);
+font-family: "Open Sans";
+font-style: normal;
+font-weight: 800;
+font-size: 36px;
+line-height: 49px;
+color:$primary_purple;
+margin-top: 100px;
+/**Inside layout */
+flex:none;
+order:0;
+flex-grow: 0;
+
+}
+
+
+.email{
+width: 72px;
+height: 24px;
+font-family: "OPen Sans";
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/*Identictal to  box height*/
+letter-spacing: 0.015rem;
+flex: none;
+order: 0;
+flex-grow: 0;
+color:$black;
+margin-bottom: 30px;
+
+} 
+
+
+.email-email{
+    margin-top:25px;
+    
+}
+
+.password-password{
+    margin-top: 25px;
+}
+
+
+.input-fill{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap:16px;
+    width: 721px;
+    height:56px;
+    border:1px solid #D0D0D0;
+    border-radius: 8px;
+    flex: 1;
+    flex-grow: 0;
+    margin-bottom: 35px;
+    border-color: #D0D0D0;
+    color:$primary_white;
+
+}
+
+.password{
+width: 74px;
+height: 24px;
+font-family: "Open Sans";
+font-style: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.015rem;
+color:$black;
+flex:0;
+order:0;
+flex-grow: 0;
+margin-bottom: 30px;
+}
+
+
+.button-log{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 19px 51px 18px ;
+gap:10px;
+width: 721px;
+height: 56px;
+background: $primary_purple;
+border-radius: 16px;
+flex: none;
+order:1;
+flex-grow: 0;
+margin-bottom: 40px;
+}
+
+
+
+.button-log_google{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 19px 51px 18px ;
+    gap:10px;
+    width: 721px;
+    height: 56px;
+    background: $primary_white;
+    border-radius: 16px;
+    flex: none;
+    order:0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    border: 1px solid #814A95;
+    border-radius: 16px;
+    }
+    
+
+
+.text-or{
+            position: absolute;
+            top:40%;
+            left:50%;
+            transform: translate(-100%, 1701%);
+            margin-top: 20px;
+            margin-bottom: 20px;
+           
+          
+}
+
+  .or{
+    width:23px;
+    height: 23px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing:  0.015rem;
+    color: #898989;
+    flex:none;
+    order:0;
+    flex-grow:0;
+  }
+
+
+
+.shift-google{
+
+    margin-top: 130px;
+    margin-bottom: 25px;
+}
+
+
+.shift-facebook{
+    margin-top: 0px;
+    margin-bottom:25px ;
+}
+
+
+.link-account{       
+    position: absolute;
+    width: 471px;
+    height: 44px;
+    left: 473px;
+    top: 1480px;
+    line-height: 44px;
+    margin-bottom: 70px;
+}
+
+
+.have-account{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+.account-login{
+    color: #FFFFFF;
+}
+
+

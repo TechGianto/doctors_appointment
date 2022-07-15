@@ -1,26 +1,67 @@
-<h2>Log in</h2>
-
+<div class = "form-container">
+<div class = "container-login">
+<h2 class = "login-login" >Log in</h2>
+<p class = "welcome-message">welcome back.Login to  access your account.</p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: "email" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-fill"%>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.label :password ,class: "password" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: "input-fill"%>
   </div>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
-    </div>
   <% end %>
+</div>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "button-log" %>
   </div>
-<% end %>
 
+
+<div class = "text-or">
+<h5 class ="or-move">
+   <span class = "or">Or</span>
+</h5>
+</div>
+
+<div class = "shift-google">
+<button type="button" class="button-log_google">
+  <%= image_submit_tag("google_login/google_logo.svg") %> Login with Google
+</button>
+</div>
+
+<div class = "shift-facebook">
+<button type="button" class="button-log_google">
+  <%= image_submit_tag("google_login/fac_logo.svg") %> Login with Facebook
+</button>
+</div>
+
+
+<div class = "forgotton">
 <%= render "devise/shared/links" %>
+<div>
+<% end %>
+</div>
+</div>
+
+
+<!----
+
+<button type="button" class="btn btn-primary">
+  <%= image_submit_tag("google_login/google_logo.svg") %> LOgin
+</button>
+
+
+ <%= image_submit_tag("google_login/google_logo.svg", alt: "google logo", class: "login_logo")%>Log
+   <%= f.submit, image_submit_tag("google_login/goodle_logo.svg")>
+  
+  </div>
+
+-->

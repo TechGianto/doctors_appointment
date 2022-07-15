@@ -1,29 +1,56 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class = "form-container"> 
+   <div class = "container-login"> 
+    <h4 class = "login-login">Create An account</h4>
+     <span class = "welcome-message"> Welcome to the future of swift medical consultation.</span>
+     <span class = "welcome-message"> Create an account to get started </span>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div  class = "email-email">
+      <%= f.label :email, class: "email" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "input-fill" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class = "password-password"> 
+       <%= f.label :password, class: "password"%>
+       <% if @minimum_password_length %>
+       <em>(<%= @minimum_password_length %> characters minimum)</em>
+       <% end %><br />
+       <%= f.password_field :password, autocomplete: "password",class: "input-fill" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="password-password">
+    <%= f.label :password_confirmation, class: "password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete:"confirm_password" , class: "input-fill" %>
+    </div>
+  
+    <div class="actions">
+     <%= f.submit "Create an Account", class: "button-log"%>
+   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+   <div class = "text-or">
+    <h5 class ="or-move">
+       <span class = "or">Or</span>
+    </h5>
+    </div>
+    
+    <div class = "shift-google">
+    <button type="button" class="button-log_google">
+      <%= image_submit_tag("google_login/google_logo.svg") %> Login with Google
+    </button>
+    </div>
+    
+    <div class = "shift-facebook">
+    <button type="button" class="button-log_google">
+      <%= image_submit_tag("google_login/fac_logo.svg") %> Login with Facebook
+    </button>
+    </div>
+    
+   <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
+<div class = "link-account">
+<p class ="have-account">Already have an Account? <%= render "devise/shared/links", class: "account-login" %></p>
+</div>
+</div>
