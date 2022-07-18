@@ -6,7 +6,7 @@ FactoryBot.define do
     first_name { Faker::Name.first_name }
     middle_name { Faker::Name.middle_name }
     date_of_birth { Faker::Date.between(from: '2014-09-23', to: '2014-09-25') }
-    phone { Faker::PhoneNumber.cell_phone_in_e164 }
+    phone { Faker::PhoneNumber.cell_phone_in_e164.length > 15 ? '08104663471' : Faker::PhoneNumber.cell_phone_in_e164 }
     profile_pic { Faker::Fillmurray.image }
     address { Faker::Address.full_address }
     gender { Faker::Gender.binary_type }
