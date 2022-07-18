@@ -14,7 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
   create_table "doctor_specialities", force: :cascade do |t|
     t.bigint "doctor_id", null: false
     t.bigint "speciality_id", null: false
