@@ -2,11 +2,7 @@
     <% if current_user.has_role?(:admin) %>
         <%= user.email %>
         <%= user.roles.pluck(:name) %>
-        <%= link_to "Edit Roles", edit_user_path(user) %>
-    <% else %>
-        <% user.email %>
-        <% user.roles.pluck(:name) %>
-        
+        <%= link_to "Edit Roles", edit_user_path(user) %>   
    <% end %>
     </br>
 <% end %>

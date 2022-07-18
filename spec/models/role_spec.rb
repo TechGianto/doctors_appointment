@@ -1,9 +1,29 @@
 require 'rails_helper'
 
 RSpec.describe Role, type: :model do
-  it 'Assign role patient to new User' do
-    user = User.create!
-    expect(user.done?).to be_patient
+  let(:user1) { create(:user) }
+
+  describe 'role' do
+    it 'is valid' do
+      user = user1.has_role? :Patient
+      expect(user).to be true
+    end
   end
-  #pending "add some examples to (or delete) #{__FILE__}"
+
+  describe 'doctor role' do
+    it 'validates doctor role' do
+      user1.add_role :Doctor
+      user = user1.has_role? :Doctor
+      expect(user).to be true
+    end
+  end
+
+  describe 'admin role' do
+    it 'validates admin role' do
+      user1.add_role :admin
+      user = user1.has_role? :admin
+      expect(user).to be true
+    end
+  end
+
 end
