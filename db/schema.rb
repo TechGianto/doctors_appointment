@@ -52,7 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_092209) do
   end
 
   create_table "doctors", force: :cascade do |t|
-    t.string "certificate"
     t.string "hospital_address"
     t.string "qualifications"
     t.decimal "rate"

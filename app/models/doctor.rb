@@ -1,5 +1,5 @@
 class Doctor < ApplicationRecord
-  has_many_attached :certificate
+  has_many_attached :certificates
   belongs_to :user, optional: true
   belongs_to :hospital, optional: true
   has_many :doctor_specialities, dependent: :destroy
