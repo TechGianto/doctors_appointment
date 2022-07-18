@@ -49,14 +49,14 @@
   border: 1px solid $primary_purple;
   border-radius: 32px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .row-design .col-2 {
   text-transform: capitalize;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 14px;
   font-style: normal;
 }
@@ -85,4 +85,56 @@
   color: #814a95;
   background-color: #fff;
   text-transform: capitalize;
+}
+
+@media screen and (max-width: 900px) {
+  .tab-col {
+    display: none;
+  }
+
+  .container .col-2.tab-col {
+    display: none;
+  }
+
+  .hospital-container-header h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hospital-container-header h6 {
+    font-size: 15px;
+  }
+
+  .btn-view {
+    width: 146px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hospital-container-header h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hospital-container-header h6 {
+    font-size: 15px;
+  }
+
+  .mobile-col {
+    display: none;
+  }
+
+  .row-design .col-2.mobile-col {
+    display: none;
+  }
+
+  .row-design .col-2 {
+    width: 50%;
+  }
+
+  .btn-view {
+    width: 146px;
+    height: 56px;
+  }
 }

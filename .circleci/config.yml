@@ -78,7 +78,7 @@ jobs:
           paths:
             - node_modules
       - persist_to_workspace:
-          root: '.'
+          root: "."
           paths:
             - yarn.lock
       - save_cache:
@@ -157,14 +157,14 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: '.'
+          at: "."
       - run: yarn
       - restore_cache:
           keys:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
-    
+
   test:
     <<: *default_environment
     parallelism: 1

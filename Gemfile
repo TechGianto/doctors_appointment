@@ -36,6 +36,11 @@ gem 'bootstrap', '~> 5.1.3'
 
 gem 'slick_rails'
 
+#Using Omniauth for Authentication
+gem 'omniauth-facebook', '~> 9.0'
+gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
+
 gem 'jquery-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
@@ -60,6 +65,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'brakeman', require: false
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'pry-byebug'
   gem 'pry-rescue'

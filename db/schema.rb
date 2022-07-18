@@ -42,6 +42,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_092209) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
   create_table "doctor_specialities", force: :cascade do |t|
     t.bigint "doctor_id", null: false
     t.bigint "speciality_id", null: false
