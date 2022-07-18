@@ -1,15 +1,13 @@
 class ChangeDataTypeForCertificate < ActiveRecord::Migration[7.0]
-  def change
     def up
       if column_exists?(:doctors, :certificate)
         remove_column(:doctors, :certificate)
-       end
+      end
+    end
+
+    def down
+     if !column_exists?(:doctors, :certificate)
+      add_column :doctors, :certificate, :string
      end
-     
-     def down
-      if !column_exists?(:doctors, :certificate)
-       add_column :doctors, :certificate, :string
-       end
-     end
-  end
+    end
 end
