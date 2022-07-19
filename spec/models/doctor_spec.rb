@@ -15,7 +15,6 @@ RSpec.describe Doctor, type: :model do
       expect(doctor1).to be_valid
     end
 
-    it { is_expected.to validate_presence_of(:certificate) }
     it { is_expected.to validate_presence_of(:hospital_address) }
     it { is_expected.to validate_presence_of(:qualifications) }
     it { is_expected.to validate_presence_of(:rate) }
