@@ -5,8 +5,11 @@ RSpec.describe Doctor, type: :model do
 
   describe 'Associations' do
     it { is_expected.to have_many(:doctor_specialities).dependent(:destroy) }
+    # it { is_expected.to have_many(:doctor_ratings).dependent(:destroy) }
+    it { is_expected.to have_many(:appointments).dependent(:destroy) }
     it { is_expected.to belong_to(:user).without_validating_presence }
     it { is_expected.to belong_to(:hospital).without_validating_presence }
+    # it { is_expected.to belong_to(:doctor_availabilities).dependent(:destroy) }
   end
 
 
@@ -20,8 +23,6 @@ RSpec.describe Doctor, type: :model do
     it { is_expected.to validate_presence_of(:rate) }
     it { is_expected.to validate_presence_of(:available_time) }
     it { is_expected.to validate_presence_of(:application_status) }
-    it { is_expected.to validate_presence_of(:user_id) }
-    it { is_expected.to validate_presence_of(:hospital_id) }
     it { is_expected.to define_enum_for(:application_status) }
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_14_092209) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_19_193722) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,9 +42,40 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_092209) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "date_of_appointment"
+    t.integer "no_of_session"
+    t.integer "status"
+    t.bigint "user_id", null: false
+    t.bigint "doctor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
+    t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "doctor_availabilities", force: :cascade do |t|
+    t.time "time_available"
+    t.date "week"
+    t.date "year"
+    t.json "meta_data"
+    t.bigint "doctor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_doctor_availabilities_on_doctor_id"
+  end
+
+  create_table "doctor_ratings", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
+    t.bigint "user_id", null: false
+    t.bigint "doctor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_doctor_ratings_on_doctor_id"
+    t.index ["user_id"], name: "index_doctor_ratings_on_user_id"
+  end
+
   create_table "doctor_specialities", force: :cascade do |t|
     t.bigint "doctor_id", null: false
     t.bigint "speciality_id", null: false
@@ -119,6 +150,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "appointments", "doctors"
+  add_foreign_key "appointments", "users"
+  add_foreign_key "doctor_availabilities", "doctors"
+  add_foreign_key "doctor_ratings", "doctors"
+  add_foreign_key "doctor_ratings", "users"
   add_foreign_key "doctor_specialities", "doctors"
   add_foreign_key "doctor_specialities", "specialities"
   add_foreign_key "doctors", "hospitals"
