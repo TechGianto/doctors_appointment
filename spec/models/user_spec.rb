@@ -18,7 +18,6 @@ RSpec.describe User, type: :model do
       expect(user.errors.full_messages).not_to include('Email is invalid', 'Email can"t be blank')
     end
 
-    
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:password) }
     it { is_expected.to validate_presence_of(:last_name) }
