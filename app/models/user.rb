@@ -31,7 +31,7 @@ class User < ApplicationRecord
     user
   end
 
-  after_create :assign_default_role  
+  after_create :assign_default_role
   validate :must_have_a_role, on: :update
 
   private
