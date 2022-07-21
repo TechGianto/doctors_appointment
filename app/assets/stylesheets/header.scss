@@ -224,15 +224,14 @@
   z-index: 88;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .navbar > .container-fluid {
     padding: 0 10px;
   }
 
-  .nav-item {
-    .find-doc {
-      display: none;
-    }
+  .nav-link.nav-link-color.active::after {
+    left: 5%;
+    width: 100px;
   }
 
   .main-discription {
@@ -262,7 +261,7 @@
   }
 
   .main-logo {
-    width: 141.25px;
+    width: 100px;
     height: 56px;
   }
 
