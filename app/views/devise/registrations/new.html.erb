@@ -1,30 +1,56 @@
 
-  <div class = "form-container"> 
-   <div class = "container-login"> 
-    <h4 class = "login-login">Create An account</h4>
-     <span class = "welcome-message"> Welcome to the future of swift medical consultation.</span>
-     <span class = "welcome-message"> Create an account to get started </span>
+  <div class = "form-container" >
+   <div class = "container-login register"> 
+    <h4 class = "login-login text">Create An account</h4>
+     <p class = "welcome-message text"> Welcome to the future of swift medical consultation.
+             Create an account to get started. </p>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div  class = "email-email">
-      <%= f.label :email, class: "email" %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "input-fill" %>
+    <div class="row">
+      <div class="col form-group">
+        <%= f.label :first_name %>
+       <%= f.email_field :first_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"First Name" %>
+      </div>	
+      <div class="col form-group">
+        <%= f.label :last_name %>
+       <%= f.email_field :last_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Last Name" %>
+      </div>	
     </div>
 
-    <div class = "password-password"> 
-       <%= f.label :password, class: "password"%>
+    <div class="row">
+      <div class="col form-group">
+        <%= f.label :Phone %>
+       <%= f.email_field :phone, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Phone" %>
+      </div>	
+      <div class="col form-group">
+        <%= f.label :Email %>
+       <%= f.email_field :email, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Email" %>
+      </div>	
+    </div>
+
+    <div class="row">
+      <div class="col form-group">
+       <%= f.label :Gender %>
+       <select class="form-select form-select-lg mb-3 form-control input-fill" aria-label=".form-select-lg example" id = "select-gender">
+         <option class="select" >Select</option>
+         <option class="email">Female</option>
+         <option class="email">Male</option>
+       </select>
+       </div>
+ </div>
+
+
+    <div class="row">
+    <div class="col form-group">
+       <%= f.label :password %>
        <% if @minimum_password_length %>
        <em>(<%= @minimum_password_length %> characters minimum)</em>
        <% end %><br />
-       <%= f.password_field :password, autocomplete: "password",class: "input-fill" %>
+       <%= f.password_field :password, autofocus: true, autocomplete: "password",class: "form-control input-fill", placeholder: "Password" %>
     </div>
-
-    <div class="password-password">
-    <%= f.label :password_confirmation, class: "password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete:"confirm_password" , class: "input-fill" %>
     </div>
-  
+    
     <div class="actions">
      <%= f.submit "Create an Account", class: "button-log"%>
    </div>
@@ -51,6 +77,10 @@
 
 </div>
 <div class = "link-account">
-<p class ="have-account">Already have an Account? <%= render "devise/shared/links", class: "account-login" %></p>
+  <p class ="have-account">Already have an account? </p>
+  <%= link_to "Log in", new_session_path(resource_name),class: "account-login" %>
+  </div>
+</div>
+
 </div>
 </div>
