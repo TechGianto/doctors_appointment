@@ -77,6 +77,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+    t.index ["resource_type", "resource_id"], name: "index_roles_on_resource"
+  end
+
   create_table "specialities", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -109,6 +119,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_155913) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "doctor_specialities", "doctors"
+  add_foreign_key "doctor_specialities", "specialities"
+  add_foreign_key "doctors", "hospitals"
+  add_foreign_key "doctors", "users"
+  create_table "users_roles", id: false, force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "role_id"
+    t.index ["role_id"], name: "index_users_roles_on_role_id"
+    t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
+    t.index ["user_id"], name: "index_users_roles_on_user_id"
+  end
+
   add_foreign_key "doctor_specialities", "doctors"
   add_foreign_key "doctor_specialities", "specialities"
   add_foreign_key "doctors", "hospitals"
