@@ -40,6 +40,7 @@ gem 'slick_rails'
 gem 'omniauth-facebook', '~> 9.0'
 gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0.1'
 gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
+gem 'open-uri'
 
 gem 'jquery-rails'
 
@@ -54,6 +55,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+
+gem 'faker'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
