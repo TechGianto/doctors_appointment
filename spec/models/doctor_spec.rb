@@ -19,7 +19,6 @@ RSpec.describe Doctor, type: :model do
     end
 
     it { is_expected.to validate_presence_of(:hospital_address) }
-    it { is_expected.to validate_presence_of(:qualifications) }
     it { is_expected.to validate_presence_of(:rate) }
     it { is_expected.to validate_presence_of(:available_time) }
     it { is_expected.to validate_presence_of(:application_status) }

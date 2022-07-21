@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_19_193722) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_20_094623) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,8 +56,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_193722) do
 
   create_table "doctor_availabilities", force: :cascade do |t|
     t.time "time_available"
-    t.date "week"
-    t.date "year"
+    t.integer "week"
+    t.integer "year"
     t.json "meta_data"
     t.bigint "doctor_id", null: false
     t.datetime "created_at", null: false
@@ -87,7 +87,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_193722) do
 
   create_table "doctors", force: :cascade do |t|
     t.string "hospital_address"
-    t.string "qualifications"
     t.decimal "rate"
     t.time "available_time"
     t.integer "application_status", default: 0
@@ -116,6 +115,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_193722) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource"
+  create_table "qualifications", force: :cascade do |t|
+    t.string "name"
+    t.bigint "doctor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_qualifications_on_doctor_id"
   end
 
   create_table "specialities", force: :cascade do |t|
@@ -171,4 +176,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_193722) do
   add_foreign_key "doctor_specialities", "specialities"
   add_foreign_key "doctors", "hospitals"
   add_foreign_key "doctors", "users"
+  add_foreign_key "qualifications", "doctors"
 end
