@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   end
   get 'home/index'
   root 'home#index'
+  get 'home/services'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end

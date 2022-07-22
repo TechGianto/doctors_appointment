@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import "variables";
+
+.services {
+  &-header {
+    width: 100%;
+    background-color: $primary_green_blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+
+    h1 {
+      font-family: "Lora";
+      font-size: calc(32px + (100vw/44));
+      margin-top: 48px;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: calc(24px + (100vw/100));
+      margin-bottom: 29px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      height: 155px;
+      width: 758px;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  &-list {
+    background-color: #e0f0e2;
+    padding: 48px 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .services-name-container {
+      width: 564px;
+      height: 352px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .service-name {
+        flex: 50%;
+        display: flex;
+        align-items: center;
+
+        .service-icon-container {
+          background-color: #fff;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .service-icon {
+            width: 41px;
+            height: 41px;
+          }
+        }
+
+        h3 {
+          font-weight: 600;
+          font-size: 20px;
+          color: $primary_purple;
+          margin-bottom: 0;
+          margin-left: 16px;
+          list-style: 27.24px;
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 13px;
+
+    .services-discription-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      overflow: hidden;
+
+      .services-discription {
+        width: 476px;
+        height: 334px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+          font-size: 36px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .appointment-btn {
+          width: 305px;
+          height: 82px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #c01b4d;
+          border-radius: $button_border_radius;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      .discription-image-container {
+        width: 530.8px;
+        height: 536px;
+
+        &.left-image {
+          grid-area: 1;
+        }
+
+        .discription-image {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    &-header {
+      width: 100%;
+
+      h3 {
+        text-align: center;
+      }
+
+      p {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-list {
+      padding: 20px;
+
+      .services-name-container {
+        width: 100%;
+        height: 100%;
+
+        .service-name {
+          flex: 100%;
+        }
+      }
+    }
+
+    &-main {
+      .services-discription-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 30px;
+
+        .services-discription {
+          width: 100%;
+          height: 400px;
+
+          .appointment-btn {
+            width: 90%;
+          }
+        }
+
+        .discription-image-container {
+          width: 100%;
+          height: 100%;
+          grid-area: 1;
+
+          .discription-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1040px) {
+  .services {
+    &-header {
+      width: 100%;
+
+      h3 {
+        text-align: center;
+      }
+
+      p {
+        width: 60%;
+        height: 100%;
+      }
+    }
+
+    &-main {
+      .services-discription-container {
+        .services-discription {
+          width: 80%;
+          height: 100%;
+        }
+
+        .discription-image-container {
+          width: 80%;
+          height: 80%;
+
+          .discription-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
