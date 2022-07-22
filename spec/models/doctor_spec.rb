@@ -7,6 +7,7 @@ RSpec.describe Doctor, type: :model do
     it { is_expected.to have_many(:doctor_specialities).dependent(:destroy) }
     # it { is_expected.to have_many(:doctor_ratings).dependent(:destroy) }
     it { is_expected.to have_many(:appointments).dependent(:destroy) }
+    it { is_expected.to have_many(:doctors_qualifications).dependent(:destroy) }
     it { is_expected.to belong_to(:user).without_validating_presence }
     it { is_expected.to belong_to(:hospital).without_validating_presence }
     # it { is_expected.to belong_to(:doctor_availabilities).dependent(:destroy) }

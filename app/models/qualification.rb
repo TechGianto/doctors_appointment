@@ -1,4 +1,4 @@
 class Qualification < ApplicationRecord
-  belongs_to :doctor
   validates :name, presence: true
+  has_many :doctors_qualifications, dependent: :destroy
 end

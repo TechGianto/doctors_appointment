@@ -5,8 +5,9 @@ class Doctor < ApplicationRecord
   has_many :doctor_specialities, dependent: :destroy
   has_many :doctor_ratings, dependent: :destroy
   has_many :appointments, dependent: :destroy
-  has_many :qualifications, dependent: :destroy
-  validates_associated :doctor_specialities, :doctor_ratings, :appointments, :hospital, :user
+  has_many :doctors_qualifications, dependent: :destroy
+  has_many :doctor_availabilities, dependent: :destroy
+  validates_associated :doctor_specialities, :doctor_ratings, :appointments, :hospital, :user, :doctor_availabilities, :doctors_qualifications
   validates :hospital_address, :rate, :available_time, :application_status, presence: true
   enum :application_status, {pending: 0, rejected: 1, approved: 2}
 end

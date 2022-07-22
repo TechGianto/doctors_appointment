@@ -4,7 +4,7 @@ RSpec.describe Qualification, type: :model do
   let(:qualification1) { create(:qualification) }
 
   describe 'Associations' do
-    it { is_expected.to belong_to(:doctor).without_validating_presence }
+    it { is_expected.to have_many(:doctors_qualifications).dependent(:destroy) }
   end
 
   describe 'Validations' do
