@@ -74,12 +74,12 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-end
-
-group :test do
   gem 'faker'
   gem 'fakeredis'
   gem 'pry'
+end
+
+group :test do
   gem 'rails-controller-testing'
   gem 'rspec'
   gem 'rspec_junit_formatter'
