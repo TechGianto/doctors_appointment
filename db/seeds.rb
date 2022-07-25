@@ -12,16 +12,16 @@ require 'open-uri'
 end
 
 # create manual specialities
-Speciality.first_or_create(name: 'Allergy and immunology')
-Speciality.first_or_create(name: 'Anesthesiology')
-Speciality.first_or_create(name: 'Dermatology')
-Speciality.first_or_create(name: 'Diagnostic radiology')
-Speciality.first_or_create(name: 'Emergency medicine')
-Speciality.first_or_create(name: 'Family medicine')
-Speciality.first_or_create(name: 'Internal medicine')
-Speciality.first_or_create(name: 'Medical genetics')
-Speciality.first_or_create(name: 'Neurology')
-Speciality.first_or_create(name: 'Nuclear medicine')
+Speciality.find_or_create_by(name: 'Allergy and immunology')
+Speciality.find_or_create_by(name: 'Anesthesiology')
+Speciality.find_or_create_by(name: 'Dermatology')
+Speciality.find_or_create_by(name: 'Diagnostic radiology')
+Speciality.find_or_create_by(name: 'Emergency medicine')
+Speciality.find_or_create_by(name: 'Family medicine')
+Speciality.find_or_create_by(name: 'Internal medicine')
+Speciality.find_or_create_by(name: 'Medical genetics')
+Speciality.find_or_create_by(name: 'Neurology')
+Speciality.find_or_create_by(name: 'Nuclear medicine')
 
 20.times do
     Speciality.create(name: Faker::Company.industry)
