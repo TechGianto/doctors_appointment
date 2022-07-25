@@ -8,7 +8,7 @@
 require 'open-uri'
 
 20.times do
-    Hospital.create(name: Faker::Address.street_name, address: Faker::Address.full_address)
+   FactoryBot.create(:hospital)
 end
 
 # create manual specialities
@@ -27,45 +27,25 @@ Speciality.first_or_create(name: 'Nuclear medicine')
     Speciality.create(name: Faker::Company.industry)
 end
 
+Qualification.find_or_create_by(name: 'M.B.B.S')
+Qualification.find_or_create_by(name: 'L.B')
+Qualification.find_or_create_by(name: 'BM')
+Qualification.find_or_create_by(name: 'D.A.U')
+Qualification.find_or_create_by(name: 'F.M.S.A')
+Qualification.find_or_create_by(name: 'F.M.C.Ophth.')
+
 60.times do
-    user = User.new
-    user.email = Faker::Internet.email
-    user.password = 'password'
-    user.last_name = Faker::Name.last_name
-    user.first_name = Faker::Name.first_name
-    user.middle_name = Faker::Name.middle_name
-    user.date_of_birth = Faker::Date.between(from: '2014-09-23', to: '2014-09-25')
-    user.phone = '08104663471'
-    user.address = Faker::Address.full_address
-    user.gender = Faker::Gender.binary_type
-    user.state = Faker::Address.state
-    user.nationality = Faker::Nation.nationality
-    user.LGA = Faker::Address.country_code_long
-    user.status = rand(1..3)
+    user = FactoryBot.create(:user)
 
     picture = Faker::Avatar.image
     picture_filename = File.basename(URI.parse(picture).path)
     downloaded_picture = URI.parse(picture).open
     user.profile_pic.attach(io: downloaded_picture, filename: picture_filename)
     user.save!
-    puts user.id
 end
 
 40.times do
-    user = User.new
-    user.email = Faker::Internet.email
-    user.password = 'password'
-    user.last_name = Faker::Name.last_name
-    user.first_name = Faker::Name.first_name
-    user.middle_name = Faker::Name.middle_name
-    user.date_of_birth = Faker::Date.between(from: '2014-09-23', to: '2014-09-25')
-    user.phone = '08104663471'
-    user.address = Faker::Address.full_address
-    user.gender = Faker::Gender.binary_type
-    user.state = Faker::Address.state
-    user.nationality = Faker::Nation.nationality
-    user.LGA = Faker::Address.country_code_long
-    user.status = rand(1..3)
+    user = FactoryBot.create(:user)
 
     picture = Faker::Avatar.image
     picture_filename = File.basename(URI.parse(picture).path)
@@ -73,14 +53,13 @@ end
     user.profile_pic.attach(io: downloaded_picture, filename: picture_filename)
     user.save!
 
-    doctor = Doctor.new
-    doctor.hospital_address = Faker::Address.full_address
-    doctor.rate = rand(1.0..5.0)
-    doctor.available_time = Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
-    doctor.user_id = user.id
-    doctor.hospital_id = rand(1..10)
-    doctor.qualifications = 'M.B.B.S'
-    doctor.save!
+    doctor = FactoryBot.create(:doctor, user: user)
+    user.add_role :Doctor
+
+    DoctorsQualification.create(doctor: doctor, qualification_id: rand(1..5))
+    rating = FactoryBot.create(:doctor_rating, doctor: doctor, user: user)
+    rating.user.id = rand(1..60)
+    rating.save
     doctorsp = DoctorSpeciality.new
     doctorsp.speciality_id = rand(1..20)
     doctorsp.doctor_id = doctor.id
