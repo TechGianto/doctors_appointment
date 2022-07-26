@@ -1,3 +1,5 @@
+require 'open-uri'
+
 FactoryBot.define do
   factory :user do
     email { Faker::Internet.email }
