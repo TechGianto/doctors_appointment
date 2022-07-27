@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   root 'home#index'
+<<<<<<< HEAD
   controller :home do
     get :services, action: :services
     # get :services, path: 'our-services', action: :services
@@ -16,5 +17,11 @@ Rails.application.routes.draw do
   # resources :doctor, only: [:index, :show] do
   #   post :sack
   # end
+=======
+  get 'home/services'
+  controller :search do
+    get :search, action: :index
+  end
+>>>>>>> 29bba78 ()
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
