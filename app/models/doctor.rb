@@ -4,6 +4,7 @@ class Doctor < ApplicationRecord
   belongs_to :hospital, optional: true
   has_many :doctor_specialities, dependent: :destroy
   has_many :doctor_ratings, dependent: :destroy
+  has_many :patient_medications, dependent: :destroy
   has_many :appointments, dependent: :destroy
   has_many :doctors_qualifications, dependent: :destroy
   has_many :doctor_availabilities, dependent: :destroy
