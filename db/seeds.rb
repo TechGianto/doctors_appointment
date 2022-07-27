@@ -35,7 +35,7 @@ Qualification.find_or_create_by(name: 'F.M.S.A')
 Qualification.find_or_create_by(name: 'F.M.C.Ophth.')
 
 60.times do
-    user = FactoryBot.create(:user)
+    user = FactoryBot.create(:user, password: 'password')
 
     picture = Faker::Avatar.image
     picture_filename = File.basename(URI.parse(picture).path)
@@ -45,7 +45,7 @@ Qualification.find_or_create_by(name: 'F.M.C.Ophth.')
 end
 
 40.times do
-    user = FactoryBot.create(:user)
+    user = FactoryBot.create(:user, password: 'password')
 
     picture = Faker::Avatar.image
     picture_filename = File.basename(URI.parse(picture).path)
