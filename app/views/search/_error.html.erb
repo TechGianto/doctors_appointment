@@ -1,0 +1,27 @@
+<div class = "search-error-container container">
+    <div class = "row">
+        <div class = "col-12">
+            <h3> We’re sorry, we couldn’t find results for your search </h3> <br/>
+            <h4> Try to remove a filter, check your spelling or use a diffrent word </h4>
+        </div>
+    </div>
+
+    <div class = "search-error-info container">
+        <div class = "row">
+            <div class = "col-6">
+            <div class = "search-404">
+            </div>   
+            <p>We told Doggy to find your search, but he didn’t . 
+Instead he was busy sleeping. We pride ourselves on meeting expectations, so to make it up to you, we are going to fire Doggy.</p>
+                <div class = "btn-container">
+                 <%= link_to "Back to Search", new_user_registration_path , class: "btn btn-back-search" %>
+                  <%= link_to "Fire Doggy", new_user_registration_path , class: "btn btn-fire-dog" %>
+                </div>
+            </div>
+            <div class = "col-6">
+            </div>
+        </div>
+
+    </div>
+
+</div>

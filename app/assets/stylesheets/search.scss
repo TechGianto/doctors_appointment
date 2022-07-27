@@ -1,0 +1,76 @@
+@import "variables";
+
+.search-error-container {
+  font-family: "Open Sans";
+  font-style: normal;
+}
+
+.search-404 {
+  width: 111px;
+  height: 82px;
+  font-family: "Lora";
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.search-error-container h3 {
+  font-size: 36px;
+  line-height: 49px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.search-error-container h4 {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.search-error-info.container {
+  background-image: url("search/error.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 332px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.search-error-info p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #2b2b2b;
+  width: 339px;
+  height: 83px;
+}
+
+.btn-container {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.btn.btn-back-search {
+  background-color: $primary_purple;
+  border-color: $primary_purple;
+  color: $white;
+  margin: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  width: 140px;
+  height: 45px;
+}
+
+.btn.btn-fire-dog {
+  background-color: $white;
+  color: $primary_green_blue;
+  border-color: $primary_green_blue;
+  margin: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  width: 140px;
+  height: 45px;
+}

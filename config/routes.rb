@@ -4,10 +4,13 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   root 'home#index'
-
   controller :home do
     get :services, action: :services
     # get :services, path: 'our-services', action: :services
+  end
+
+  controller :search do
+    get :search, action: :index
   end
 
   # resources :doctor, only: [:index, :show] do
