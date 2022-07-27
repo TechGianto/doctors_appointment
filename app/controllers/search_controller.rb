@@ -1,11 +1,5 @@
 class SearchController < ApplicationController
-    before_action :index
+    before_action :require_login, only: [:index]
 
-  private
-
-        def index
-            if user_signed_in?
-                redirect_to new_user_session_path
-            end
-        end
+    def index; end
 end
