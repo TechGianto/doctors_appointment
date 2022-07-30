@@ -206,19 +206,3 @@
   background-color: $primary_green_blue !important;
   border: 0;
 }
-
-.filter-speciality::-webkit-scrollbar {
-  width: 10px;
-}
-
-.filter-speciality::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.filter-speciality::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-.filter-speciality::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
