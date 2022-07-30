@@ -137,6 +137,7 @@
   display: flex;
 }
 
+<<<<<<< HEAD
 .filter-icon {
   cursor: pointer;
 }
@@ -152,6 +153,8 @@
   border-radius: 5px;
 }
 
+=======
+>>>>>>> 431c1aa (search sidebar filter)
 .filter-text {
   width: 53px;
   height: 27px;
@@ -159,6 +162,7 @@
   font-size: 20px;
   line-height: 27px;
   color: $black;
+<<<<<<< HEAD
   margin-left: 1px;
   text-align: center;
   padding-top: 5px;
@@ -174,6 +178,8 @@
   height: 27px;
   font-weight: 700;
   color: $black;
+=======
+>>>>>>> 431c1aa (search sidebar filter)
   margin-left: 10px;
 }
 
@@ -236,3 +242,22 @@
   background-color: $primary_green_blue !important;
   border: 0;
 }
+<<<<<<< HEAD
+=======
+
+.filter-speciality::-webkit-scrollbar {
+  width: 10px;
+}
+
+.filter-speciality::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.filter-speciality::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.filter-speciality::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+>>>>>>> 431c1aa (search sidebar filter)
