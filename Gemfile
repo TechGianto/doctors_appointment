@@ -109,3 +109,4 @@ gem 'rolify'
 gem "webpacker", "~> 5.4"
 
 gem "react_on_rails", "= 12.0.4"
+gem "mini_racer", platforms: :ruby
