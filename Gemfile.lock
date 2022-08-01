@@ -130,6 +130,9 @@ GEM
     importmap-rails (1.1.2)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    inline_svg (1.8.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     interception (0.5)
     io-console (0.5.11)
     irb (1.4.1)
@@ -415,6 +418,7 @@ DEPENDENCIES
   fakeredis
   image_processing (~> 1.2)
   importmap-rails
+  inline_svg (~> 1.8)
   jbuilder
   jquery-rails
   mini_racer
