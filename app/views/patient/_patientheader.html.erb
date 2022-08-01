@@ -1,0 +1,62 @@
+<nav class=" navbar navbar-expand-xl sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-center" href=<%=root_path%> ><%=image_tag('header_svgs/logo.svg', alt: "logo", class: "main-logo") %> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse nav-bar-destop navbar-collapse" id="navbarTogglerDemo01" >
+        <div class="d-flex ms-auto justify-content-center align-items-center">
+            <%#= link_to "Sign Out", destroy_user_session_path , method: :delete , class: "btn auth-btn register-btn" %>
+            <div class="notification">
+              <%= image_tag("patient_svgs/bell.svg", alt: "bell icon", class: "patient-nav-icon") %>
+              <span class="position-absolute translate-middle bg-success rounded-circle circle">
+                1
+              </span>
+            </div>
+            <div class="notification">
+              <%= image_tag("patient_svgs/notification.svg", alt: "notification icon", class: "patient-nav-icon") %>
+              <span class="position-absolute translate-middle bg-success rounded-circle circle">
+                2
+              </span>
+            </div>
+            <div class="dropdown">
+              <div class="dropdown-toggle display" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= image_tag("patient_svgs/profile.svg", alt: "profile icon", class: "profile-nav-icon") %>
+                <div class="patient-profile-info">
+                  <h2 class="name-text"> Wasiu Tiamiyu </h2>
+                  <h4 class="role-text"> patient </h4>
+                </div>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+        <div>
+    </div>
+  
+    <div class=" nav-item mobile-path">
+        <div class = "search-container">
+          <%= image_tag("header_svgs/search.svg", alt: "search", class: "search-icon mobile-icon")%>
+        </div>
+        <% if user_signed_in? %>
+          <a href= <%= destroy_user_session_path %> class="mobile-login-btn">
+            <%= image_tag("header_svgs/user-logout.svg", alt: "user", class: "auth-user-icon ") %>
+            <h3 class="signout">SignOut</h3>
+          </a>
+        <% else %>
+          <a href= <%= new_user_session_path%> class="mobile-login-btn">
+            <%= image_tag("header_svgs/green-user.svg", alt: "user", class: "auth-user-icon ") %>
+            <h3 class="mobile-icon">Login</h3>
+          </a>
+          <a href= <%= new_user_registration_path %> class="mobile-register-btn">
+            <%= image_tag("header_svgs/purple-user.svg", alt: "user", class: "auth-user-icon") %>
+            <h3 class="mobile-icon">Register</h3>
+          </a>
+        <% end %>
+      </div>
+    </div>
+</nav>
+  
+  
