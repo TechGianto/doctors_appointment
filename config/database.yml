@@ -88,4 +88,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  database: doctors_appointment_production
+  username: doctors_appointment
+  password: <%= ENV["DOCTORS_APPOINTMENT_DATABASE_PASSWORD"] %>
