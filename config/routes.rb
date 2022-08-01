@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -7,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
   controller :home do
     get :services, action: :services
+    get :hello, action: :test
     # get :services, path: 'our-services', action: :services
   end
 
