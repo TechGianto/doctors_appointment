@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
   controller :home do
     get :services, action: :services
+    get :hello, action: :test
     # get :services, path: 'our-services', action: :services
   end
 
