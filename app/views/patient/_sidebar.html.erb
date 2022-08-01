@@ -2,8 +2,8 @@
     <div class="user-info">
         <%= image_tag("patient_svgs/profile.svg", alt: "profile icon", class: "sidebar-image") %>
         <div class="patient-profile-info">
-            <h2 class="name-text sidebar text-one"> Wasiu Tiamiyu Oladimeji </h2>
-            <h4 class="role-text sidebar text-two"> ID: 1234567 </h4>
+            <h2 class="name-text sidebar text-one"> <%= current_user.name %> </h2>
+            <h4 class="role-text sidebar text-two"> <%= current_user.id %> </h4>
         </div>
     </div>
     <div class="sidebar-menu">
