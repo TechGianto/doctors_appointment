@@ -1,0 +1,139 @@
+@import "variables";
+
+.section-special-doctors {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h1 {
+  font-family: "Lora", sans-serif;
+  color: $primary_purple;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+
+.section-sub-heading {
+  width: 550px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27px;
+  align-items: center;
+}
+
+.card {
+  margin-top: 10px;
+  border: 0 transparent !important;
+}
+
+.doctor-cards {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.heart-icon {
+  top: 10%;
+  right: 10%;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+}
+
+.doctor-rating {
+  display: flex;
+}
+
+.doctor-info h4 {
+  font-weight: 600;
+}
+
+.doctor-info h6 {
+  font-weight: 400;
+  color: #595959;
+}
+
+.doctor-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+  line-height: 27px;
+}
+
+.doctor-stars h6 {
+  color: #595959;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.doctor-hospital {
+  display: flex;
+  align-items: center;
+  line-height: 27px;
+}
+
+.doctor-hospital h6 {
+  color: #595959;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .section-special-doctors {
+    margin-top: 80px;
+  }
+
+  .section-heading {
+    margin-bottom: 0;
+  }
+
+  .section-heading h1 {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 0;
+    font-family: "Open Sans";
+    line-height: 2.056rem;
+    text-align: center;
+  }
+
+  .section-sub-heading {
+    width: 290px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .doctor-cards {
+    display: flex;
+  }
+
+  .doctor-slider {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slic-slider {
+    display: flex;
+  }
+}

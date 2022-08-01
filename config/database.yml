@@ -24,15 +24,19 @@ default: &default
 development:
   <<: *default
   database: doctors_appointment_development
+  username: <%= ENV["DBUSERNAME"] %>
+  password: <%= ENV["DBPASSWORD"] %>
+  host: <%= ENV["DBHOST"] %>
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: doctors_appointment
+  # username: doctors_appointment
 
   # The password associated with the postgres role (username).
-  #password:
+  # password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -58,8 +62,10 @@ development:
 test:
   <<: *default
   database: doctors_appointment_test
-  # username: postgres
-  #password: password
+  username: <%= ENV["DBUSERNAME"] %>
+  password: <%= ENV["DBPASSWORD"] %>
+  host: <%= ENV["DBHOST"] %>
+  port: 5432
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -82,6 +88,4 @@ test:
 #
 production:
   <<: *default
-  database: doctors_appointment_production
-  username: doctors_appointment
-  password: <%= ENV["DOCTORS_APPOINTMENT_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
