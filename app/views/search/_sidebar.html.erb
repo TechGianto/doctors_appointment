@@ -33,7 +33,7 @@
             <div class="p-2">
                 <% @specialities.each do |speciality| %>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<%= speciality.name %>" id=<%=speciality.name.delete( " ") %>>
+                        <input class="form-check-input" type="checkbox" value="<%= speciality.name %>" id="<%=speciality.name.delete( " ") %>">
                         <label class="form-check-label" for="<%= speciality.name.delete( " ") %>">
                   <%= speciality.name %>
                 </label>
@@ -48,7 +48,7 @@
             <div class="p-2">
                 <% @user_qualifications.each do |userqualification| %>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<%= userqualification.name %>" id=<%=u serqualification.name %>>
+                        <input class="form-check-input" type="checkbox" value="<%= userqualification.name %>" id="<%=userqualification.name %>">
                         <label class="form-check-label" for="<%= userqualification.name %>">
                   <%= userqualification.name %>
                 </label>
