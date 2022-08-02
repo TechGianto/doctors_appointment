@@ -32,4 +32,14 @@ $(document).ready(function(){
         }
       ]
     });;
+
+    $('.filter-icon').click(function(){
+      $('#sidebar-toggle').removeClass("col-3")
+      document.getElementById('search-sidebar').style.visibility = 'hidden'
+      document.getElementById('search-filter').style.background = 'transparent'
+      $('#sidebar-toggle').addClass("col-1")
+      $('#filter-wrap').addClass('filter-wrap-toggle')
+      $('#filter-text').removeClass("filter-text")
+      $('#filter-text').addClass("filter-text-toggle")
+    });
   });

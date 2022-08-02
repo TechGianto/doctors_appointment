@@ -137,12 +137,37 @@
   display: flex;
 }
 
+.filter-icon {
+  cursor: pointer;
+}
+
+.filter-icon-container {
+  background-color: $white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .filter-text {
   width: 53px;
   height: 27px;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
+  color: $black;
+  margin-left: 1px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.filter-wrap-toggle {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.filter-text-toggle {
+  font-size: 15px;
+  height: 27px;
+  font-weight: 700;
   color: $black;
   margin-left: 10px;
 }

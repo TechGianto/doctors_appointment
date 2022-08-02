@@ -1,29 +1,29 @@
-<div class="search-sidebar d-flex flex-column flex-shrink-0">
-    <div class='search-filter'>
-        <div class="filter-wrap">
-            <div>
-                <%=image_tag('search/filter-icon.svg', alt: "filter icon") %>
+<div class="search-sidebar d-flex flex-column flex-shrink-0" >
+    <div class='search-filter' id="search-filter">
+        <div class="filter-wrap" id="filter-wrap">
+            <div class="filter-icon-container">
+                <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon") %>
             </div>
-            <div class="filter-text">
+            <div class="filter-text" id="filter-text">
                 Filter
             </div>
         </div>
     </div>
 
-    <%=  form_with html: {class: 'filter-form' } do |form|  %>
+    <%=  form_with html: {class: 'filter-form', id: 'search-sidebar' } do |form|  %>
         <h6>State</h6>
         <select class="form-select filter-form-select" aria-label="Default select example">
               <option selected>Select state</option>
-              <% @user_state.each do |userstate| %>
-              <option value="<%= "#{userstate.state}" %>"><%= userstate.state %></option>
+              <% @user_states.each do |userstate| %>
+              <option value="<%=  userstate.state  %>"><%= userstate.state %></option>
               <% end %>
         </select>
 
         <h6>Region</h6>
         <select class="form-select filter-form-select" aria-label="Default select example">
               <option selected>Select region</option>
-              <% @user_region.each do |userregion| %>
-              <option value="<%= "#{userregion.LGA}" %>"><%= userregion.LGA%></option>
+              <% @user_regions.each do |userregion| %>
+              <option value="<%= userregion.LGA  %>"><%= userregion.LGA%></option>
               <% end %>
         </select>
 
@@ -31,10 +31,10 @@
         <div class='filter-speciality'>
             <input type="text" placeholder="Search speciliality" class='header form-control'>
             <div class="p-2">
-                <% @speciality.each do |speciality| %>
+                <% @specialities.each do |speciality| %>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<%= " #{speciality.name} " %>" id=<%="#{speciality.name.delete(" ")}" %>>
-                        <label class="form-check-label" for="<%= " #{speciality.name.delete( " ")} " %>">
+                        <input class="form-check-input" type="checkbox" value="<%= speciality.name %>" id=<%= speciality.name.delete(" ")  %>>
+                        <label class="form-check-label" for="<%= speciality.name.delete( " ") %>">
                   <%= speciality.name %>
                 </label>
                     </div>
@@ -46,10 +46,10 @@
         <div class='filter-speciality'>
             <input type="text" placeholder="Search qualification" class='header form-control'>
             <div class="p-2">
-                <% @user_qualification.each do |userqualification| %>
+                <% @user_qualifications.each do |userqualification| %>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<%= " #{userqualification.name} " %>" id=<%="#{userqualification.name}" %>>
-                        <label class="form-check-label" for="<%= " #{userqualification.name} " %>">
+                        <input class="form-check-input" type="checkbox" value="<%= userqualification.name %>" id=<%= userqualification.name  %>>
+                        <label class="form-check-label" for="<%= userqualification.name %>">
                   <%= userqualification.name %>
                 </label>
                     </div>
