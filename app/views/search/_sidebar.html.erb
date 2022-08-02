@@ -1,4 +1,4 @@
-<div class="search-sidebar d-flex flex-column flex-shrink-0" >
+<div class="search-sidebar d-flex flex-column flex-shrink-0">
     <div class='search-filter' id="search-filter">
         <div class="filter-wrap" id="filter-wrap">
             <div class="filter-icon-container">
@@ -33,7 +33,7 @@
             <div class="p-2">
                 <% @specialities.each do |speciality| %>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<%= speciality.name %>" id=<%= speciality.name.delete(" ")  %>>
+                        <input class="form-check-input" type="checkbox" value="<%= speciality.name %>" id=<%=s peciality.name.delete( " ") %>>
                         <label class="form-check-label" for="<%= speciality.name.delete( " ") %>">
                   <%= speciality.name %>
                 </label>
@@ -48,7 +48,7 @@
             <div class="p-2">
                 <% @user_qualifications.each do |userqualification| %>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<%= userqualification.name %>" id=<%= userqualification.name  %>>
+                        <input class="form-check-input" type="checkbox" value="<%= userqualification.name %>" id=<%=u serqualification.name %>>
                         <label class="form-check-label" for="<%= userqualification.name %>">
                   <%= userqualification.name %>
                 </label>
