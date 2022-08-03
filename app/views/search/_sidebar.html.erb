@@ -1,8 +1,9 @@
 <div class="search-sidebar d-flex flex-column flex-shrink-0">
     <div class='search-filter' id="search-filter">
         <div class="filter-wrap" id="filter-wrap">
-            <div class="filter-icon-container">
+            <div class="filter-icon-container" id="filter-icon-container">
                 <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon") %>
+                <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon-expand") %>
             </div>
             <div class="filter-text" id="filter-text">
                 Filter
@@ -10,7 +11,7 @@
         </div>
     </div>
 
-    <%=  form_with html: {class: 'filter-form', id: 'search-sidebar' } do |form|  %>
+    <%=  form_with html: {class: 'filter-form', id: 'search-sidebar-form' } do |form|  %>
         <h6>State</h6>
         <select class="form-select filter-form-select" aria-label="Default select example">
               <option selected>Select state</option>
