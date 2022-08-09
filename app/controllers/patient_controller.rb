@@ -1,6 +1,6 @@
 class PatientController < ApplicationController
-  before_action :require_login, only: [:test]
+  before_action :require_login, only: [:index]
   layout 'patient'
 
-  def index;end
+  def index; end
 end

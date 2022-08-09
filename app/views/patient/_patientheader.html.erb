@@ -23,8 +23,8 @@
               <div class="dropdown-toggle display" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 <%= image_tag("patient_svgs/profile.svg", alt: "profile icon", class: "profile-nav-icon") %>
                 <div class="patient-profile-info">
-                  <h2 class="name-text"> <%= current_user.name %> </h2>
-                  <h4 class="role-text"> <%= current_user.role %> </h4>
+                  <h2 class="name-text"> <%= current_user.first_name %> </h2>
+                  <h4 class="role-text"> <%= current_user.roles[0].name %> </h4>
                 </div>
               </div>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
