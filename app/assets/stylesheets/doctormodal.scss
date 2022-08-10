@@ -16,6 +16,21 @@
     background: none;
   }
 
+  .about-doctor {
+    font-size: 36px;
+    font-weight: 400;
+    color: #814a95;
+    line-height: 49px;
+    margin-bottom: 32px;
+  }
+
+  .location {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #595959;
+  }
+
   .model-container {
     width: 80%;
     background-color: #fff;
@@ -114,22 +129,6 @@
         flex-direction: column;
       }
 
-      .left {
-        margin-right: 30px;
-
-        .location {
-          width: 242px;
-        }
-
-        .biography {
-          & > div {
-            .location {
-              width: 265px;
-            }
-          }
-        }
-      }
-
       .right {
         width: 100%;
 
@@ -159,6 +158,22 @@
 
         .location {
           font-size: 20px;
+        }
+      }
+
+      .left {
+        margin-right: 30px;
+
+        .location {
+          width: 242px;
+        }
+
+        .biography {
+          & > div {
+            .location {
+              width: 265px;
+            }
+          }
         }
       }
     }
@@ -289,21 +304,6 @@
         }
       }
     }
-  }
-
-  .about-doctor {
-    font-size: 36px;
-    font-weight: 400;
-    color: #814a95;
-    line-height: 49px;
-    margin-bottom: 32px;
-  }
-
-  .location {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #595959;
   }
 }
 
