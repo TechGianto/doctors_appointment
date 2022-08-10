@@ -53,6 +53,13 @@
   @include viewdisplay();
 }
 
+.profile-nav-pic {
+  width: 56px;
+  height: 56px;
+  border-radius: 30px;
+  margin-right: 16px;
+}
+
 /* Sidebar css disign */
 
 .side-bar {
@@ -101,6 +108,7 @@
   flex-direction: column;
   justify-content: center;
   color: #898989;
+  border-right: 1px solid #898989;
 }
 
 .menu-head {
@@ -186,7 +194,7 @@
 .patient-search-options {
   display: flex;
   border-radius: 16px;
-  width: 100%;
+  width: 80%;
   align-items: center;
 }
 
@@ -196,12 +204,14 @@
   flex: 4.5;
   padding: 0.4rem;
   border: 1px solid black;
+  box-shadow: 0 0 4px 0.1px #898989;
 
   @include viewdisplay(center, space-between);
 }
 
 .end {
   border-radius: 16px 0 0 16px;
+  box-shadow: 0 0 4px 0.1px #898989;
 }
 
 .search-design.end {
@@ -219,6 +229,7 @@
   padding: 0.4rem;
   flex: 5.5;
   border: 1px solid #000;
+  box-shadow: 0 0 4px 0.1px #898989;
 
   .form-control {
     border: none;
@@ -228,6 +239,7 @@
 .submit-btn {
   flex: 1;
   border-radius: 0 16px 16px 0;
+  box-shadow: 0 0 4px 0.1px #898989;
   background-color: #814a95;
   padding: 13.7px;
 }
@@ -243,10 +255,11 @@
 .form-select .speciality {
   flex: 3;
   border-radius: 16px 0 0 16px;
+  box-shadow: 0 0 4px 0.1px #898989;
 }
 
 .greeting {
-  width: 100%;
+  width: 80%;
   margin-top: 48px;
 
   h1 {
@@ -265,25 +278,31 @@
 }
 
 .appointment-activities {
-  width: 100%;
+  width: 80%;
 
-  @include viewdisplay(flex-start, space-between);
+  @include viewdisplay(center, space-between);
 }
 
 .appointment {
   flex-direction: column;
+  justify-content: space-between;
+  align-self: start;
+  width: 50%;
 
   @include viewdisplay(flex-start);
 
   h2 {
     margin-top: 48px;
     margin-bottom: 16px;
+    color: #814a95;
   }
 }
 
 .appointment-info {
   border: 1px dashed #000;
   flex-direction: column;
+  width: 90%;
+  box-shadow: 0 0 4px 0.1px #898989;
 
   @include viewdisplay();
 
@@ -295,8 +314,8 @@
   }
 
   .info-icon {
-    width: 253px;
-    height: 172px;
+    width: 60%;
+    height: 60%;
     margin-top: 43px;
   }
 
@@ -313,18 +332,22 @@
 
 .activities {
   flex-direction: column;
+  width: 45%;
 
   @include viewdisplay(flex-start);
 
   h2 {
     margin-top: 48px;
     margin-bottom: 16px;
+    color: #814a95;
   }
 }
 
 .activity-info {
   border: 1px dashed #000;
   flex-direction: column;
+  width: 100%;
+  box-shadow: 0 0 4px 0.1px #898989;
 
   @include viewdisplay();
 
@@ -332,12 +355,11 @@
     width: 392px;
     font-size: 20px;
     text-align: center;
-    padding: 89px 77px 0 90px;
+    padding: 89px 77px 20px 90px;
   }
 
   .info-icon {
-    width: 327px;
-    height: 232px;
+    width: 75%;
     margin-top: 39px;
   }
 
@@ -350,69 +372,82 @@
 }
 
 .health {
-  width: 100%;
+  width: 80%;
 
-  @include viewdisplay(flex-start, space-between);
+  @include viewdisplay(center, space-between);
 }
 
 .medications {
   flex-direction: column;
+  width: 50%;
 
   @include viewdisplay(flex-start);
 
   h2 {
     margin-top: 44px;
     margin-bottom: 16px;
+    color: #814a95;
   }
 }
 
 .medication-info {
   border: 1px dashed #000;
   flex-direction: column;
+  width: 90%;
+  box-shadow: 0 0 4px 0.1px #898989;
 
   @include viewdisplay();
 
   h4 {
-    padding: 47px 137px 0 108px;
+    padding: 47px 137px 5px 108px;
     width: 438px;
     font-size: 20px;
     text-align: center;
   }
 
   .info-icon {
-    width: 242px;
-    height: 242px;
+    width: 60%;
+    height: 60%;
     margin-top: 10px;
-    margin-bottom: 45px;
+    margin-bottom: 64px;
   }
 }
 
 .vitals {
   flex-direction: column;
+  width: 45%;
 
   @include viewdisplay(flex-start);
 
   h2 {
     margin-top: 44px;
     margin-bottom: 16px;
+    color: #814a95;
   }
 }
 
 .vitals-info {
   background-color: #fbfbfb;
   border-radius: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  @include viewdisplay(center, space-around);
 }
 
 .vitals-info-one {
+  margin: 6% 4% 4%;
   display: flex;
-  margin: 26px 29px 0 24px;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .vital-one {
   flex-direction: column;
-  margin-right: 24px;
   border-radius: 16px;
   background-color: #c01b4d;
+  width: 42%;
 
   @include viewdisplay();
 
@@ -421,7 +456,7 @@
   }
 
   h4 {
-    padding: 0 10px 45px 11px;
+    padding: 0 10px 29px 11px;
     color: #fff;
     font-size: 10px;
   }
@@ -431,6 +466,7 @@
   flex-direction: column;
   border-radius: 16px;
   background-color: #e346be;
+  width: 42%;
 
   @include viewdisplay();
 
@@ -439,7 +475,7 @@
   }
 
   h4 {
-    padding: 0 10px 45px 11px;
+    padding: 0 10px 29px 11px;
     color: #fff;
     font-size: 10px;
   }
@@ -450,6 +486,7 @@
   border-radius: 16px;
   margin-right: 24px;
   background-color: #d4af37;
+  width: 42%;
 
   @include viewdisplay();
 
@@ -458,7 +495,7 @@
   }
 
   h4 {
-    padding: 0 10px 45px 11px;
+    padding: 0 10px 29px 11px;
     color: #fff;
     font-size: 10px;
   }
@@ -468,6 +505,7 @@
   flex-direction: column;
   border-radius: 16px;
   background-color: #637ec9;
+  width: 42%;
 
   @include viewdisplay();
 
@@ -476,7 +514,7 @@
   }
 
   h4 {
-    padding: 0 10px 45px 11px;
+    padding: 0 10px 29px 11px;
     color: #fff;
     font-size: 10px;
   }
@@ -484,11 +522,13 @@
 
 .vitals-info-two {
   display: flex;
-  margin: 24px 29px 24px 24px;
+  margin: 4% 4% 6%;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .billings {
-  width: 100%;
+  width: 80%;
   flex-direction: column;
 
   @include viewdisplay(flex-start, center);
@@ -496,6 +536,7 @@
   h2 {
     margin-top: 44px;
     margin-bottom: 24px;
+    color: #814a95;
   }
 }
 
@@ -503,17 +544,19 @@
   border: 1px dashed #000;
   width: 100%;
   margin-bottom: 97px;
+  box-shadow: 0 0 4px 0.1px #898989;
 
   @include viewdisplay();
 
   h4 {
     width: 238px;
     text-align: center;
+    margin-left: 15%;
   }
 }
 
 .billing-icon {
-  width: 317px;
+  width: 50%;
   height: 255px;
   margin: 43px 0 51px;
 }

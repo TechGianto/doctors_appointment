@@ -21,7 +21,7 @@
             </div>
             <div class="dropdown">
               <div class="dropdown-toggle display" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <%= image_tag("patient_svgs/profile.svg", alt: "profile icon", class: "profile-nav-icon") %>
+                <%= image_tag(current_user.profile_pic, alt: "profile icon", class: "profile-nav-pic") %>
                 <div class="patient-profile-info">
                   <h2 class="name-text"> <%= current_user.first_name %> </h2>
                   <h4 class="role-text"> <%= current_user.roles[0].name %> </h4>
