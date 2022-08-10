@@ -11,7 +11,9 @@
 }
 
 /* This container is for create account */
+
 /* main body */
+
 .form-container {
   display: flex;
   width: 100%;
@@ -69,9 +71,6 @@
   background-size: 16px 12px;
   border: 1px solid #0000;
   border-radius: 0.24rem;
-  /* transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; *
-  -webkit-appearance: none;
-  -moz-appearance: none;  */
   appearance: none;
 }
 
@@ -146,7 +145,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
-  /* identical to box height */
   color: #ffff;
   text-decoration: none;
   display: inline;
