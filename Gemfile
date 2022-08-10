@@ -58,6 +58,13 @@ gem 'bootsnap', require: false
 
 gem 'faker'
 
+gem 'factory_bot_rails', '~> 6.2'
+gem 'pry-byebug'
+gem 'pry-rescue'
+gem 'fakeredis'
+gem 'pry'
+gem 'pry-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -69,17 +76,11 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
-  gem 'factory_bot_rails', '~> 6.2'
-  gem 'pry-byebug'
-  gem 'pry-rescue'
   gem 'rspec-rails'
   gem 'rubocop', '~> 1.27.0', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'faker'
-  gem 'fakeredis'
-  gem 'pry'
 end
 
 group :test do
@@ -92,7 +93,6 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'pry-rails'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
