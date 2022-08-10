@@ -6,13 +6,11 @@
             </div>
             <div class='col-9' id="search-main">
                 <%= render "search/error" %>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
             </div>
         </div>
-
     </div>
-<%= render "search/error" %>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-</button>
 <%= render 'home/dotormodal'%>
 <%= render "home/footer" %>
