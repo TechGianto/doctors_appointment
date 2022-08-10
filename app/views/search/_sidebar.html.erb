@@ -1,0 +1,68 @@
+<div class="search-sidebar d-flex flex-column flex-shrink-0">
+    <div class='search-filter' id="search-filter">
+        <div class="filter-wrap" id="filter-wrap">
+            <div class="filter-icon-container" id="filter-icon-container">
+                <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon") %>
+                <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon-expand") %>
+            </div>
+            <div class="filter-text" id="filter-text">
+                Filter
+            </div>
+        </div>
+    </div>
+
+    <%=  form_with html: {class: 'filter-form', id: 'search-sidebar-form' } do |form|  %>
+        <h6>State</h6>
+        <select class="form-select filter-form-select" aria-label="Default select example">
+              <option selected>Select state</option>
+              <% @user_states.each do |userstate| %>
+              <option value="<%=  userstate.state  %>"><%= userstate.state %></option>
+              <% end %>
+        </select>
+
+        <h6>Region</h6>
+        <select class="form-select filter-form-select" aria-label="Default select example">
+              <option selected>Select region</option>
+              <% @user_regions.each do |userregion| %>
+              <option value="<%= userregion.LGA  %>"><%= userregion.LGA%></option>
+              <% end %>
+        </select>
+
+        <h6>Speciality</h6>
+        <div class='filter-speciality'>
+            <input type="text" placeholder="Search speciliality" class='header form-control'>
+            <div class="p-2">
+                <% @specialities.each do |speciality| %>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="<%= speciality.name %>" id="<%=speciality.name.delete( " ") %>">
+                        <label class="form-check-label" for="<%= speciality.name.delete( " ") %>">
+                  <%= speciality.name %>
+                </label>
+                    </div>
+                    <% end %>
+            </div>
+        </div>
+
+        <h6>Qualification</h6>
+        <div class='filter-speciality'>
+            <input type="text" placeholder="Search qualification" class='header form-control'>
+            <div class="p-2">
+                <% @user_qualifications.each do |userqualification| %>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="<%= userqualification.name %>" id="<%=userqualification.name %>">
+                        <label class="form-check-label" for="<%= userqualification.name %>">
+                  <%= userqualification.name %>
+                </label>
+                    </div>
+                    <% end %>
+            </div>
+        </div>
+
+        <h6>Gender</h6>
+        <select class="form-select filter-form-select" aria-label="Default select example">
+              <option selected>Select Gender</option>
+             <option value="Male">Male</option>
+             <option value="Female">Female</option>    
+        </select>
+        <% end %>
+</div>

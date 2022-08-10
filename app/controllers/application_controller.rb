@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
         end
     end
 
-  def user
-    current_user
-  end
+    def user
+      current_user
+    end
 end

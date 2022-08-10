@@ -1,1 +1,13 @@
-<%= render "search/error" %>
+<%= render "search_header" %>
+    <div class='search-container container'>
+        <div class='row search-row'>
+            <div class='col-3' id="sidebar-toggle">
+                <%= render "sidebar" %>
+            </div>
+            <div class='col-9' id="search-main">
+                <%= render "search/error" %>
+            </div>
+        </div>
+
+    </div>
+    <%= render "home/footer" %>
