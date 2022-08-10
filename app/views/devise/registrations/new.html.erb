@@ -6,40 +6,36 @@
              Create an account to get started. </p>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
-
     <div class="row">
       <div class="col form-group">
         <%= f.label :first_name %>
-       <%= f.email_field :first_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"First Name" %>
+       <%= f.text_field :first_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"First Name" %>
       </div>	
       <div class="col form-group">
         <%= f.label :last_name %>
-       <%= f.email_field :last_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Last Name" %>
+       <%= f.text_field :last_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Last Name" %>
       </div>	
     </div>
-
+    <div class="row">
+      <div class="col form-group">
+        <%= f.label :Email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Email" %>
+      </div>
+    </div>
     <div class="row">
       <div class="col form-group">
         <%= f.label :Phone %>
-       <%= f.email_field :phone, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Phone" %>
-      </div>	
+       <%= f.text_field :phone, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Phone" %>
+      </div>
       <div class="col form-group">
-        <%= f.label :Email %>
-       <%= f.email_field :email, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Email" %>
+        <%= f.label :Gender %>
+        <select class="form-select form-select form-control input-fill" aria-label=".form-select-lg example" id = "select-gender">
+          <option class="select" >Gender</option>
+          <option class="email" value="Female" >Female</option>
+          <option class="email" value="Male">Male</option>
+        </select>
       </div>	
     </div>
-
-    <div class="row">
-      <div class="col form-group">
-       <%= f.label :Gender %>
-       <select class="form-select form-select-lg mb-3 form-control input-fill" aria-label=".form-select-lg example" id = "select-gender">
-         <option class="select" >Select</option>
-         <option class="email">Female</option>
-         <option class="email">Male</option>
-       </select>
-       </div>
- </div>
-
 
     <div class="row">
     <div class="col form-group">
@@ -54,33 +50,28 @@
     <div class="actions">
      <%= f.submit "Create an Account", class: "button-log"%>
    </div>
-
    <div class = "text-or">
     <h5 class ="or-move">
        <span class = "or">Or</span>
     </h5>
     </div>
-    
+
     <div class = "shift-google">
-    <button type="button" class="button-log_google">
-      <%= image_submit_tag("google_login/google_logo.svg") %> Login with Google
-    </button>
-    </div>
-    
-    <div class = "shift-facebook">
-    <button type="button" class="button-log_google">
-      <%= image_submit_tag("google_login/fac_logo.svg") %> Login with Facebook
-    </button>
-    </div>
-    
+  <a class="button-log-google password-link" href="<%= user_google_omniauth_authorize_path%>">
+    <%= image_submit_tag("google_login/google_logo.svg") %> <span>Login with Google</span>
+  </a>
+</div>
+
+
+<div class = "shift-facebook">
+  <a  class="button-log-google password-link" href="<%= user_facebook_omniauth_authorize_path%>" >
+    <%= image_submit_tag("google_login/fac_logo.svg") %> <span>Login with Facebook</span>
+  </a>
+</div>
    <% end %>
 
 </div>
 <div class = "link-account">
-  <p class ="have-account">Already have an account? </p>
-  <%= link_to "Log in", new_session_path(resource_name),class: "account-login" %>
+  <%= link_to "Already have an account? Log in", new_session_path(resource_name),class: "account-login" %>
   </div>
-</div>
-
-</div>
 </div>
