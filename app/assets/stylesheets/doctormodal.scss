@@ -41,7 +41,7 @@
       width: 409px;
       margin-right: 68px;
 
-      .doctor_image {
+      .doctor-image {
         border: 4px solid #d4af37;
         border-radius: 16px 16px 0 0;
         width: 398px;
@@ -50,7 +50,7 @@
         padding: 11px 7px;
       }
 
-      .doctor_star-container {
+      .doctor-star-container {
         width: 100%;
         height: 40px;
         display: flex;
@@ -70,14 +70,13 @@
           margin-left: 20px;
         }
 
-        &>div {
-          display: flex;
+        & > div {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 100%;
 
-          .doctor_star {
+          .doctor-star {
             width: 14px;
             height: 16px;
             object-fit: cover;
@@ -90,7 +89,7 @@
     .doctor-name {
       h1 {
         font-size: calc(32px + (100vw/44));
-        font-family: 'Lora';
+        font-family: "Lora";
         font-weight: 700;
         line-height: 82px;
       }
@@ -194,7 +193,6 @@
         background-color: #c01b4d;
         color: #fff;
         border-radius: 16px;
-
       }
     }
 
@@ -205,7 +203,7 @@
       margin-bottom: 128px;
       gap: 14px;
 
-      &>h1 {
+      & > h1 {
         font-size: 20px;
         font-weight: 600;
       }
@@ -240,7 +238,7 @@
           align-items: center;
           justify-content: space-around;
 
-          .doctor_star {
+          .doctor-star {
             width: 14px;
             height: 14px;
           }
@@ -296,7 +294,7 @@
   .about-doctor {
     font-size: 36px;
     font-weight: 400;
-    color: #814A95;
+    color: #814a95;
     line-height: 49px;
     margin-bottom: 32px;
   }
@@ -322,5 +320,4 @@
       border: none !important;
     }
   }
-
 }
