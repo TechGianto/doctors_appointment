@@ -21,7 +21,11 @@
             </div>
             <div class="dropdown">
               <div class="dropdown-toggle display" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <%= image_tag(current_user.profile_pic, alt: "profile icon", class: "profile-nav-pic") %>
+                <% if current_user.profile_pic.attached? %>
+                  <%= image_tag(current_user.profile_pic, alt: "profile icon", class: "profile-nav-pic") %>
+                <% else %>
+                  <%= inline_svg_tag "patient_svgs/human.svg", alt: "search icon", class: "profile-nav-pic" %>
+                <% end %>
                 <div class="patient-profile-info">
                   <h2 class="name-text"> <%= current_user.first_name %> </h2>
                   <h4 class="role-text"> <%= current_user.roles[0].name %> </h4>

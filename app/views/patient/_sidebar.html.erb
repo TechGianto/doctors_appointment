@@ -1,6 +1,10 @@
 <div class="side-bar">
     <div class="user-info">
-        <%= image_tag(current_user.profile_pic, alt: "profile icon", class: "sidebar-image") %>
+        <% if current_user.profile_pic.attached? %>
+            <%= image_tag(current_user.profile_pic, alt: "profile icon", class: "sidebar-image") %>
+        <% else %>
+            <%= inline_svg_tag "patient_svgs/human.svg", alt: "search icon", class: "sidebar-image" %>
+        <% end %>
         <div class="patient-profile-info">
             <h2 class="name-text sidebar text-one"> <%= current_user.first_name %> </h2>
             <h4 class="role-text sidebar text-two"> ID: <%= current_user.id %> </h4>
