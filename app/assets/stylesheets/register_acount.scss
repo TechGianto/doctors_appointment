@@ -31,7 +31,6 @@
 
 .container-login.register {
   height: 100%;
-  padding-right: 109px;
 }
 
 .submit-email {
@@ -40,4 +39,28 @@
 
 .password-link:hover {
   color: #000;
+}
+
+@media screen and (min-width: 1440px) {
+  .container-login {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-login {
+    width: 90%;
+  }
+
+  .row > .col.form-group {
+    flex: none;
+  }
+
+  .button-log {
+    padding: 10px 5px;
+  }
+
+  .button-log-google {
+    padding: 10px 5px;
+  }
 }
