@@ -1,0 +1,66 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@500&display=swap");
+
+/* Container for login */
+
+/* Main body that has green color */
+
+.form-container-login {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 97px);
+  background: $primary_green_blue;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-login {
+  width: 50%;
+  height: 100%;
+  border-radius: 16px;
+  background: $primary_white;
+  align-items: center;
+  padding: 0 50px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.container-login.register {
+  height: 100%;
+}
+
+.submit-email {
+  margin: 20px 0;
+}
+
+.password-link:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 1440px) {
+  .container-login {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-login {
+    width: 90%;
+  }
+
+  .row > .col.form-group {
+    flex: none;
+  }
+
+  .button-log {
+    padding: 10px 5px;
+  }
+
+  .button-log-google {
+    padding: 10px 5px;
+  }
+}

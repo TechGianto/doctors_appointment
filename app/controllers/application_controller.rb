@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :configure_sign_up_params, if: :devise_controller?
 
   private
 
@@ -10,5 +11,9 @@ class ApplicationController < ActionController::Base
 
     def user
       current_user
+    end
+
+    def configure_sign_up_params
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :password])
     end
 end

@@ -1,16 +1,32 @@
-<h2>Forgot your password?</h2>
 
+  <div class = "form-container-login ">
+    <div class = "container-login forgotten-password-form""> 
+    <h2 class = "login-login">Forgot your password?</h2>
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="col form-group">
+     <%= f.label :email %>
+     <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control input-fill" , placeholder:"Email" %>
+  </div>	
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class = "submit-email">
+    <button type="button" class="button-log">Send me reset password instructions
+      <%= f.submit "" %>
+    </button>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+<div class = "shift-google">
+  <button type="button" class="button-log-google">
+    <%=  link_to "Log in", new_session_path(resource_name), class: "reset-password password-link" %>
+  </button>
+</div>
+
+
+<div class = "shift-google">
+  <button type="button" class="button-log-google">
+    <%= link_to "Sign up", new_registration_path(resource_name), class: "reset-password password-link" %>
+  </button>
+</div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+</div>

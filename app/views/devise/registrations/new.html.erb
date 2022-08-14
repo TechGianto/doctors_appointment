@@ -1,29 +1,77 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class = "form-container" >
+   <div class = "container-login register"> 
+    <h4 class = "login-login text">Create An account</h4>
+     <p class = "welcome-message text"> Welcome to the future of swift medical consultation.
+             Create an account to get started. </p>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="row">
+      <div class="col form-group">
+        <%= f.label :first_name %>
+       <%= f.text_field :first_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"First Name" %>
+      </div>	
+      <div class="col form-group">
+        <%= f.label :last_name %>
+       <%= f.text_field :last_name, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Last Name" %>
+      </div>	
+    </div>
+    <div class="row">
+      <div class="col form-group">
+        <%= f.label :Email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Email" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col form-group">
+        <%= f.label :Phone %>
+       <%= f.text_field :phone, autofocus: true, autocomplete: "name",class: "form-control input-fill" , placeholder:"Phone" %>
+      </div>
+      <div class="col form-group">
+        <%= f.label :Gender %>
+        <select class="form-select form-select form-control input-fill" aria-label=".form-select-lg example" id = "select-gender">
+          <option class="select" >Gender</option>
+          <option class="email" value="Female" >Female</option>
+          <option class="email" value="Male">Male</option>
+        </select>
+      </div>	
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="row">
+    <div class="col form-group">
+       <%= f.label :password %>
+       <% if @minimum_password_length %>
+       <em>(<%= @minimum_password_length %> characters minimum)</em>
+       <% end %><br />
+       <%= f.password_field :password, autofocus: true, autocomplete: "password",class: "form-control input-fill", placeholder: "Password" %>
+    </div>
+    </div>
+    
+    <div class="actions">
+     <%= f.submit "Create an Account", class: "button-log"%>
+   </div>
+   <div class = "text-or">
+    <h5 class ="or-move">
+       <span class = "or">Or</span>
+    </h5>
+    </div>
+
+    <div class = "shift-google">
+  <a class="button-log-google password-link" href="<%= user_google_omniauth_authorize_path%>">
+    <%= image_submit_tag("google_login/google_logo.svg") %> <span>Login with Google</span>
+  </a>
+</div>
+
+
+<div class = "shift-facebook">
+  <a  class="button-log-google password-link" href="<%= user_facebook_omniauth_authorize_path%>" >
+    <%= image_submit_tag("google_login/fac_logo.svg") %> <span>Login with Facebook</span>
+  </a>
+</div>
+   <% end %>
+
+</div>
+<div class = "link-account">
+  <%= link_to "Already have an account? Log in", new_session_path(resource_name),class: "account-login" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

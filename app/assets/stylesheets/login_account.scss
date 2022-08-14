@@ -1,0 +1,195 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@500&display=swap");
+
+.welcome-message {
+  font-family: "Open Sans";
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #2b2b2b;
+}
+
+/* This container is for create account */
+
+/* main body */
+
+.form-container {
+  display: flex;
+  width: 100%;
+  background: $primary_green_blue;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border-radius: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 97px);
+}
+
+.login-login {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 30px;
+  color: $primary_purple;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.form-group label,
+.password,
+.email {
+  color: #7a7a7a;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.015em;
+}
+
+.input-fill {
+  width: 100%;
+  border: 1px solid#d0d0d0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-color: #d0d0d0;
+  color: $primary_white;
+}
+
+.form-control.input-fill {
+  padding: 10px;
+}
+
+.form-control.input-fill:focus {
+  box-shadow: none;
+}
+
+.password-image {
+  /* Password see image */
+  background-image: url ("google_login/password-logo.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #0000;
+  border-radius: 0.24rem;
+  appearance: none;
+}
+
+.button-log {
+  padding: 10px 51px;
+  gap: 10px;
+  width: 100%;
+  background: $primary_purple;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  color: $primary_white;
+}
+
+.button-log-google {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 51px;
+  gap: 10px;
+  width: 100%;
+  background: $primary_white;
+  border-radius: 16px;
+  border: 1px solid#814A95;
+  color: #000;
+  text-decoration: none;
+}
+
+.text-or {
+  margin: 6px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.or {
+  width: 23px;
+  height: 23px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.015rem;
+  color: #898989;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.shift-google {
+  margin-bottom: 10px;
+}
+
+.shift-facebook {
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.link-account {
+  height: 44px;
+  line-height: 44px;
+  display: inline;
+  color: #ffff;
+  margin-top: 16px;
+  margin-bottom: 17px;
+}
+
+.have-account {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  color: #ffff;
+  text-decoration: none;
+  display: inline;
+}
+
+.account-login {
+  color: #ffff;
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.forgotten-password {
+  width: 150px;
+  height: 25px;
+  display: inline;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #814a95;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  text-decoration: none;
+}
+
+.forgotten-pass {
+  position: relative;
+  float: right;
+  margin-top: calc(24px - 35px);
+  margin-bottom: 14px;
+}
+
+.reset-password {
+  text-decoration: none;
+  color: #000;
+}
