@@ -130,6 +130,9 @@ GEM
     importmap-rails (1.1.2)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    inline_svg (1.8.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     interception (0.5)
     io-console (0.5.11)
     irb (1.4.1)
@@ -143,6 +146,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jwt (2.4.1)
     libv8-node (16.10.0.0-arm64-darwin)
+    libv8-node (16.10.0.0-x86_64-darwin)
+    libv8-node (16.10.0.0-x86_64-linux)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -415,6 +420,7 @@ DEPENDENCIES
   fakeredis
   image_processing (~> 1.2)
   importmap-rails
+  inline_svg (~> 1.8)
   jbuilder
   jquery-rails
   mini_racer
