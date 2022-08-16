@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   end
   root 'home#index'
   controller :home do
-    get :services, action: :services
+    get :services, action: :services 
     get :hello, action: :test
+    get :account, action: :account
     # get :services, path: 'our-services', action: :services
   end
 

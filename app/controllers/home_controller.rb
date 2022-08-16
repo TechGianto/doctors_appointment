@@ -4,6 +4,8 @@ class HomeController < ApplicationController
 
   def index; end
   def services; end
+  
+
 
   def test
     @hello_world_props = { name: "#{user.first_name} #{user.last_name}" }
