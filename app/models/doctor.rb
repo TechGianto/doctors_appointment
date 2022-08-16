@@ -11,4 +11,7 @@ class Doctor < ApplicationRecord
   validates_associated :doctor_specialities, :user, :doctors_qualifications
   validates :hospital_address, :rate, :available_time, :application_status, presence: true
   enum :application_status, {pending: 0, rejected: 1, approved: 2}
+
+  delegate :first_name, to: :user # This allow us call doctor.first_name
+  delegate :last_name, to: :user  # This allows us call doctor.last_name
 end
