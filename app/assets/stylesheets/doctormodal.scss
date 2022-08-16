@@ -1,0 +1,323 @@
+@import "variables";
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 90px);
+  width: 100%;
+
+  .cancel {
+    position: absolute;
+    right: 8.5%;
+    top: 5%;
+    cursor: pointer;
+    background: none;
+  }
+
+  .about-doctor {
+    font-size: 36px;
+    font-weight: 400;
+    color: #814a95;
+    line-height: 49px;
+    margin-bottom: 32px;
+  }
+
+  .location {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #595959;
+  }
+
+  .model-container {
+    width: 80%;
+    background-color: #fff;
+    height: 80vh;
+    overflow-y: scroll;
+
+    &.modal-body {
+      padding: 0;
+    }
+
+    .doctor-details-container,
+    .user-testemonials {
+      display: flex;
+    }
+
+    .doctor-details-container {
+      padding: 48px 44px 0 46px;
+    }
+
+    .doctor-image-container {
+      display: flex;
+      flex-direction: column;
+      width: 409px;
+      margin-right: 68px;
+
+      .doctor-image {
+        border: 4px solid #d4af37;
+        border-radius: 16px 16px 0 0;
+        width: 398px;
+        height: 348px;
+        object-fit: cover;
+        padding: 11px 7px;
+      }
+
+      .doctor-star-container {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background-color: #d4af37;
+        margin-top: 15px;
+        border-radius: 0 0 16px 16px;
+        padding-right: 30px;
+
+        h5 {
+          font-size: 20px;
+          font-weight: 400;
+          margin: 0;
+          margin-right: 39px;
+          margin-left: 20px;
+        }
+
+        & > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          .doctor-star {
+            width: 14px;
+            height: 16px;
+            object-fit: cover;
+            margin-right: 14px;
+          }
+        }
+      }
+    }
+
+    .doctor-name {
+      h1 {
+        font-size: calc(32px + (100vw/44));
+        font-family: "Lora";
+        font-weight: 700;
+        line-height: 82px;
+      }
+
+      h4 {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 49;
+        color: #2b2b2b;
+      }
+    }
+
+    .doctor-details {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 32px;
+
+      .left,
+      .right {
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right {
+        width: 100%;
+
+        .about-doctor {
+          margin-bottom: 16px;
+        }
+
+        .specialites {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 16px;
+
+          .speciality {
+            width: 143px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            border-radius: 16px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+          }
+        }
+
+        .location {
+          font-size: 20px;
+        }
+      }
+
+      .left {
+        margin-right: 30px;
+
+        .location {
+          width: 242px;
+        }
+
+        .biography {
+          & > div {
+            .location {
+              width: 265px;
+            }
+          }
+        }
+      }
+    }
+
+    .user-testemonials {
+      flex-direction: column;
+      margin-top: 45px;
+      padding: 0 46px 0 42px;
+
+      .comments {
+        margin-right: 24px;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 700;
+          color: #595959;
+          margin-bottom: 16px;
+        }
+      }
+
+      .user-image {
+        margin-right: 25px;
+        border-radius: 16px;
+      }
+
+      .appointment-btn {
+        padding: 20px 29px 34px 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        background-color: #c01b4d;
+        color: #fff;
+        border-radius: 16px;
+      }
+    }
+
+    .other-doctor {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 22px 0 42px;
+      margin-bottom: 128px;
+      gap: 14px;
+
+      & > h1 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .similar-doctor-container {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .similar-doc {
+        display: flex;
+        align-items: center;
+        width: 282px;
+        height: 237px;
+        flex-direction: column;
+        position: relative;
+
+        .similar-doc-image {
+          width: 100%;
+          height: 94px;
+          border-radius: 16px 16px 0 0;
+        }
+
+        .doctor-rating {
+          width: 68px;
+          height: 29px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          .doctor-star {
+            width: 14px;
+            height: 14px;
+          }
+
+          span {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+          }
+        }
+
+        .discription {
+          padding: 9px 0 8px 22px;
+
+          h1 {
+            font-weight: 700;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 8px;
+          }
+
+          h3 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+          }
+
+          p {
+            font-size: 10px;
+            font-weight: 400;
+            color: #2b2b2b;
+            width: 70%;
+            word-wrap: break-word;
+          }
+        }
+
+        button {
+          width: 100%;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0 0 16px 16px;
+          color: #000;
+          background-color: #f4dbe3;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  backdrop-filter: blur(25px);
+}
+
+@media (min-width: 576px) {
+  .modal-dialog.back-color {
+    max-width: 100%;
+
+    .modal-content {
+      background: none !important;
+      border: none !important;
+    }
+  }
+}

@@ -30,6 +30,11 @@ class User < ApplicationRecord
       state: data['location'],
       password: Devise.friendly_token[0, 20],
     )
+    picture = data['image']
+    picture_filename = File.basename(URI.parse(picture).path)
+    downloaded_picture = URI.parse(picture).open
+    user.profile_pic.attach(io: downloaded_picture, filename: picture_filename)
+    user.save!
     user
   end
 
