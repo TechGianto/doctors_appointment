@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       current_user
     end
 
-    def after_sign_in_path_for(resource)
+    def after_sign_in_path_for(*)
       patient_index_path
     end
 
