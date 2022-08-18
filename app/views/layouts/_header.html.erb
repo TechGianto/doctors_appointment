@@ -25,12 +25,13 @@
           <a class="nav-link nav-link-color" href="#">FAQ</a>
         </li>
       </ul>
+      
       <div class="d-flex">
         <% if user_signed_in? %>
            <%= link_to "Sign Out", destroy_user_session_path , method: :delete , class: "btn auth-btn register-btn" %>
         <% else %>
           <%= link_to "Log in", new_user_session_path , class: "btn auth-btn small-btn login-btn" %>
-          <%= link_to "Register", new_user_registration_path , class: "btn auth-btn register-btn small-btn" %>
+          <%= link_to "Register", account_path , class: "btn auth-btn register-btn small-btn" %>
         <% end %>
       </div>
     </div>

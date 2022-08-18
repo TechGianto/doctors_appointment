@@ -1,0 +1,21 @@
+
+<div class = "form-container-login">
+  <div class = "container-login">
+  <h2 class = "login-login text">Create An account</h2>
+  <p class = "welcome-message">Welcome to the future of swift medical consultation. </p>
+  <h4 class = "welcome-message">Select your account type: </h4><br>
+  <div class = "shift-google">
+<a class="button-log-google password-link" href= <%= new_user_registration_path %>>
+   <span class = "option">Sign up as a Patient</span>
+</a>
+</div>
+<div class = "shift-facebook">
+  <a  class="button-log-google password-link" href= <%= new_user_registration_path %>>
+    <span class = "option">Sign up as a Doctor</span>
+  </a>
+</div>
+</div><br>
+<div class = "link-account">
+  <%= link_to "Already have an account? Log in", new_user_session_path ,class: "account-login" %>
+  </div>
+</div>

@@ -55,6 +55,10 @@
 <% end %>
 </div>
 <div class = "link-account">
+
+  <%= link_to "Don't have an account? Sign up", account_path, class: "account-login" %>
+
   <%= link_to "Don't have an account? Sign up", new_registration_path(resource_name), class: "account-login" %>
+
   </div>
 </div>
