@@ -1,4 +1,4 @@
 <div class="patient-page">
     <%= render 'sidebar' %>
-    <%= render 'overview' %>
+    <%= react_component("Overview", props: @patient_header_props, prerender: false) %>
 </div>

@@ -3,15 +3,17 @@ import Logo from "../../../../assets/images/header_svgs/logo.svg"
 import Bell from "../../../../assets/images/patient_svgs/bell.svg"
 import NotificationIcon from "../../../../assets/images/patient_svgs/notification.svg"
 import Human from "../../../../assets/images/patient_svgs/human.svg"
+import Search from "../../../../assets/images/header_svgs/search.svg"
+import UserLogout from "../../../../assets/images/header_svgs/user-logout.svg"
+import LoginIcon from "../../../../assets/images/header_svgs/green-user.svg"
+import RegisterIcon from "../../../../assets/images/header_svgs/purple-user.svg"
 
 
-const PatientHeader = ({ profile_pic, first_name, roles }) => {
-  console.log(first_name)
-  console.log(profile_pic)
+const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
   return (
     <nav className=" navbar navbar-expand-xl sticky-top navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand text-center" href="#" >
+        <a className="navbar-brand text-center" href="\" >
           <img src={Logo} alt="logo" className="main-logo" />
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +33,7 @@ const PatientHeader = ({ profile_pic, first_name, roles }) => {
 
             <div className="dropdown">
               <div className="dropdown-toggle display" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                { profile_pic.attached?
+                { profile_pic?
                   <img src={profile_pic} alt="profile icon" class="profile-nav-pic" />
                   :
                   <img src={Human} alt="search icon" class="profile-nav-pic" />
@@ -49,7 +51,30 @@ const PatientHeader = ({ profile_pic, first_name, roles }) => {
               </ul>
             </div>
           </div>
-          {/* mobile */}
+          <div class=" nav-item mobile-path">
+            <div class="search-container">
+              <img src={Search} alt="logo" class="search-icon mobile-icon img-responsive" />
+            </div>
+
+            {
+              signed_in ? 
+                <a href='#' class="mobile-login-btn">
+                  <img src={UserLogout} alt="logout" class="auth-user-icon" />
+                  <h3 class="mobile-icon">SignOut</h3>
+                </a>
+                :
+                <div>
+                  <a href="#" class="mobile-login-btn">
+                    <img src={LoginIcon} alt="login" class="auth-user-icon" />
+                    <h3 class="mobile-icon">Login</h3>
+                  </a>
+                  <a href="#" class="mobile-login-btn">
+                    <img src={RegisterIcon} alt="regiser" class="auth-user-icon" />
+                    <h3 class="mobile-icon">Register</h3>
+                  </a>
+                </div>
+            }
+          </div>
         </div>
       </div>
     </nav>
