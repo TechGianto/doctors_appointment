@@ -6,4 +6,5 @@ import HelloWorldApp from "../bundles/HelloWorld/startup/HelloWorldApp";
 ReactOnRails.register({
   HelloWorldApp,
   PatientHeader,
+  Overview,
 });
