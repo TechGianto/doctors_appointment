@@ -65,6 +65,7 @@
 .side-bar {
   background-color: #e8e8e8;
   width: 350px;
+  border-right: 1px solid #898989;
 }
 
 .user-info {
@@ -108,7 +109,6 @@
   flex-direction: column;
   justify-content: center;
   color: #898989;
-  border-right: 1px solid #898989;
 }
 
 .menu-head {
@@ -156,10 +156,10 @@
       margin-left: 101px;
     }
 
-    &.active-item {
+    .active {
       background-color: #814a95;
 
-      .list-link {
+      &.list-link {
         color: #fff;
 
         .sidebar-icons path {

@@ -19,7 +19,7 @@ const Overview = () => {
         <div className ="search-design end">
           <img src={Doc} alt="search icon" className="sidebar-icons" />
           <select className="form-select speciality" aria-label=".form-select example">
-            <option selected>Speciality</option>
+            <option defaultValue>Speciality</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -31,7 +31,7 @@ const Overview = () => {
         <div className ="search-design">
           <img src={Locations} alt="message" />
           <select className="form-select " aria-label=".form-select example">
-            <option selected>Speciality</option>
+            <option defaultValue>Speciality</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
