@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Human from "../../../../assets/images/patient_svgs/human.svg"
 import Search from "../../../../assets/images/patient_svgs/search.svg"
 import DocIcon from "../../../../assets/images/patient_svgs/doc.svg"
@@ -39,123 +40,123 @@ const PatientSideBar = ({ profile_pic, first_name, id }) => {
         <h3 className="menu-head first">DASHBOARD</h3>
         <ul className="menu-list">
           <li className="list-item active-item">
-            <a href="#" className= "list-link">
+            <NavLink to="/patient" className= "list-link">
               <Svg Icons={Search} classN="sidebar-icons" />
               Overview
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={DocIcon} classN="sidebar-icons" />
               Doctor Search
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Calender} classN="sidebar-icons" />
               Appointment
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Notification} classN="sidebar-icons" />
               Messages
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Human} classN="sidebar-icons" />
               Profile
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Contact} classN="sidebar-icons" />
               Contact
-            </a>
+            </NavLink>
           </li>
         </ul>
         <h3 className="menu-head rest">MEDICAL</h3>
         <ul className="menu-list">
         <li className="list-item">
-          <a href="#" className= "list-link">
+          <NavLink to="#" className= "list-link">
             <Svg Icons={Medication} classN="sidebar-icons" />
             Medications
-          </a>
+          </NavLink>
         </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Record} classN="sidebar-icons" />
               Health Records
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Lab} classN="sidebar-icons" />
               LAB Results
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Care} classN="sidebar-icons" />
               Care Plans
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className="list-link">
+            <NavLink to="#" className="list-link">
               <Svg Icons={Form} classN="sidebar-icons" />
               Forms
-            </a>
+            </NavLink>
           </li>
         </ul>
         <h3 className="menu-head rest">DONATION</h3>
         <ul className="menu-list">
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Organ} classN="sidebar-icons" />
               Search Organ
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Donor} classN="sidebar-icons" />
               Donate Organ
-            </a>
+            </NavLink>
           </li>
         </ul>
         <h3 className="menu-head rest">FINANCE</h3>
         <ul className="menu-list">
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Currency} classN="sidebar-icons" />
               Billing
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={History} classN="sidebar-icons" />
               History
-            </a>
+            </NavLink>
           </li>
         </ul>
         <ul className="menu-list last">
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Thumb} classN="sidebar-icons" />
               Support
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Setting} classN="sidebar-icons" />
               Settings
-            </a>
+            </NavLink>
           </li>
           <li className="list-item">
-            <a href="#" className= "list-link">
+            <NavLink to="#" className= "list-link">
               <Svg Icons={Logout} classN="sidebar-icons" />
               Log Out
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
