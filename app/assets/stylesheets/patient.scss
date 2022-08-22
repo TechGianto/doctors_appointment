@@ -156,10 +156,10 @@
       margin-left: 101px;
     }
 
-    .active {
+    &.active-item {
       background-color: #814a95;
 
-      &.list-link {
+      .list-link {
         color: #fff;
 
         .sidebar-icons path {
