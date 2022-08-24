@@ -1,16 +1,3 @@
-<%= render "search_header" %>
-    <div class='search-container container'>
-        <div class='row search-row'>
-            <div class='col-3' id="sidebar-toggle">
-             <%= react_component("SideBarApp", props: @side_bar_props, prerender: false) %>
-            </div>
-            <div class='col-9' id="search-main">
-                <%= render "search/error" %>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button>
-            </div>
-        </div>
-    </div>
+<%= react_component("SideBarApp", props: @side_bar_props, prerender: false) %>
 <%= render 'home/dotormodal'%>
 <%= render "home/footer" %>
