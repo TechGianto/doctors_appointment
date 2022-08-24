@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Human from "../../../../assets/images/patient_svgs/human.svg"
+import HumanIcon from "../../../../assets/images/patient_svgs/human.svg"
 import Search from "../../../../assets/images/patient_svgs/search.svg"
 import DocIcon from "../../../../assets/images/patient_svgs/doc.svg"
 import Calender from "../../../../assets/images/patient_svgs/calender.svg"
@@ -65,7 +65,7 @@ const PatientSideBar = ({ profile_pic, first_name, id }) => {
           </li>
           <li className="list-item">
             <NavLink to="#" className= "list-link">
-              <Svg Icons={Human} classN="sidebar-icons" />
+              <Svg Icons={HumanIcon} classN="sidebar-icons" />
               Profile
             </NavLink>
           </li>
