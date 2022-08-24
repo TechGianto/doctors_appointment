@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
       current_user
     end
 
+    def after_sign_in_path_for(*)
+      patient_index_path
+    end
+
+
     def configure_sign_up_params
       devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :password])
     end
