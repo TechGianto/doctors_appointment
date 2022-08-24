@@ -2,11 +2,19 @@ import React from 'react'
 import Logo from "../../../../assets/images/header_svgs/logo.svg"
 import Bell from "../../../../assets/images/patient_svgs/bell.svg"
 import NotificationIcon from "../../../../assets/images/patient_svgs/notification.svg"
-import Human from "../../../../assets/images/patient_svgs/human.svg"
+import HumanIcon from "../../../../assets/images/patient_svgs/human.svg"
 import Search from "../../../../assets/images/header_svgs/search.svg"
 import UserLogout from "../../../../assets/images/header_svgs/user-logout.svg"
 import LoginIcon from "../../../../assets/images/header_svgs/green-user.svg"
 import RegisterIcon from "../../../../assets/images/header_svgs/purple-user.svg"
+
+// const headerAsset = (asset_name) => {
+//   return `../../../../assets/images/header_svgs/${asset_name}`;
+// }
+
+// const patientAsset = (asset_name) => {
+//   return `../../../../assets/images/patient_svgs/${asset_name}`;
+// }
 
 
 const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
@@ -36,7 +44,7 @@ const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
                 { profile_pic?
                   <img src={profile_pic} alt="profile icon" className="profile-nav-pic" />
                   :
-                  <img src={Human} alt="search icon" className="profile-nav-pic" />
+                  <img src={HumanIcon} alt="search icon" className="profile-nav-pic" />
                 }
                 <div className="patient-profile-info">
                   <h2 className="name-text">{first_name}</h2>

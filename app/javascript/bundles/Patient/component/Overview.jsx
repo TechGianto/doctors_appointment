@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Doc from "../../../../assets/images/patient_svgs/doc.svg"
 import Locations from "../../../../assets/images/patient_svgs/location.svg"
 import Search from "../../../../assets/images/patient_svgs/search.svg"
@@ -12,29 +12,46 @@ import VitalFour from "../../../../assets/images/patient_svgs/vitalsfour.svg"
 import Billing from "../../../../assets/images/patient_svgs/billing.svg"
 
 
-const Overview = () => {
+const Overview = ({ speciality, location }) => {
+  const [options, setOption] = useState({
+    doctor_speciality: "",
+    doctor_name: "",
+    doctor_location: "",
+  })
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setOption(prevState => ({
+        ...prevState,
+        [name]: value
+    }));
+};
+  console.log(options)
   return (
     <div className="patient-handle">
       <div className="patient-search-options">
         <div className ="search-design end">
           <img src={Doc} alt="search icon" className="sidebar-icons" />
-          <select className="form-select speciality" aria-label=".form-select example">
+          <select className="form-select speciality" name="doctor_speciality" onChange={handleChange} aria-label=".form-select example">
             <option defaultValue>Speciality</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {
+              speciality.map(s => {
+                return <option value={s.name}>{ s.name }</option>
+              })
+            }
           </select>
         </div>
         <div className ="search-inputs">
-          <input type="text" className="form-control" placeholder="Search Doctors" aria-label="" />
+          <input type="text" className="form-control" name='doctor_name' onChange={handleChange} placeholder="Search Doctors" aria-label="" />
         </div>
         <div className ="search-design">
           <img src={Locations} alt="message" />
-          <select className="form-select " aria-label=".form-select example">
-            <option defaultValue>Speciality</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select className="form-select " name='doctor_location' onChange={handleChange} aria-label=".form-select example">
+            <option defaultValue>Locations</option>
+            {
+              location.map(l => {
+                return <option value={l}>{ l }</option>
+              })
+            }
           </select>
         </div>
         <button className="submit-btn">
