@@ -9,7 +9,7 @@ orbs:
 default_environment: &default_environment
   working_directory: ~/DOCTORS_APPOINTMENT
   docker:
-    - image: cimg/ruby:3.0.4-node
+    - image: cimg/ruby:3.0.4-browsers
       environment:
         BUNDLE_JOBS: 4
         BUNDLE_PATH: vendor/bundle
@@ -19,6 +19,7 @@ default_environment: &default_environment
         DB_HOST: localhost
         PGHOST: 127.0.0.1
         RAILS_ENV: test
+        NODE_ENV: test
         REDIS_HOST: 127.0.0.1
     - image: circleci/postgres:12.0-alpine
       environment:
@@ -73,6 +74,7 @@ jobs:
             bundle exec rake db:create
             bundle exec rake db:migrate
       - run: yarn
+      - run: bundle exec rake webpacker:compile
       - save_cache:
           key: v1-dependency-cache-{{ checksum "yarn.lock" }}
           paths:
@@ -187,7 +189,8 @@ jobs:
           command: |
             bundle exec rake db:create
             bundle exec rake db:migrate
-
+      - run: yarn
+      - run: bundle exec rake webpacker:compile
       - save_cache:
           key: rails-build-{{ checksum "Gemfile.lock" }}
           paths:
