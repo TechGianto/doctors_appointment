@@ -11,7 +11,7 @@ const Patient = ({ profile_pic, first_name, roles, signed_in, id, speciality, lo
       <div className="patient-page">
         <PatientSideBar profile_pic={profile_pic} first_name={first_name} id={id} />
         <Routes>
-          <Route path='/patient' element={<Overview speciality={speciality} location={location}  />} />
+          <Route path='/patient' element={<Overview speciality={speciality} location={location} fristname={first_name}  />} />
         </Routes>
       </div>
     </BrowserRouter>

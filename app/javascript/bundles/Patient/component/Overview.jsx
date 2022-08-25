@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PatientAsset from './PatientAsset'
 
 
-const Overview = ({ speciality, location }) => {
+const Overview = ({ speciality, location, fristname }) => {
   const {
     Doc, Locations, Search, Appointment, Activity, Medical,
     Vitaltwo, Billing, VitalFour, VitalThree, Vitalone
@@ -19,7 +19,6 @@ const Overview = ({ speciality, location }) => {
         [name]: value
     }));
 };
-  console.log(options)
   return (
     <div className="patient-handle">
       <div className="patient-search-options">
@@ -29,7 +28,7 @@ const Overview = ({ speciality, location }) => {
             <option defaultValue>Speciality</option>
             {
               speciality.map(s => {
-                return <option value={s.name}>{ s.name }</option>
+                return <option value={s.name} key={s.name}>{ s.name }</option>
               })
             }
           </select>
@@ -43,7 +42,7 @@ const Overview = ({ speciality, location }) => {
             <option defaultValue>Locations</option>
             {
               location.map(l => {
-                return <option value={l}>{ l }</option>
+                return <option value={l} key={l[1]}>{ l[0] }</option>
               })
             }
           </select>
@@ -53,7 +52,7 @@ const Overview = ({ speciality, location }) => {
         </button>
       </div>
       <div className="greeting">
-        <h1>Welcome Wasiu</h1>
+        <h1>Welcome { fristname }</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget risus maecenas</p>
       </div>
       <div className="appointment-activities">
