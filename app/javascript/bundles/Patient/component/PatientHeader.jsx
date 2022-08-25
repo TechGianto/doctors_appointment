@@ -1,23 +1,9 @@
 import React from 'react'
-import Logo from "../../../../assets/images/header_svgs/logo.svg"
-import Bell from "../../../../assets/images/patient_svgs/bell.svg"
-import NotificationIcon from "../../../../assets/images/patient_svgs/notification.svg"
-import HumanIcon from "../../../../assets/images/patient_svgs/human.svg"
-import Search from "../../../../assets/images/header_svgs/search.svg"
-import UserLogout from "../../../../assets/images/header_svgs/user-logout.svg"
-import LoginIcon from "../../../../assets/images/header_svgs/green-user.svg"
-import RegisterIcon from "../../../../assets/images/header_svgs/purple-user.svg"
-
-// const headerAsset = (asset_name) => {
-//   return `../../../../assets/images/header_svgs/${asset_name}`;
-// }
-
-// const patientAsset = (asset_name) => {
-//   return `../../../../assets/images/patient_svgs/${asset_name}`;
-// }
+import PatientAsset from './PatientAsset'
 
 
 const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
+  const {Logo, Bell, NotificationIcon, HumanIcon, Search, UserLogout, LoginIcon, RegisterIcon} = PatientAsset
   return (
     <nav className=" navbar navbar-expand-xl sticky-top navbar-light bg-light">
       <div className="container-fluid">
