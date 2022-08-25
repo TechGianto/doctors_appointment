@@ -1,35 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import HumanIcon from "../../../../assets/images/patient_svgs/human.svg"
-import Search from "../../../../assets/images/patient_svgs/search.svg"
-import DocIcon from "../../../../assets/images/patient_svgs/doc.svg"
-import Calender from "../../../../assets/images/patient_svgs/calender.svg"
-import Notification from "../../../../assets/images/patient_svgs/notification.svg"
-import Contact from "../../../../assets/images/patient_svgs/contact.svg"
-import Medication from  "../../../../assets/images/patient_svgs/medication.svg"
-import Record from "../../../../assets/images/patient_svgs/record.svg"
-import Lab from "../../../../assets/images/patient_svgs/lab.svg"
-import Care from "../../../../assets/images/patient_svgs/care.svg"
-import Form from "../../../../assets/images/patient_svgs/form.svg"
-import Organ from "../../../../assets/images/patient_svgs/sOrgan.svg"
-import Donor from "../../../../assets/images/patient_svgs/donor.svg"
-import Currency from "../../../../assets/images/patient_svgs/currency.svg"
-import History from "../../../../assets/images/patient_svgs/history.svg"
-import Thumb from "../../../../assets/images/patient_svgs/thumbs.svg"
-import Setting from "../../../../assets/images/patient_svgs/settings.svg"
-import Logout from "../../../../assets/images/patient_svgs/logout.svg"
 import Svg from './Svg'
+import PatientAsset from './PatientAsset'
 
 
 const PatientSideBar = ({ profile_pic, first_name, id }) => {
-  console.log(Search)
+  const {
+    HumanIcon, Search, Calender, DocIcon, NotificationIcon, Contact, Medication, Record,
+    Lab, Care, FormIcon, Organ, Donor, Currency, History, Thumb, Setting, Logout
+  } = PatientAsset
   return (
     <div className="side-bar">
       <div className="user-info">
       { profile_pic?
         <img src={profile_pic} alt="profile icon" className="sidebar-image" />
         :
-        <img src={Human} alt="search icon" className="sidebar-image" />
+        <img src={HumanIcon} alt="search icon" className="sidebar-image" />
       }
         <div className="patient-profile-info">
           <h2 className="name-text sidebar text-one"> {first_name} </h2>
@@ -59,7 +45,7 @@ const PatientSideBar = ({ profile_pic, first_name, id }) => {
           </li>
           <li className="list-item">
             <NavLink to="#" className= "list-link">
-              <Svg Icons={Notification} classN="sidebar-icons" />
+              <Svg Icons={NotificationIcon} classN="sidebar-icons" />
               Messages
             </NavLink>
           </li>
@@ -104,7 +90,7 @@ const PatientSideBar = ({ profile_pic, first_name, id }) => {
           </li>
           <li className="list-item">
             <NavLink to="#" className="list-link">
-              <Svg Icons={Form} classN="sidebar-icons" />
+              <Svg Icons={FormIcon} classN="sidebar-icons" />
               Forms
             </NavLink>
           </li>

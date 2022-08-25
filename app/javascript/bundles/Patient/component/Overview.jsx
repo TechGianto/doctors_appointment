@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
-import Doc from "../../../../assets/images/patient_svgs/doc.svg"
-import Locations from "../../../../assets/images/patient_svgs/location.svg"
-import Search from "../../../../assets/images/patient_svgs/search.svg"
-import Appointment from "../../../../assets/images/patient_svgs/appointment.svg"
-import Activity from "../../../../assets/images/patient_svgs/activity.svg"
-import Medical from "../../../../assets/images/patient_svgs/medical.svg"
-import Vitalone from "../../../../assets/images/patient_svgs/vitalone.svg"
-import Vitaltwo from "../../../../assets/images/patient_svgs/vitalstwo.svg"
-import VitalThree from "../../../../assets/images/patient_svgs/vitalsthree.svg"
-import VitalFour from "../../../../assets/images/patient_svgs/vitalsfour.svg"
-import Billing from "../../../../assets/images/patient_svgs/billing.svg"
+import PatientAsset from './PatientAsset'
 
 
 const Overview = ({ speciality, location }) => {
+  const {
+    Doc, Locations, Search, Appointment, Activity, Medical,
+    Vitaltwo, Billing, VitalFour, VitalThree, Vitalone
+  } = PatientAsset
   const [options, setOption] = useState({
     doctor_speciality: "",
     doctor_name: "",
