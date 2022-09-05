@@ -4,8 +4,7 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.7.0
   kubernetes: circleci/kubernetes@0.10.0
   aws-cli: circleci/aws-cli@1.3.0
-  slack: circleci/slack@4.1.1
-  eslint: arrai/eslint@7.4.0 
+  slack: circleci/slack@4.1.1 
 
 default_environment: &default_environment
   working_directory: ~/DOCTORS_APPOINTMENT
