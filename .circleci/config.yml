@@ -166,19 +166,7 @@ jobs:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
-  reactlint:
-    docker:
-      - image: circleci/node:12
-    steps:
-      - checkout
-      - attach_workspace:
-          at: "."
-      - run: yarn
-      - restore_cache:
-          keys:
-            - v1-dependency-cache-{{ checksum "yarn.lock" }}
-            - v1-dependency-cache-
-      - run: ./node_modules/.bin/eslint "**/*.{js, jsx}"
+      - run: eslint \"app/**/*.{js,jsx}\"
 
   test:
     <<: *default_environment
