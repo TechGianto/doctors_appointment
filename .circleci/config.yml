@@ -171,6 +171,9 @@ jobs:
       - image: circleci/node:12
     steps:
       - checkout
+      - attach_workspace:
+          at: "."
+      - run: yarn
       - run:
           name: check for changed files with eslint violation
           command: ./node_modules/.bin/eslint "**/*.{js,jsx}"
