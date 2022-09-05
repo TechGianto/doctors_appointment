@@ -166,7 +166,6 @@ jobs:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
-
   reactlint:
     docker:
       - image: circleci/node:12
