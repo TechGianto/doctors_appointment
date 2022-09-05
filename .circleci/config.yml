@@ -178,7 +178,7 @@ jobs:
           keys:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
-      - run: eslint \"app/**/*.{js,jsx}\"
+      - run: ./node_modules/.bin/eslint "**/*.{js, jsx}"
 
   test:
     <<: *default_environment
