@@ -167,11 +167,13 @@ jobs:
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
   eslint:
+    docker:
+      - image: circleci/node:12
     steps:
       - checkout
       - run:
-        name: check for changed files with eslint violation
-        command: ./node_modules/.bin/eslint "**/*.{js,jsx}"
+          name: check for changed files with eslint violation
+          command: ./node_modules/.bin/eslint "**/*.{js,jsx}"
   test:
     <<: *default_environment
     parallelism: 1
