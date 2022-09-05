@@ -1,0 +1,65 @@
+.medications-records {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+}
+
+.medications-all {
+  font-size: 14px;
+  font-family: 400;
+}
+
+.medications-info-records {
+  position: relative;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.form-control.speciality.fill {
+  border: none;
+  width: 100%;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.search-design.end.set {
+  flex: 9;
+  text-align: left;
+  width: 100%;
+}
+
+.patient-search-options.search {
+  width: 100%;
+  padding: 0 0 0 62px;
+}
+
+.patient-handle.med-search {
+  padding: 0 102px 0 62px;
+}
+
+.medication-info.record {
+  box-shadow: none;
+  position: relative;
+  border: none;
+  margin-top: 26px;
+
+  h4 {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+}
