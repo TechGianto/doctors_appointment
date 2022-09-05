@@ -166,7 +166,7 @@ jobs:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
-      - run: eslint \"app/**/*.{js,jsx}\"
+      - run: ./node_modules/.bin/eslint "**/*.{js,jsx}"
 
   test:
     <<: *default_environment
