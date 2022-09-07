@@ -176,7 +176,7 @@ jobs:
       - run: yarn
       - run:
           name: check for changed files with eslint violation
-          command: ./node_modules/.bin/eslint "**/*.{js,jsx}"
+          command: npm run lint
   test:
     <<: *default_environment
     parallelism: 1
