@@ -4,7 +4,7 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.7.0
   kubernetes: circleci/kubernetes@0.10.0
   aws-cli: circleci/aws-cli@1.3.0
-  slack: circleci/slack@4.1.1
+  slack: circleci/slack@4.1.1 
 
 default_environment: &default_environment
   working_directory: ~/DOCTORS_APPOINTMENT
@@ -166,7 +166,17 @@ jobs:
             - v1-dependency-cache-{{ checksum "yarn.lock" }}
             - v1-dependency-cache-
       - run: ./node_modules/.bin/stylelint "**/*.scss"
-
+  eslint:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - attach_workspace:
+          at: "."
+      - run: yarn
+      - run:
+          name: check for changed files with eslint violation
+          command: npm run lint
   test:
     <<: *default_environment
     parallelism: 1
@@ -236,5 +246,8 @@ workflows:
           requires:
             - security
       - stylecheck:
+          requires:
+            - security
+      - eslint:
           requires:
             - security

@@ -1,4 +1,4 @@
-import { Application } from "@hotwired/stimulus"
+import { Application } from "@hotwired/stimulus" /* eslint-disable-line */
 
 const application = Application.start()
 
