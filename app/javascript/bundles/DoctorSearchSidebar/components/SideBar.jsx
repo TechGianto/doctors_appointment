@@ -6,6 +6,7 @@ const SideBar = ({ regions, states, specialities, qualifications }) => {
   let [state, setState] = useState("");
   let [region, setRegion] = useState("");
   let [gender, setGender] = useState("");
+  console.log(gender);
 
   const handleStateChange = (event) => {
     setState(event.target.value);
