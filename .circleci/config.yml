@@ -248,3 +248,6 @@ workflows:
       - stylecheck:
           requires:
             - security
+      - eslint:
+          requires:
+            - security
