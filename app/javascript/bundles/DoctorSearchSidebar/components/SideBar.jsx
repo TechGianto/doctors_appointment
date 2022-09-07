@@ -91,7 +91,7 @@ const SideBar = ({ regions, states, specialities, qualifications }) => {
                   className="form-check-label"
                   htmlFor={userspeciality.name.replaceAll(/\s/g, "")}
                 >
-                  {userspeciality.name}{" "}
+                  {userspeciality.name}
                 </label>
               </div>
             ))}
@@ -121,7 +121,7 @@ const SideBar = ({ regions, states, specialities, qualifications }) => {
                   className="form-check-label"
                   htmlFor={userqualifications.name.replaceAll(/\s/g, "")}
                 >
-                  {userqualifications.name}{" "}
+                  {userqualifications.name}
                 </label>
               </div>
             ))}
