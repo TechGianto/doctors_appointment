@@ -1,5 +1,5 @@
-import React from 'react'
-import PatientAsset from './PatientAsset'
+import React from "react"
+import PatientAsset from "./PatientAsset"
 
 
 const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
@@ -39,9 +39,9 @@ const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
               </div>
 
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                <li><a className="dropdown-item" href="/">Action</a></li>
+                <li><a className="dropdown-item" href="/">Another action</a></li>
+                <li><a className="dropdown-item" href="/">Something else here</a></li>
               </ul>
             </div>
           </div>
@@ -52,17 +52,17 @@ const PatientHeader = ({ profile_pic, first_name, roles, signed_in }) => {
 
             {
               signed_in ? 
-                <a href='#' className="mobile-login-btn">
+                <a href='<%= destroy_user_session_path %>' className="mobile-login-btn">
                   <img src={UserLogout} alt="logout" className="auth-user-icon" />
                   <h3 className="mobile-icon">SignOut</h3>
                 </a>
                 :
                 <div>
-                  <a href="#" className="mobile-login-btn">
+                  <a href='<%= new_user_session_path%>' className="mobile-login-btn">
                     <img src={LoginIcon} alt="login" className="auth-user-icon" />
                     <h3 className="mobile-icon">Login</h3>
                   </a>
-                  <a href="#" className="mobile-login-btn">
+                  <a href="<%= new_user_registration_path %>" className="mobile-login-btn">
                     <img src={RegisterIcon} alt="regiser" className="auth-user-icon" />
                     <h3 className="mobile-icon">Register</h3>
                   </a>

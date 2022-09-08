@@ -1,3 +1,3 @@
-searchDoctorStart = "SEARCHDOCTORSTART";
-seachDoctorSuccess = "SEARCHDOCTORSUCCESS";
-searchDoctorFAIL = "SEARCHDOCTORFAIL";
+export const searchDoctorStart = "SEARCHDOCTORSTART";
+export const seachDoctorSuccess = "SEARCHDOCTORSUCCESS";
+export const searchDoctorFAIL = "SEARCHDOCTORFAIL";
