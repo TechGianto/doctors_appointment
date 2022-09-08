@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import PatientAsset from './PatientAsset'
+import React, { useState } from "react"
+import PatientAsset from "./PatientAsset"
 
 
 const Overview = ({ speciality, location, fristname }) => {
@@ -15,16 +15,16 @@ const Overview = ({ speciality, location, fristname }) => {
   const handleChange = e => {
     const { name, value } = e.target;
     setOption(prevState => ({
-        ...prevState,
-        [name]: value
+      ...prevState,
+      [name]: value
     }));
-};
+  };
   return (
     <div className="patient-handle">
       <div className="patient-search-options">
         <div className ="search-design end">
           <img src={Doc} alt="search icon" className="sidebar-icons" />
-          <select className="form-select speciality" name="doctor_speciality" onChange={handleChange} aria-label=".form-select example">
+          <select className="form-select speciality" name={options[0]} onChange={handleChange} aria-label=".form-select example">
             <option defaultValue>Speciality</option>
             {
               speciality.map(s => {
@@ -34,11 +34,11 @@ const Overview = ({ speciality, location, fristname }) => {
           </select>
         </div>
         <div className ="search-inputs">
-          <input type="text" className="form-control" name='doctor_name' onChange={handleChange} placeholder="Search Doctors" aria-label="" />
+          <input type="text" className="form-control" name={options[1]} onChange={handleChange} placeholder="Search Doctors" aria-label="" />
         </div>
         <div className ="search-design">
           <img src={Locations} alt="message" />
-          <select className="form-select " name='doctor_location' onChange={handleChange} aria-label=".form-select example">
+          <select className="form-select " name={options[2]} onChange={handleChange} aria-label=".form-select example">
             <option defaultValue>Locations</option>
             {
               location.map(l => {
