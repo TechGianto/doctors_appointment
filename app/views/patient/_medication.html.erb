@@ -1,0 +1,61 @@
+<div class="patient-handle">
+    <div class="patient-search-options">
+        <div class ="search-design end">
+            <%= image_tag("patient_svgs/doc.svg", alt: "search icon", class: "sidebar-icons") %>
+            <select class="form-select speciality" aria-label=".form-select example">
+                <option selected>Speciality</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class ="search-inputs">
+            <input type="text" class="form-control" placeholder="Search Doctors" aria-label="">
+        </div>
+        <div class ="search-design">
+            <%= image_tag("patient_svgs/location.svg", alt: "message") %>
+            <select class="form-select " aria-label=".form-select example">
+                <option selected>Speciality</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <button class="submit-btn">
+            <%= image_tag("patient_svgs/search.svg", alt: "search icon", class: "sidebar-icons") %>
+        </button>
+    </div>
+
+
+    <div class="health">
+        <div class="medications">
+            <h2>Current Medications</h2>
+            <div class="medication-info">
+                <h4 class = "medications-all">Your medications will appear hear</h4>
+                <%= image_tag("patient_svgs/medical.svg", alt: "appointment icon", class: "info-icon img-fluid") %>
+            </div>
+        </div>
+</div>
+
+<div class="billings">
+    <h2>Recently Used Medications</h2>
+</div>
+   <div class="patient-handle med-search">
+    <div class="patient-search-options search">
+        <div class ="search-design end set">
+            <input class="form-control speciality fill" type="text" placeholder = "Search medication">
+        </div>
+        <button class="submit-btn">
+            <%= image_tag("patient_svgs/search.svg", alt: "search icon", class: "sidebar-icons") %>
+        </button>
+      </div>
+
+      <div class="medication-info record">
+        <h4>No used medications yet</h4>
+        <%= image_tag("patient_svgs/medicationhistory.svg", alt: "appointment icon", class: "img-fluid") %>
+    </div>
+</div>
+</div>
+
+
+
