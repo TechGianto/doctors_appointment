@@ -3,7 +3,6 @@
 import { connect } from "react-redux";
 import * as actions from "../actions/SideBarActionCreators";
 import DoctorsSearchPage from "../components/DoctorsSearchPage";
-import SideBar from "../components/SideBar";
 
 // Which part of the Redux global state does our component want to receive as props?
 const mapStateToProps = (state) => ({

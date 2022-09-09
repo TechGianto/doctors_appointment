@@ -36,6 +36,6 @@ const qualifications = (state = '', action) => {
       return state;
   }
 };
-const SideBarReducer = combineReducers({ regions, states, specialities, qualifications });
+const DoctorSearchAppReducer = combineReducers({ regions, states, specialities, qualifications });
 
-export default SideBarReducer;
+export default DoctorSearchAppReducer;

@@ -1,6 +1,6 @@
 import { createStore } from 'redux'
-import SideBarReducer from '../reducers/SideBarReducer';
+import DoctorSearchAppReducer from '../reducers/DoctorSearchAppReducer';
 
-const configureStore = (railsProps) => createStore(SideBarReducer, railsProps);
+const configureStore = (railsProps) => createStore(DoctorSearchAppReducer, railsProps);
 
 export default configureStore;

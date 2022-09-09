@@ -8,17 +8,14 @@ const SideBar = ({ regions, states, specialities, qualifications }) => {
   let [gender, setGender] = useState("");
 
   const handleStateChange = (event) => {
-    console.log(event);
     setState(event.target.value);
   };
 
   const handleRegionChange = (event) => {
-    console.log(event);
     setRegion(event.target.value);
   };
 
   const handleGenderChange = (event) => {
-    console.log(event);
     setGender(event.target.value);
   };
 
@@ -27,8 +24,6 @@ const SideBar = ({ regions, states, specialities, qualifications }) => {
       <div className="search-filter" id="search-filter">
         <div className="filter-wrap" id="filter-wrap">
           <div className="filter-icon-container" id="filter-icon-container">
-            {/* <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon") %>
-            <%=image_tag('search/filter-icon.svg', alt: "filter icon", class:"filter-icon-expand") %> */}
             <img src={filtericon} alt="filter icon" className="filter-icon" />
             <img
               src={filtericonalt}
@@ -41,7 +36,7 @@ const SideBar = ({ regions, states, specialities, qualifications }) => {
           </div>
         </div>
       </div>
-      <form className="filter-form">
+      <form className="filter-form" id="search-sidebar-form">
         <h6>State</h6>
         <select
           value={state}
