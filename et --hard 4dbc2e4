@@ -1,0 +1,152 @@
+[33md4fa232[m[33m ([m[1;36mHEAD -> [m[1;32makin-kelvin/ch117/Convert-doctors-page-to-react-component[m[33m, [m[1;31morigin/akin-kelvin/ch117/Convert-doctors-page-to-react-component[m[33m)[m HEAD@{0}: commit: Remove yarn lock file
+[33m4dbc2e4[m HEAD@{1}: commit: Remove yarn lock file
+[33mba38767[m HEAD@{2}: commit: sidebar changed to react
+[33m52a1c29[m HEAD@{3}: rebase (continue) (finish): returning to refs/heads/akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33m52a1c29[m HEAD@{4}: rebase (continue) (pick): sidebar circle ci error
+[33mea67e9c[m HEAD@{5}: rebase (continue): rebasing React doctor search page
+[33m1581a07[m HEAD@{6}: rebase (continue) (pick): Remove unused bundle
+[33m8298a69[m HEAD@{7}: rebase (continue): Refactor search page
+[33md0c1d67[m HEAD@{8}: commit: sidebar changed to react
+[33m6fa5baf[m HEAD@{9}: rebase (continue) (pick): React Redux
+[33m158f8ca[m HEAD@{10}: rebase (continue) (pick): sidebar changed to react
+[33m283dd7a[m HEAD@{11}: rebase (continue) (pick): sidebar changed to react
+[33mefbd4bc[m HEAD@{12}: commit: sidebar changed to react
+[33m1a4825d[m HEAD@{13}: rebase (continue) (pick): sidebar changed to react
+[33m8ffbd2d[m HEAD@{14}: rebase (continue): sidebar changed to react
+[33md42f0a6[m HEAD@{15}: pull --rebase origin development (pick): search sidebar adjusted
+[33m06aa796[m HEAD@{16}: pull --rebase origin development (pick): filter toggle
+[33m2e1a080[m HEAD@{17}: pull --rebase origin development (pick): search sidebar filter
+[33m1104476[m HEAD@{18}: pull --rebase origin development (pick): search sidebar filter
+[33m5bf95e3[m HEAD@{19}: pull --rebase origin development (pick): search sidebar filter
+[33m8b735cd[m[33m ([m[1;31morigin/development[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{20}: pull --rebase origin development (start): checkout 8b735cd32b20bb43cf3764d704df050c3c877c50
+[33mb14e1eb[m HEAD@{21}: reset: moving to HEAD
+[33mb14e1eb[m HEAD@{22}: commit: sidebar circle ci error
+[33m88ed227[m HEAD@{23}: commit: "No key property error resolve"
+[33m19f7de2[m HEAD@{24}: commit: sidebar circle ci error
+[33m43a35d7[m HEAD@{25}: commit: rebasing React doctor search page
+[33mb092a41[m HEAD@{26}: rebase (continue) (finish): returning to refs/heads/akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33mb092a41[m HEAD@{27}: rebase (continue): eslint react (#67)
+[33m2582d31[m HEAD@{28}: pull --rebase origin akin-kelvin/ch117/Convert-doctors-page-to-react-component (pick): Routing to the patient page (#63)
+[33m9d9588a[m HEAD@{29}: pull --rebase origin akin-kelvin/ch117/Convert-doctors-page-to-react-component (start): checkout 9d9588ab36e2982f73aae6c7c0fcde58ee186f17
+[33mbcb53f6[m HEAD@{30}: rebase (skip) (finish): returning to refs/heads/akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33mbcb53f6[m HEAD@{31}: rebase (skip) (pick): sidebar changed to react
+[33m8ad354e[m HEAD@{32}: pull --rebase origin development (pick): search sidebar adjusted
+[33m0abf11f[m HEAD@{33}: pull --rebase origin development (pick): filter toggle
+[33mf24751c[m HEAD@{34}: pull --rebase origin development (pick): search sidebar filter
+[33mef4545d[m HEAD@{35}: pull --rebase origin development (pick): search sidebar filter
+[33m929c1f6[m HEAD@{36}: pull --rebase origin development (pick): search sidebar filter
+[33m6245193[m HEAD@{37}: pull --rebase origin development (start): checkout 624519353ee1f70e1b639dd5969c540045edaf67
+[33m9d9588a[m HEAD@{38}: checkout: moving from development to akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33m1fdd127[m[33m ([m[1;32mkelvin-akin-isaiah/ch123/implement-the-search-doctor-feature[m[33m, [m[1;32mdevelopment[m[33m)[m HEAD@{39}: checkout: moving from akin-kelvin/ch117/Convert-doctors-page-to-react-component to development
+[33m0d60c64[m HEAD@{40}: reset: moving to HEAD
+[33m0d60c64[m HEAD@{41}: rebase (continue) (finish): returning to refs/heads/akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33m0d60c64[m HEAD@{42}: rebase (continue): Refactor search page
+[33mbf3ccc7[m HEAD@{43}: rebase (continue) (pick): React Redux
+[33m65f824e[m HEAD@{44}: rebase (continue) (pick): sidebar changed to react
+[33m6e618a9[m HEAD@{45}: rebase (continue) (pick): sidebar changed to react
+[33m854acf8[m HEAD@{46}: rebase (continue) (pick): sidebar changed to react
+[33m2487260[m HEAD@{47}: rebase (continue) (pick): sidebar changed to react
+[33m9db7938[m HEAD@{48}: rebase (continue) (pick): filter toggle
+[33m4780db8[m HEAD@{49}: rebase (continue) (pick): search sidebar filter
+[33m215fd75[m HEAD@{50}: rebase (continue) (pick): search sidebar filter
+[33m76f362d[m HEAD@{51}: rebase (continue): Refactor search page
+[33me2fdb52[m HEAD@{52}: rebase (continue) (pick): sidebar changed to react
+[33m01cb2dd[m HEAD@{53}: rebase (continue): sidebar changed to react
+[33m35ce9b4[m HEAD@{54}: rebase (continue): eslint react (#67)
+[33m583587c[m HEAD@{55}: pull --rebase origin akin-kelvin/ch117/Convert-doctors-page-to-react-component (pick): Routing to the patient page (#63)
+[33m9d9588a[m HEAD@{56}: pull --rebase origin akin-kelvin/ch117/Convert-doctors-page-to-react-component (start): checkout 9d9588ab36e2982f73aae6c7c0fcde58ee186f17
+[33m49dd593[m HEAD@{57}: rebase (continue) (finish): returning to refs/heads/akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33m49dd593[m HEAD@{58}: rebase (continue) (pick): Remove unused bundle
+[33m805a846[m HEAD@{59}: rebase (continue): Refactor search page
+[33m89815d7[m HEAD@{60}: rebase (continue): React Redux
+[33m8dbe75c[m HEAD@{61}: rebase (continue) (pick): sidebar changed to react
+[33mef07476[m HEAD@{62}: rebase (continue): sidebar changed to react
+[33mb052d99[m HEAD@{63}: rebase (continue): sidebar changed to react
+[33meacda07[m HEAD@{64}: rebase (continue): sidebar changed to react
+[33mb4ee826[m HEAD@{65}: rebase (continue): sidebar changed to react
+[33m8eb6d3e[m HEAD@{66}: rebase (continue): filter toggle
+[33mac77789[m HEAD@{67}: rebase (continue): search sidebar filter
+[33m948a37d[m HEAD@{68}: rebase (continue) (pick): search sidebar filter
+[33maa3b9db[m HEAD@{69}: rebase (continue): search sidebar filter
+[33m6e11a25[m HEAD@{70}: rebase (continue): Refactor search page
+[33me253531[m HEAD@{71}: rebase (continue) (pick): React Redux
+[33md08432f[m HEAD@{72}: rebase (continue) (pick): sidebar changed to react
+[33m0afbf82[m HEAD@{73}: rebase (continue) (pick): sidebar changed to react
+[33ma720fd7[m HEAD@{74}: rebase (continue): sidebar changed to react
+[33mba1de2c[m HEAD@{75}: rebase (continue) (pick): sidebar changed to react
+[33m67beff7[m HEAD@{76}: rebase (continue): sidebar changed to react
+[33m289616b[m HEAD@{77}: pull --rebase origin development (pick): search sidebar adjusted
+[33m9633a1e[m HEAD@{78}: pull --rebase origin development (pick): filter toggle
+[33m6bf2e01[m HEAD@{79}: pull --rebase origin development (pick): search sidebar filter
+[33m027678d[m HEAD@{80}: pull --rebase origin development (pick): search sidebar filter
+[33meebf106[m HEAD@{81}: pull --rebase origin development (pick): search sidebar filter
+[33m6245193[m HEAD@{82}: pull --rebase origin development (start): checkout 624519353ee1f70e1b639dd5969c540045edaf67
+[33mbfac6ef[m HEAD@{83}: checkout: moving from kelvin-akin-isaiah/ch123/implement-the-search-doctor-feature to akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33m1fdd127[m[33m ([m[1;32mkelvin-akin-isaiah/ch123/implement-the-search-doctor-feature[m[33m, [m[1;32mdevelopment[m[33m)[m HEAD@{84}: checkout: moving from development to kelvin-akin-isaiah/ch123/implement-the-search-doctor-feature
+[33m1fdd127[m[33m ([m[1;32mkelvin-akin-isaiah/ch123/implement-the-search-doctor-feature[m[33m, [m[1;32mdevelopment[m[33m)[m HEAD@{85}: pull --rebase origin development (finish): returning to refs/heads/development
+[33m1fdd127[m[33m ([m[1;32mkelvin-akin-isaiah/ch123/implement-the-search-doctor-feature[m[33m, [m[1;32mdevelopment[m[33m)[m HEAD@{86}: pull --rebase origin development (pick): "rebasing origin development"
+[33m6245193[m HEAD@{87}: pull --rebase origin development (start): checkout 624519353ee1f70e1b639dd5969c540045edaf67
+[33m525378c[m HEAD@{88}: commit: "rebasing origin development"
+[33m4603704[m HEAD@{89}: reset: moving to HEAD
+[33m4603704[m HEAD@{90}: checkout: moving from isaiah-tolu-kelvin/ch122/add-eslint-check-for-react to development
+[33md156c7c[m[33m ([m[1;32misaiah-tolu-kelvin/ch122/add-eslint-check-for-react[m[33m)[m HEAD@{91}: checkout: moving from isaiah-tolu-kelvin/ch122/add-eslint-check-for-react to isaiah-tolu-kelvin/ch122/add-eslint-check-for-react
+[33md156c7c[m[33m ([m[1;32misaiah-tolu-kelvin/ch122/add-eslint-check-for-react[m[33m)[m HEAD@{92}: commit: eslint react
+[33m4603704[m HEAD@{93}: checkout: moving from development to isaiah-tolu-kelvin/ch122/add-eslint-check-for-react
+[33m4603704[m HEAD@{94}: pull: Fast-forward
+[33mbfd55d3[m HEAD@{95}: checkout: moving from akin-kelvin/ch117/Convert-doctors-page-to-react-component to development
+[33mbfac6ef[m HEAD@{96}: reset: moving to HEAD
+[33mbfac6ef[m HEAD@{97}: pull: Merge made by the 'ort' strategy.
+[33m875ffe7[m HEAD@{98}: pull: Fast-forward
+[33mce71c09[m HEAD@{99}: pull --rebase origin development (finish): returning to refs/heads/akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33mce71c09[m HEAD@{100}: pull --rebase origin development (pick): React Redux
+[33m64622fe[m HEAD@{101}: pull --rebase origin development (pick): sidebar changed to react
+[33m550dd96[m HEAD@{102}: pull --rebase origin development (pick): sidebar changed to react
+[33m348814d[m HEAD@{103}: pull --rebase origin development (pick): sidebar changed to react
+[33mb865eec[m HEAD@{104}: pull --rebase origin development (pick): sidebar changed to react
+[33m92729c0[m HEAD@{105}: pull --rebase origin development (pick): sidebar changed to react
+[33m1be2d7f[m HEAD@{106}: pull --rebase origin development (pick): search sidebar adjusted
+[33m10b9073[m HEAD@{107}: pull --rebase origin development (pick): filter toggle
+[33m4b1083a[m HEAD@{108}: pull --rebase origin development (pick): search sidebar filter
+[33mfd0313b[m HEAD@{109}: pull --rebase origin development (pick): search sidebar filter
+[33m0a9800e[m HEAD@{110}: pull --rebase origin development (pick): search sidebar filter
+[33mb8ac1d8[m HEAD@{111}: pull --rebase origin development (start): checkout b8ac1d8cca8fc8e98a3a97de08d402bc32774232
+[33mc026376[m HEAD@{112}: commit: React Redux
+[33mf3e843e[m HEAD@{113}: checkout: moving from akin-kelvin/ch117/Convert-doctors-page-to-react-component to akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33mf3e843e[m HEAD@{114}: checkout: moving from Rails/106/design-select-account-page to akin-kelvin/ch117/Convert-doctors-page-to-react-component
+[33me46f006[m[33m ([m[1;32mRails/106/design-select-account-page[m[33m)[m HEAD@{115}: commit: Adding double Quote
+[33m07f1bf6[m[33m ([m[1;31morigin/Rails/106/design-select-account-page[m[33m)[m HEAD@{116}: checkout: moving from akin/ch116/search-form-and-sidebar-on-doctors-page to Rails/106/design-select-account-page
+[33m8203756[m[33m ([m[1;32makin/ch116/search-form-and-sidebar-on-doctors-page[m[33m)[m HEAD@{117}: commit: search
+[33mebfa5bd[m[33m ([m[1;31morigin/akin/ch116/search-form-and-sidebar-on-doctors-page[m[33m)[m HEAD@{118}: checkout: moving from akin/ch116/search-form-and-sidebar-on-doctors-page to akin/ch116/search-form-and-sidebar-on-doctors-page
+[33mebfa5bd[m[33m ([m[1;31morigin/akin/ch116/search-form-and-sidebar-on-doctors-page[m[33m)[m HEAD@{119}: rebase (abort): updating HEAD
+[33mca36d37[m HEAD@{120}: pull --rebase origin development (start): checkout ca36d3730e5621043f78753ec8681905d3c17c62
+[33mebfa5bd[m[33m ([m[1;31morigin/akin/ch116/search-form-and-sidebar-on-doctors-page[m[33m)[m HEAD@{121}: checkout: moving from development to akin/ch116/search-form-and-sidebar-on-doctors-page
+[33mbfd55d3[m HEAD@{122}: checkout: moving from akin/ch116/search-form-and-sidebar-on-doctors-page to development
+[33mebfa5bd[m[33m ([m[1;31morigin/akin/ch116/search-form-and-sidebar-on-doctors-page[m[33m)[m HEAD@{123}: pull --rebase origin development (finish): returning to refs/heads/akin/ch116/search-form-and-sidebar-on-doctors-page
+[33mebfa5bd[m[33m ([m[1;31morigin/akin/ch116/search-form-and-sidebar-on-doctors-page[m[33m)[m HEAD@{124}: pull --rebase origin development (pick): Adding of the Not Operator
+[33m2f51899[m HEAD@{125}: pull --rebase origin development (pick): featured news card h2 reduced
+[33m9e712a5[m HEAD@{126}: pull --rebase origin development (pick): search sidebar filter
+[33m7734898[m HEAD@{127}: pull --rebase origin development (pick): search sidebar filter
+[33m27bb443[m HEAD@{128}: pull --rebase origin development (pick): search sidebar filter
+[33mb8a421c[m HEAD@{129}: pull --rebase origin development (pick): search sidebar filter
+[33mf3e3b93[m HEAD@{130}: pull --rebase origin development (pick): filter toggle
+[33m82ebba9[m HEAD@{131}: pull --rebase origin development (pick): filter toggle
+[33m7b25ba3[m HEAD@{132}: pull --rebase origin development (pick): search sidebar filter
+[33mbd4e007[m HEAD@{133}: pull --rebase origin development (pick): search sidebar filter
+[33maacb09f[m HEAD@{134}: pull --rebase origin development (pick): search sidebar filter
+[33me5f631f[m HEAD@{135}: pull --rebase origin development (start): checkout e5f631f6f86b75f191abbc11cd22da4c53d39d36
+[33m2be85e1[m HEAD@{136}: pull --rebase origin development (finish): returning to refs/heads/akin/ch116/search-form-and-sidebar-on-doctors-page
+[33m2be85e1[m HEAD@{137}: pull --rebase origin development (pick): Adding of the Not Operator
+[33me496667[m HEAD@{138}: pull --rebase origin development (pick): featured news card h2 reduced
+[33m3b82440[m HEAD@{139}: pull --rebase origin development (pick): search sidebar filter
+[33ma1cfd67[m HEAD@{140}: pull --rebase origin development (pick): search sidebar filter
+[33m95acfd0[m HEAD@{141}: pull --rebase origin development (pick): search sidebar filter
+[33me067aba[m HEAD@{142}: pull --rebase origin development (pick): search sidebar filter
+[33m9c21b05[m HEAD@{143}: pull --rebase origin development (pick): filter toggle
+[33me248df5[m HEAD@{144}: pull --rebase origin development (pick): filter toggle
+[33m90f482d[m HEAD@{145}: pull --rebase origin development (pick): search sidebar filter
+[33m355510a[m HEAD@{146}: pull --rebase origin development (pick): search sidebar filter
+[33m4321f88[m HEAD@{147}: pull --rebase origin development (pick): search sidebar filter
+[33me80013d[m HEAD@{148}: pull --rebase origin development (start): checkout e80013da2d52cfc089c921a8ba5ea2c6b9826e7a
+[33m65f2025[m HEAD@{149}: commit: Adding of the Not Operator
+[33m21f4836[m HEAD@{150}: checkout: moving from development to akin/ch116/search-form-and-sidebar-on-doctors-page
+[33mbfd55d3[m HEAD@{151}: clone: from https://github.com/TechGianto/doctors_appointment.git
