@@ -252,3 +252,122 @@
 .filter-speciality::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.doctor-card {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 24px;
+  min-width: 294px;
+  position: relative;
+}
+
+.doctor-card .card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctor-card-img {
+  width: 128px;
+  height: 128px;
+  margin: 8px;
+  border: 1px solid #d4af37;
+  border-radius: 100%;
+}
+
+.doctor-speciality {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.card-body .card-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.card-text {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  a {
+    padding: 10px 0;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .btn-profile {
+    background-color: #f1e0ee;
+    border-radius: 0px 0px 0px 16px;
+    color: #2b2b2b;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.btn-appiontment {
+  background-color: #c01b4d;
+  border-radius: 0px 0px 16px 0px;
+  color: #ffffff;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.doctor-search-output {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  padding-top: 40px;
+  gap: 25px;
+}
+
+.doctor-card .doctor-rating {
+  background-color: #d4af37;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: column;
+  position: absolute;
+  left: 0;
+  top: 10%;
+}
+
+.doctor-rating-img {
+  height: 16px;
+  min-width: 16px;
+  margin-right: 5px;
+  padding: 3px;
+}
+
+.rating-value {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  padding-right: 5px;
+}
