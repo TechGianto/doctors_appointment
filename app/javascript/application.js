@@ -3,8 +3,8 @@
 //= require popper
 //= require bootstrap
 //= require slick
-import "@hotwired/turbo-rails"  /* eslint-disable-line */
-import "controllers" /* eslint-disable-line */
+import "@hotwired/turbo-rails"; /* eslint-disable-line */
+import "controllers"; /* eslint-disable-line */
 
 $(document).ready(function () {
   $(".doctor-slider").slick({

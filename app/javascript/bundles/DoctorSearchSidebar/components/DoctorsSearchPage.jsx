@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import SearchError from "./SearchError";
 import SideBar from "./SideBar";
+import DoctorCard from "./DoctorCard";
 import PropTypes from "prop-types";
 
 const DoctorsSearchPage = ({
@@ -10,7 +11,6 @@ const DoctorsSearchPage = ({
   specialities,
   qualifications,
 }) => {
-  
   return (
     <div>
       <Header />
@@ -26,7 +26,12 @@ const DoctorsSearchPage = ({
             />
           </div>
           <div className="col-9" id="search-main">
-            <SearchError />
+            {/* <SearchError /> */}
+            <div className="doctor-search-output">
+              <DoctorCard />
+              <DoctorCard />
+              <DoctorCard />
+            </div>
             <button
               type="button"
               className="btn btn-primary"
