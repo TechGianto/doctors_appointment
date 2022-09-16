@@ -291,7 +291,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
-  color: #000000;
+  color: #000;
 }
 
 .card-text {
@@ -319,7 +319,7 @@
 
   .btn-profile {
     background-color: #f1e0ee;
-    border-radius: 0px 0px 0px 16px;
+    border-radius: 0 0 0 16px;
     color: #2b2b2b;
 
     &:hover {
@@ -330,8 +330,8 @@
 
 .btn-appiontment {
   background-color: #c01b4d;
-  border-radius: 0px 0px 16px 0px;
-  color: #ffffff;
+  border-radius: 0 0 16px;
+  color: #fff;
 
   &:hover {
     color: white;
@@ -348,7 +348,7 @@
 
 .doctor-card .doctor-rating {
   background-color: #d4af37;
-  width: 50px;
+  width: 75px;
   display: flex;
   align-items: center;
   justify-content: column;

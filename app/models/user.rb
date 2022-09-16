@@ -41,6 +41,10 @@ class User < ApplicationRecord
   after_create :assign_default_role
   validate :must_have_a_role, on: :update
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   private
 
     def must_have_a_role

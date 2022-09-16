@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import SearchError from "./SearchError";
+// import SearchError from "./SearchError";
 import SideBar from "./SideBar";
 import DoctorCard from "./DoctorCard";
 import PropTypes from "prop-types";
@@ -10,7 +10,10 @@ const DoctorsSearchPage = ({
   states,
   specialities,
   qualifications,
+  doctors
 }) => {
+
+  console.log(doctors)
   return (
     <div>
       <Header />
@@ -53,12 +56,14 @@ DoctorsSearchPage.propTypes = {
   regions: PropTypes.array.isRequired,
   specialities: PropTypes.array.isRequired,
   qualifications: PropTypes.array.isRequired,
+  doctors: PropTypes.array.isRequired
 };
 DoctorsSearchPage.defaultProps = {
   states: [],
   region: [],
   specialities: [],
   qualifications: [],
+  doctors: []
 };
 
 export default DoctorsSearchPage;
