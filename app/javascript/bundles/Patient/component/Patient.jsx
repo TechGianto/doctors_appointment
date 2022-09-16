@@ -2,6 +2,7 @@ import React from "react"
 import PatientHeader from "./PatientHeader"
 import PatientSideBar from "./PatientSidebar"
 import Overview from "./Overview"
+import PropTypes from "prop-types";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const Patient = ({ profile_pic, first_name, roles, signed_in, id, speciality, location}) => {
@@ -16,6 +17,26 @@ const Patient = ({ profile_pic, first_name, roles, signed_in, id, speciality, lo
       </div>
     </BrowserRouter>
   )
+}
+
+Patient.prototype = {
+  profile_pic: PropTypes.string.isRequired,
+  first_name: PropTypes.string.isRequired,
+  roles: PropTypes.string.isRequired,
+  signed_in: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
+  speciality: PropTypes.array.isRequired,
+  location: PropTypes.array.isRequired
+}
+
+Patient.defaultProps = {
+  profile_pic: "",
+  first_name: "",
+  roles: "",
+  signed_in: false,
+  id: 0,
+  speciality: [],
+  location: []
 }
 
 export default Patient
