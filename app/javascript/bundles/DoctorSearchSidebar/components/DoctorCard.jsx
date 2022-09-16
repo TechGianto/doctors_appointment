@@ -18,10 +18,14 @@ const DoctorCard = () => {
         </p>
       </div>
       <div className="card-btn">
-        <a href="#" className="btn-profile">
+        <a href="/trash"
+          className="btn-profile"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
           Profile
         </a>
-        <a href="#" className="btn-appiontment">
+        <a href="qwertyui" className="btn-appiontment">
           Book Appointment
         </a>
       </div>

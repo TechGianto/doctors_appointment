@@ -60,6 +60,14 @@ end
     rating = FactoryBot.create(:doctor_rating, doctor: doctor, user: user)
     rating.user.id = rand(1..60)
     rating.save
+    rating = FactoryBot.create(:doctor_rating, doctor: doctor, user: user)
+    rating.user.id = rand(1..60)
+    rating.save
+    doctorsp = DoctorSpeciality.new
+    doctorsp.speciality_id = rand(1..20)
+    doctorsp.doctor_id = doctor.id
+    doctorsp.save!
+
     doctorsp = DoctorSpeciality.new
     doctorsp.speciality_id = rand(1..20)
     doctorsp.doctor_id = doctor.id

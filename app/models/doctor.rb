@@ -15,4 +15,16 @@ class Doctor < ApplicationRecord
 
   delegate :first_name, to: :user # This allow us call doctor.first_name
   delegate :last_name, to: :user  # This allows us call doctor.last_name
+
+  def specialities
+    return self.doctor_specialities.map(&:speciality).map(&:name)
+  end
+
+  def doctor_rate
+    self.doctor_ratings.sum(&:rating) / self.doctor_ratings.size
+  end
+
+  # def doctor_count
+  #   self.doctor_ratings.count
+  # end
 end
