@@ -9,9 +9,9 @@ class SearchController < ApplicationController
     @doctors = Doctor.includes(
       :user,
       :doctor_ratings,
-      :doctor_specialities, 
+      :doctor_specialities,
       doctor_specialities: :speciality,
-      user: [:profile_pic_attachment, :profile_pic_blob]
+      user: [:profile_pic_attachment, :profile_pic_blob],
     ).approved.map { |doctor| DoctorPresenter.new(doctor).show_card_details }
 
     @side_bar_props = { regions: @user_regions, states: @user_states, specialities: @specialities, qualifications: @user_qualifications, doctors: @doctors }
