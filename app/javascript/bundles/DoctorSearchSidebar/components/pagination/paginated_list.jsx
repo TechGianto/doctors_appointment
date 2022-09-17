@@ -1,10 +1,10 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Items from "./cardi_tems";
 
 
 
-const  PaginatedItems = ({ itemsPerPage, doctors }) => {
+const PaginatedItems = ({ itemsPerPage, doctors }) => {
   // We start with an empty list of items.
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
@@ -32,7 +32,7 @@ const  PaginatedItems = ({ itemsPerPage, doctors }) => {
   return (
     <div className="pagination-item">
       <div className="doctor-search-output">
-      <Items currentItems={currentItems} />
+        <Items currentItems={currentItems} />
       </div>
       <ReactPaginate
         breakLabel="..."
