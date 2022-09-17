@@ -31,7 +31,7 @@ const DoctorsSearchPage = ({
           <div className="col-9" id="search-main">
             {/* <SearchError /> */}
 
-             <PaginatedItems doctors={doctors} itemsPerPage={20} />
+            <PaginatedItems doctors={doctors} itemsPerPage={20} />
             <button
               type="button"
               className="btn btn-primary"
