@@ -283,7 +283,7 @@
 .doctor-speciality {
   text-transform: capitalize;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 27px;
 }
 
@@ -344,6 +344,7 @@
   padding: 10px;
   padding-top: 40px;
   gap: 25px;
+  margin-bottom: 40px;
 }
 
 .doctor-card .doctor-rating {
@@ -370,4 +371,11 @@
   font-size: 20px;
   line-height: 27px;
   padding-right: 5px;
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

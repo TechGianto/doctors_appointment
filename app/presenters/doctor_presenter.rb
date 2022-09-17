@@ -1,16 +1,15 @@
-class DoctorPresenter < ActionController::Base
-  def initialize(doctor)
-    @doctor = doctor
-  end
+class DoctorPresenter < SimpleDelegator
+
+  delegate :full_name, :profile_pic, to: :user
 
   def show_card_details
     {
-      doctor_id: @doctor.id,
-      doctor_name: @doctor.user.full_name,
-      doctor_address: @doctor.hospital_address,
-      doctor_ratings: @doctor.doctor_rate,
-      doctor_image: url_for(@doctor.user.profile_pic).to_s,
-      doctor_speciality: @doctor.specialities.first,
+      doctor_id: id,
+      doctor_name: full_name,
+      doctor_address: hospital_address,
+      doctor_ratings: doctor_rate,
+      doctor_image: Rails.application.routes.url_helpers.rails_blob_path(profile_pic, only_path: true),
+      doctor_speciality: specialities.first,
     }
   end
 end
