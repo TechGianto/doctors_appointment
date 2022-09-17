@@ -2,8 +2,9 @@ import React from "react";
 import Header from "./Header";
 // import SearchError from "./SearchError";
 import SideBar from "./SideBar";
-import DoctorCard from "./DoctorCard";
 import PropTypes from "prop-types";
+import PaginatedItems from "./pagination/paginated_list";
+
 
 const DoctorsSearchPage = ({
   regions,
@@ -13,7 +14,6 @@ const DoctorsSearchPage = ({
   doctors
 }) => {
 
-  console.log(doctors)
   return (
     <div>
       <Header />
@@ -30,11 +30,8 @@ const DoctorsSearchPage = ({
           </div>
           <div className="col-9" id="search-main">
             {/* <SearchError /> */}
-            <div className="doctor-search-output">
-              <DoctorCard />
-              <DoctorCard />
-              <DoctorCard />
-            </div>
+
+             <PaginatedItems doctors={doctors} itemsPerPage={20} />
             <button
               type="button"
               className="btn btn-primary"
