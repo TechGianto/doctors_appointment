@@ -13,7 +13,7 @@ const DoctorCard = (props) => {
         <h5 className="card-title">{props.fullname}</h5>
         <h6 className="doctor-speciality">{props.speciality}</h6>
         <p className="card-text">
-        {props.address}
+          {props.address}
         </p>
       </div>
       <div className="card-btn">
