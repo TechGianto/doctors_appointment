@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../../../../assets/images/doctor_svgs/democard.svg";
 import rating from "../../../../assets/images/doctor_svgs/star-white.svg";
 
 const DoctorCard = (props) => {
