@@ -5,3 +5,4 @@ export const REGIONS = "REGIONS";
 export const SPECIALITIES = "SPECIALITIES"
 export const QUALIFICATIONS = "QUALIFICATIONS"
 export const DOCTORS = "DOCTORS"
+export const TOTAL_PAGES = "TOTAL_PAGES"

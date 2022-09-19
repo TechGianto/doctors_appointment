@@ -11,6 +11,7 @@ const mapStateToProps = (state) => ({
   specialities: state.specialities,
   qualifications: state.qualifications,
   doctors: state.doctors,
+  total_pages: state.total_pages,
 });
 
 // Don't forget to actually use connect!
