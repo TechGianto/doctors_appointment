@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { STATES, REGIONS, SPECIALITIES, QUALIFICATIONS, DOCTORS } from "../constants/SideBarConstants";
+import { STATES, REGIONS, SPECIALITIES, QUALIFICATIONS, DOCTORS, TOTAL_PAGES } from "../constants/SideBarConstants";
 
 const regions = (state = "", action) => {
   switch (action.type) {
@@ -40,11 +40,20 @@ const qualifications = (state = "", action) => {
 const doctors = (state = "", action) => {
   switch (action.type) {
   case DOCTORS:
+    return action.doctors;
+  default:
+    return state;
+  }
+};
+
+const total_pages = (state = "", action) => {
+  switch (action.type) {
+  case TOTAL_PAGES:
     return action.text;
   default:
     return state;
   }
 };
-const DoctorSearchAppReducer = combineReducers({ regions, states, specialities, qualifications, doctors });
+const DoctorSearchAppReducer = combineReducers({ regions, states, specialities, qualifications, doctors, total_pages });
 
 export default DoctorSearchAppReducer;

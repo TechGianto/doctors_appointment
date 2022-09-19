@@ -67,6 +67,7 @@ gem 'pry-rescue'
 gem 'fakeredis'
 gem 'pry'
 gem 'pry-rails'
+gem 'kaminari'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

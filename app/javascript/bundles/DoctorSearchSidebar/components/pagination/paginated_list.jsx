@@ -1,38 +1,33 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Items from "./cardi_tems";
+import axios from "axios"
 
 
-
-const PaginatedItems = ({ itemsPerPage, doctors }) => {
-  // We start with an empty list of items.
-  const [currentItems, setCurrentItems] = useState(null);
-  const [pageCount, setPageCount] = useState(0);
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
-
-  useEffect(() => {
-    // Fetch items from another resources.
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(doctors.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(doctors.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+const PaginatedItems = ({ doctors, total_pages, updateDocotor }) => {
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % doctors.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
+    axios.get('/search', {
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      params: {
+        page: event.selected,
+      }
+    })
+      .then(function (response) {
+        console.log(response);
+        updateDocotor(response.data.doctors)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
   };
 
   return (
     <div className="pagination-item">
       <div className="doctor-search-output">
-        <Items currentItems={currentItems} />
+        <Items currentItems={doctors} />
       </div>
       <ReactPaginate
         breakLabel="..."
@@ -40,7 +35,7 @@ const PaginatedItems = ({ itemsPerPage, doctors }) => {
         onPageChange={handlePageClick}
         pageRangeDisplayed={4}
         marginPagesDisplayed={2}
-        pageCount={pageCount}
+        pageCount={total_pages / 5}
         previousLabel="< previous >"
         renderOnZeroPageCount={null}
         pageClassName="page-item"
