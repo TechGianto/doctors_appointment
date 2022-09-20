@@ -18,7 +18,7 @@ const DoctorsSearchPage = ({
   console.log(total_pages)
   return (
     <div>
-      <Header />
+      <Header speciality={specialities} location={states} />
       <div className="search-container container">
         <div className="row search-row">
           <div className="col-3" id="sidebar-toggle">
