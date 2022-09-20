@@ -8,8 +8,8 @@ const PaginatedItems = ({ doctors, total_pages, updateDocotor }) => {
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    axios.get('/search', {
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    axios.get("/search", {
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
       params: {
         page: event.selected,
       }
