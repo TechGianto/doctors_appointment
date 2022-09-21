@@ -8,7 +8,7 @@ class PatientController < ApplicationController
     @vital = current_user.user_vital
 
     if current_user.appointments.present?
-      @start_time = @appointment.date_of_appointment 
+      @start_time = @appointment.date_of_appointment
       @end_time = @appointment.date_of_appointment + (@appointment.no_of_session * 30).minutes
       @speciality = @appointment.doctor.doctor_specialities.map(&:speciality).map(&:name)
     end

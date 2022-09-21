@@ -15,8 +15,8 @@ class User < ApplicationRecord
   validates :state, :gender, :blood_group, :age, :middle_name, :nationality, :LGA, :status, presence: true, allow_nil: true
 
   has_many :patient_medications, dependent: :destroy
-  has_many :appointments
-  has_one :user_vital
+  has_many :appointments, dependent: :destroy
+  has_one :user_vital, dependent: :destroy
 
   #validates :gender, inclusion: {in: ['Male', 'Female']}, allow_nil: false
 
