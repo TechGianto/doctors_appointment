@@ -12,9 +12,12 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
   validates :password, length: {minimum: 5}
   validates :phone, length: {minimum: 11, maximum: 15}, format: {with: /\A[+-]?\d+\z/}, allow_nil: true
-  validates :state, :gender, :middle_name, :nationality, :LGA, :status, presence: true, allow_nil: true
+  validates :state, :gender, :blood_group, :age, :middle_name, :nationality, :LGA, :status, presence: true, allow_nil: true
 
   has_many :patient_medications, dependent: :destroy
+  has_many :appointments
+  has_one :user_vital
+
   #validates :gender, inclusion: {in: ['Male', 'Female']}, allow_nil: false
 
   def self.from_omniauth(access_token)

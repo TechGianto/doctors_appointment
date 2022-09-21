@@ -1,63 +1,187 @@
- <div class="patient-handle">
-        <div class="patient-search-options">
-            <div class ="search-design end">
-                <%= image_tag("patient_svgs/doc.svg", alt: "search icon", class: "sidebar-icons") %>
-                <select class="form-select speciality" aria-label=".form-select example">
-                    <option selected>Speciality</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-            </div>
-            <div class ="search-inputs">
-                <input type="text" class="form-control" placeholder="Search Doctors" aria-label="">
-            </div>
-            <div class ="search-design">
-                <%= image_tag("patient_svgs/location.svg", alt: "message") %>
-                <select class="form-select " aria-label=".form-select example">
-                    <option selected>Speciality</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-            </div>
-            <button class="submit-btn">
-                <%= image_tag("patient_svgs/search.svg", alt: "search icon", class: "sidebar-icons") %>
-            </button>
+<div class="patient-handle">
+    <div class="patient-search-options">
+        <div class ="search-design end">
+            <%= image_tag("patient_svgs/doc.svg", alt: "search icon", class: "sidebar-icons") %>
+            <select class="form-select speciality" aria-label=".form-select example">
+                <option selected>Speciality</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
         </div>
-        <div class="greeting">
-            <h1>Welcome Wasiu</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget risus maecenas</p>
+        <div class ="search-inputs">
+            <input type="text" class="form-control" placeholder="Search Doctors" aria-label="">
         </div>
-        <div class="appointment-activities">
+        <div class ="search-design">
+            <%= image_tag("patient_svgs/location.svg", alt: "message") %>
+            <select class="form-select " aria-label=".form-select example">
+                <option selected>Speciality</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <button class="submit-btn">
+            <%= image_tag("patient_svgs/search.svg", alt: "search icon", class: "sidebar-icons") %>
+        </button>
+    </div>
+     <div class="greeting">
+        <h1>Welcome <%= current_user.first_name %></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget risus maecenas</p>
+    </div>
+    
+    <div class="appointment-activities">
+        <% if @appointment.present? %>
             <div class="appointment">
+                <h2 class="appointment-heading">Next Appointment</h2>
+                <div>
+                    <h1>Friday 11th, November</h1>
+                    <div class="time">
+                        <%= image_tag("patient_svgs/clock.svg", alt: "time of appointment") %>
+                        <h2><%= @start_time.strftime('%H:%M') %> - <%= @end_time.strftime('%H:%M') %>  -<%= session_to_hour(@appointment.no_of_session * 30) %></h2>
+                    </div>
+                    <div class="appointment-doc">
+                        <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
+                        <div class="appointment-doc-details">
+                            <h2><%= @appointment.doctor.first_name %> <%= @appointment.doctor.last_name %></h2>
+                            <h3><%= @speciality[0] %></h3>
+                        </div>
+                    </div>
+                    <div class="appointment-location">
+                        <%= image_tag("patient_svgs/appointmentLocation.svg", alt: "location for appointment") %>
+                        <h3><%= @appointment.doctor.hospital.name %>, <%= @appointment.doctor.hospital.address %></h3>
+                    </div>
+                    <div class="doctor-specialities">
+                        <h3 class="speciality-title">speciality</h3>
+                        <h3 class="doctor-specialities-names">Engtotolpy, Cardiology, Astigngnggn, Endotrophuetic Carbongfgf, Lapotonomic Surgery </h3>
+                    </div>
+                    <div class="appointment-buttons">
+                        <div class="appointment-button-cancel">
+                            <%= image_tag("patient_svgs/cancel.svg", alt: "doctor for appointment") %>
+                            <h2>Cancel appointment</h2>
+                        </div>
+                        <div class="appointment-button-reschedule">
+                            <%= image_tag("patient_svgs/reschedule.svg", alt: "reschedule appointment") %>
+                            <h2>Reschedule</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% else %>
+            <div class="empty-appointment">
                 <h2>Next Appointment</h2>
-                <div class="appointment-info">
+                <div class="empty-appointment-info">
                     <h4>Your next appointment will appear hear</h4>
                     <%= image_tag("patient_svgs/appointment.svg", alt: "appointment icon", class: "info-icon") %>
                     <button type="button" class="btn">Book Appointment</button>
                 </div>
-            </div>
-            <div class="activities">
-                <h2>Recent Activities</h2>
-                <div class="activity-info">
-                    <h4>Your next recent activities will appear hear</h4>
-                    <%= image_tag("patient_svgs/activity.svg", alt: "appointment icon", class: "info-icon") %>
-                    <div class="lower-part"></div>
+            </div> 
+        <% end %>
+        <div class="activities">
+            <h2 class="activities-heading">Recent Activities</h2>
+            <div>
+                <div class="activities-doc">
+                    <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
+                    <div class="activities-doc-details">
+                        <h2>Dr. Alexandra Bada</h2>
+                        <h3>April 05, 2022</h3>
+                    </div>
+                </div>
+                <h3 class="prescription">Dr. Alexander has updated the prescription of Exymobin from 100mg to 200mg.</h3>
+                <h3 class="notice"><strong>NOTE:</strong> ipsum dolor sit amet, consectetur adipiscing elit. Eget risus maecenas dignissim sapien. A et eu, vitae, semper sem et in turpis placerat. Praesent nibh imperdiet duis odio</h3>
+                <hr />
+                <div class="activities-doc">
+                    <%= image_tag("patient_svgs/hospitalLogo.svg", alt: "hospital logo") %>
+                    <div class="activities-doc-details">
+                        <h2>AB. Pharmaceuticals</h2>
+                        <h3>March 05, 2022</h3>
+                    </div>
+                </div>
+                <h3 class="prescription">Dr. Alexander Bada has updated the prescription of Exymobin from 100mg to 200mg.</h3>
+                <div class="activities-button">
+                    <h2>View all activities</h2>
                 </div>
             </div>
         </div>
-        <div class="health">
+        <%
+=begin%>
+ <div class="empty-activities">
+            <h2>Recent Activities</h2>
+            <div class="activity-info">
+                <h4>Your next recent activities will appear hear</h4>
+                <%= image_tag("patient_svgs/activity.svg", alt: "appointment icon", class: "info-icon") %>
+                <div class="lower-part"></div>
+            </div>
+        </div> 
+<%
+=end%>
+    </div>
+    <div class="health">
+        <% if @medications.present? %>
             <div class="medications">
                 <h2>Current Medications</h2>
-                <div class="medication-info">
+                <div class="medications-table">
+                    <% @medications.each do |medication| %>
+                        <div class="medications-cap">
+                            <div class="medication-info">
+                                <%= image_tag("patient_svgs/medication.svg", alt: "appointment icon", class: "medication-icon") %>
+                                <div class="medication-details">
+                                    <h2><%= medication.medication_name %></h2>
+                                    <h3><%= medication.dose %> per day</h3>
+                                </div>
+                                <%= image_tag("patient_svgs/arrow-right.svg", alt: "appointment icon", class: "arrow-right-icon") %>
+                            </div>
+                            <h4 class="refill">Last refill April 02, 2022</h4>
+                        </div>
+                    <% end %>
+                    <div class="medications-buttons">
+                        <div class="appointment-button-cancel">
+                            <%= image_tag("header_svgs/arrow-down.svg", alt: "doctor for appointment") %>
+                            <h2>View all</h2>
+                        </div>
+                        <div class="appointment-button-reschedule">
+                            <%= image_tag("patient_svgs/reschedule.svg", alt: "reschedule appointment") %>
+                            <h2>Request refill</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% else %>
+            <div class="empty-medications">
+                <h2>Current Medications</h2>
+                <div class="empty-medication-info">
                     <h4>Your medications will appear hear</h4>
                     <%= image_tag("patient_svgs/medical.svg", alt: "appointment icon", class: "info-icon") %>
                 </div>
             </div>
-            <div class="vitals">
-                <h2>Vitals</h2>
-                <div class="vitals-info">
+        <% end %>
+        <div class="vitals">
+            <h2>Vitals</h2>
+            <div class="vitals-info">
+                <% if @vital.present? %>
+                    <div class="vitals-info-one">
+                        <div class="vital-one">
+                            <%= image_tag("patient_svgs/vitalone.svg", alt: "appointment icon", class: "one") %>
+                            <h4>Blood Pressure</h4>
+                            <h3><%= @vital.blood_pressure %></h3>
+                        </div>
+                        <div class="vital-two">
+                            <%= image_tag("patient_svgs/vitalstwo.svg", alt: "appointment icon", class: "two") %>
+                            <h4>Blood Group</h4>
+                            <h3><%= current_user.blood_group %></h3>
+                        </div>
+                        <div class="vital-three">
+                            <%= image_tag("patient_svgs/vitalsthree.svg", alt: "appointment icon", class: "three") %>
+                            <h4>Weight</h4>
+                            <h3><%= @vital.weight %></h3>
+                        </div>
+                        <div class="vital-four">
+                            <%= image_tag("patient_svgs/vitalsfour.svg", alt: "appointment icon", class: "four") %>
+                            <h4>Age</h4>
+                            <h3><%= current_user.age %></h3>
+                        </div>
+                    </div>
+                <% else %>
                     <div class="vitals-info-one">
                         <div class="vital-one">
                             <%= image_tag("patient_svgs/vitalone.svg", alt: "appointment icon", class: "one") %>
@@ -67,8 +191,6 @@
                             <%= image_tag("patient_svgs/vitalstwo.svg", alt: "appointment icon", class: "two") %>
                             <h4>Blood Group</h4>
                         </div>
-                    </div>
-                    <div class="vitals-info-two">
                         <div class="vital-three">
                             <%= image_tag("patient_svgs/vitalsthree.svg", alt: "appointment icon", class: "three") %>
                             <h4>Weight</h4>
@@ -78,14 +200,46 @@
                             <h4>Age</h4>
                         </div>
                     </div>
-                </div>
+                <% end %>
             </div>
         </div>
-        <div class="billings">
-                <h2>Recent Bills</h2>
-                <div class="billings-info">
-                    <h4>Your recent bills will appear hear</h4>
-                    <%= image_tag("patient_svgs/billing.svg", alt: "appointment icon", class: "billing-icon") %>
-                </div>
-            </div>
     </div>
+    
+    <div class="billings bills">
+        <h2>Recent Bills</h2>
+        <div class="billings-info">
+            <div class="billing-item ">
+                <div class="billing-item-one">Providers details</div>
+                <div>date</div>
+                <div>Payment for</div>
+                <div>Amount</div>
+            </div>
+
+            <div class="billing-item billing-item-body">
+                <div class="provider-details billing-item-one">
+                    <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
+                    <div class="activities-doc-details">
+                        <h2>Dr. Alexandra Bada</h2>
+                        <h3>Senior Dermatologist</h3>
+                    </div>
+                </div>
+                <div class="other-items">April 05, 2022</div>
+                <div class="other-items">consultation</div>
+                <div class="amount">N2000.00</div>
+            </div>
+            <div class="billing-item billing-item-body">
+                <div class="provider-details billing-item-one">
+                    <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
+                    <div class="activities-doc-details">
+                        <h2>Dr. Alexandra Bada</h2>
+                        <h3>Senior Dermatologist</h3>
+                    </div>
+                </div>
+                <div class="other-items">April 05, 2022</div>
+                <div class="other-items">consultation</div>
+                <div class="amount">N2000.00</div>
+            </div>
+        </div>
+    </div>
+       
+</div>

@@ -9,7 +9,7 @@ class PatientMedication < ApplicationRecord
 
   def self.patient_medication_for_today(user)
     user.patient_medications.filter do |item|
-      item.created_at + item.no_of_days.days >= Time.current
+    item.created_at + item.no_of_days.days >= Time.current
     end
   end
 end
