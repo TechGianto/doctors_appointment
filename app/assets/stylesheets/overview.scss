@@ -1,0 +1,736 @@
+@import "./patient.scss";
+
+@mixin mediumtext($font-size: 16px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin bigtext($font-size: 20px, $font-weight: 700) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin vital {
+  flex-direction: column;
+  border-radius: 16px;
+  width: 45%;
+}
+
+@mixin vital-text {
+  padding: 0 11px;
+  color: #fff;
+  font-size: 10px;
+}
+
+.patient-page {
+  display: flex;
+}
+
+.patient-handle {
+  flex-direction: column;
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 33px 40px 0 62px;
+
+  @include viewdisplay(center);
+}
+
+.patient-search-options {
+  border-radius: 16px;
+  width: 100%;
+
+  @include viewdisplay(center);
+}
+
+.search-design {
+  width: 100%;
+  background-color: #fff;
+  flex: 4.5;
+  padding: 0.4rem;
+  border: 1px solid black;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  @include viewdisplay(center, space-between);
+}
+
+.end {
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 0 4px 0.1px #898989;
+}
+
+.search-design.end {
+  flex: 3.8;
+}
+
+.form-control {
+  flex: 5.5;
+  border-radius: 0;
+}
+
+.search-inputs {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.4rem;
+  flex: 5.5;
+  border: 1px solid #000;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  .form-control {
+    border: none;
+  }
+}
+
+.submit-btn {
+  flex: 1;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 0 4px 0.1px #898989;
+  background-color: #814a95;
+  padding: 13.7px;
+}
+
+.search-design .form-select {
+  border: none;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.form-select .speciality {
+  flex: 3;
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 0 4px 0.1px #898989;
+}
+
+.greeting {
+  width: 100%;
+  margin-top: 48px;
+
+  h1 {
+    font-family: "Lora";
+    font-style: normal;
+    color: #19b698;
+
+    @include bigtext(64px);
+  }
+
+  p {
+    width: 540px;
+
+    @include bigtext(20, 200);
+  }
+}
+
+.appointment-activities {
+  width: 100%;
+
+  @include viewdisplay(flex-start, space-between);
+}
+
+.appointment {
+  width: 54%;
+  flex-direction: column;
+
+  @include viewdisplay(flex-start);
+
+  & > div {
+    background-color: #fbfbfb;
+    box-shadow: 0 0 4px 0.1px #898989;
+    width: 100%;
+    border-radius: 16px;
+  }
+}
+
+.empty-appointment {
+  flex-direction: column;
+  align-self: start;
+  width: 54%;
+
+  @include viewdisplay(flex-start, space-between);
+
+  h2 {
+    margin: 48px 0 16px;
+    color: #814a95;
+  }
+}
+
+.empty-appointment-info {
+  border: 1px dashed #000;
+  flex-direction: column;
+  width: 90%;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  @include viewdisplay();
+
+  h4 {
+    width: 458px;
+    font-size: 20px;
+    text-align: center;
+    padding: 91px 142px 0 112px;
+  }
+
+  .info-icon {
+    width: 60%;
+    height: 60%;
+    margin-top: 43px;
+  }
+
+  .btn {
+    width: 215px;
+    height: 55px;
+    background-color: #19b698;
+    border-radius: 16px;
+    margin: 24px 0 40px;
+    color: #fff;
+  }
+}
+
+.empty-activities {
+  flex-direction: column;
+  width: 43%;
+
+  @include viewdisplay(flex-start);
+
+  h2 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    color: #814a95;
+  }
+}
+
+.activity-info {
+  border: 1px dashed #000;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  @include viewdisplay();
+
+  h4 {
+    width: 392px;
+    font-size: 20px;
+    text-align: center;
+    padding: 89px 77px 20px 90px;
+  }
+
+  .info-icon {
+    width: 75%;
+    margin-top: 39px;
+  }
+
+  .lower-part {
+    width: 100%;
+    height: 64px;
+    background-color: #fcffef;
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+.health {
+  width: 100%;
+
+  @include viewdisplay(flex-start, space-between);
+}
+
+.empty-medications {
+  flex-direction: column;
+  width: 54%;
+
+  @include viewdisplay(flex-start);
+
+  h2 {
+    margin-top: 44px;
+    margin-bottom: 16px;
+    color: #814a95;
+  }
+}
+
+.empty-medication-info {
+  border: 1px dashed #000;
+  flex-direction: column;
+  width: 90%;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  @include viewdisplay();
+
+  h4 {
+    padding: 47px 137px 5px 108px;
+    width: 438px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .info-icon {
+    width: 45%;
+    height: 60%;
+    margin: 10px 0 64px;
+  }
+}
+
+.medications {
+  flex-direction: column;
+  width: 54%;
+
+  @include viewdisplay(flex-start);
+
+  & > h2 {
+    margin: 44px 0 16px;
+    color: #814a95;
+  }
+}
+
+.medications-table {
+  flex-direction: column;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 4px 0.1px #898989;
+}
+
+.medications-cap {
+  width: 100%;
+  padding: 0 32px 0 23px;
+}
+
+.medication-info {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+  align-items: flex-start;
+}
+
+.medication-icon {
+  width: 18px;
+  margin: 4px 11px 0 0;
+}
+
+.arrow-right-icon {
+  width: 10px;
+  margin: 0 32px 0 auto;
+}
+
+.medication-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    color: #2b2b2b;
+
+    @include bigtext();
+  }
+
+  h3 {
+    color: #2b2b2b;
+
+    @include mediumtext();
+  }
+}
+
+.refill {
+  color: #2b2b2b;
+  margin-top: 8px;
+
+  @include mediumtext(10px);
+}
+
+.medications-buttons {
+  width: 100%;
+  height: 64px;
+
+  @include viewdisplay(center, center);
+
+  h2 {
+    margin: 0;
+    margin-left: 10px;
+
+    @include mediumtext();
+  }
+
+  img {
+    margin-left: 26px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.vitals {
+  flex-direction: column;
+  width: 43%;
+
+  @include viewdisplay(flex-start);
+
+  h2 {
+    margin: 44px 0 16px;
+    color: #814a95;
+  }
+
+  h3 {
+    color: #fff;
+
+    @include bigtext(20px, 400);
+  }
+}
+
+.vitals-info {
+  background-color: #fbfbfb;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0 0 4px 0.1px #898989;
+
+  @include viewdisplay(center, space-around);
+}
+
+.vitals-info-one {
+  margin: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-around;
+  width: 100%;
+
+  h4 {
+    @include vital-text();
+  }
+}
+
+.vital-one {
+  background-color: #c01b4d;
+
+  @include vital();
+  @include viewdisplay();
+
+  .one {
+    padding: 35px 57px 33px 60px;
+  }
+}
+
+.vital-two {
+  background-color: #e346be;
+
+  @include vital();
+  @include viewdisplay();
+
+  .two {
+    padding: 32px 59px 31px 60px;
+  }
+}
+
+.vital-three {
+  background-color: #d4af37;
+
+  @include vital();
+  @include viewdisplay();
+
+  .three {
+    padding: 29px 66px;
+  }
+}
+
+.vital-four {
+  background-color: #637ec9;
+
+  @include vital();
+  @include viewdisplay();
+
+  .four {
+    padding: 33px 62px 31px;
+  }
+}
+
+.billings {
+  width: 100%;
+  flex-direction: column;
+
+  @include viewdisplay(flex-start, center);
+
+  h2 {
+    margin: 44px 0 24px;
+    color: #814a95;
+  }
+}
+
+.billings-info {
+  border: 1px dashed #000;
+  width: 100%;
+  margin-bottom: 97px;
+  box-shadow: 0 0 4px 0.1px #898989;
+  flex-direction: column;
+
+  @include viewdisplay();
+
+  h4 {
+    width: 238px;
+    text-align: center;
+    margin-left: 15%;
+  }
+}
+
+.billing-icon {
+  width: 50%;
+  height: 255px;
+  margin: 43px 0 51px;
+}
+
+.appointment-heading {
+  margin: 48px 0 16px;
+  color: #814a95;
+}
+
+.appointment h1 {
+  width: 401px;
+  margin: 24px 0 0 23px;
+
+  @include bigtext(28px, 800);
+}
+
+.time {
+  margin: 18px 0 0 23px;
+
+  @include viewdisplay(center, flex-start);
+
+  h2 {
+    margin: 0 0 0 11px;
+    font-size: 20px;
+    color: #2b2b2b;
+  }
+}
+
+.appointment-doc {
+  display: flex;
+  margin: 21px 0 0 23px;
+}
+
+.appointment-doc-details {
+  margin-left: 16px;
+
+  h2 {
+    @include bigtext();
+  }
+
+  h3 {
+    line-height: 22px;
+
+    @include mediumtext();
+  }
+}
+
+.appointment-location {
+  display: flex;
+  align-items: center;
+  margin: 18px 0 0 23px;
+
+  h3 {
+    margin: 0;
+    margin-left: 13px;
+    width: 286px;
+    line-height: 21px;
+
+    @include mediumtext();
+  }
+}
+
+.doctor-specialities {
+  margin: 18px 0 0 23px;
+
+  h3 {
+    margin: 0;
+    width: 395px;
+    line-height: 21px;
+    margin-top: 7px;
+
+    @include mediumtext();
+  }
+}
+
+.appointment-buttons {
+  margin-top: 63px;
+  width: 100%;
+  height: 64px;
+
+  @include viewdisplay(center, center);
+
+  h2 {
+    margin: 0;
+    margin-left: 10px;
+
+    @include mediumtext();
+  }
+
+  img {
+    margin-left: 26px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.appointment-button-cancel {
+  display: flex;
+  flex: 50%;
+  height: inherit;
+  align-items: center;
+  border-radius: 0 0 0 16px;
+  background-color: #fcffef;
+
+  h2 {
+    color: #19b698;
+  }
+}
+
+.appointment-button-reschedule {
+  display: flex;
+  flex: 50%;
+  height: inherit;
+  align-items: center;
+  border-radius: 0 0 16px;
+  background-color: #fcffef;
+
+  h2 {
+    color: #814a95;
+  }
+}
+
+.activities {
+  flex-direction: column;
+  width: 43%;
+
+  @include viewdisplay(flex-start, center);
+
+  & > div {
+    background-color: #fbfbfb;
+    box-shadow: 0 0 4px 0.1px #898989;
+    width: 100%;
+    border-radius: 16px;
+  }
+}
+
+.activities-heading {
+  margin: 48px 0 16px;
+  color: #814a95;
+}
+
+.activities-doc {
+  display: flex;
+  margin: 25px 0 0 14px;
+
+  h3 {
+    margin: 0;
+
+    @include mediumtext();
+  }
+}
+
+.activities-doc-details {
+  margin-left: 14px;
+
+  h2 {
+    @include bigtext(16px);
+  }
+
+  h3 {
+    line-height: 22px;
+
+    @include mediumtext();
+  }
+}
+
+.prescription {
+  width: 320px;
+  margin: 16px 0  0 14px;
+
+  @include mediumtext();
+}
+
+.notice {
+  padding: 12px 11px 8px;
+  width: 302px;
+  margin: 16px 0 24px 14px;
+  background-color: #e8e8e8;
+
+  @include mediumtext(10px);
+}
+
+.activities-button {
+  margin-top: 13px;
+  width: 100%;
+  background-color: #fcffef;
+  height: 64px;
+  border-radius: 0 0 16px 16px;
+
+  @include viewdisplay(center, center);
+
+  h2 {
+    color: #814a95;
+    font-size: 20px;
+  }
+}
+
+.provider-details {
+  align-items: center;
+  display: flex;
+
+  h2 {
+    margin: 0;
+    color: #2b2b2b;
+
+    @include bigtext();
+  }
+
+  h3 {
+    margin: 0;
+    color: #898989;
+    line-height: 22px;
+
+    @include mediumtext();
+  }
+}
+
+.content {
+  color: #2b2b2b;
+
+  @include mediumtext();
+}
+
+.heading {
+  color: #898989;
+
+  @include mediumtext();
+}
+
+.billing-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  margin-bottom: 16px;
+  color: #898989;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.billing-item.billing-item-body {
+  border-radius: 16px;
+  height: 80px;
+  background-color: #fff;
+}
+
+.billing-item.billing-item-body:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.billing-item-one {
+  grid-area: 1/1/span 1/span 3;
+  margin-left: 16px;
+}
+
+.amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #814a95;
+
+  @include bigtext(16px);
+}
+
+.bills .billings-info {
+  padding: 24px;
+}
