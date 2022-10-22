@@ -43,10 +43,14 @@ class SearchController < ApplicationController
 
   def filter
     page = params['page'] || 1
-    @doctors = @result.where(specialities: {name: [params['doctor_speciality']]}).page(page).per(5)
+    @res = @result.where(specialities: {name: [params['doctor_speciality']]}).page(page).per(5)
     if params['location'] != ''
-      @doctors = @result.where(specialities: {name: [params['doctor_speciality']]}, user: {state: [params['location']]}).page(page).per(5)
+      @res = @result.where(user: {state: [params['location']]}).page(page).per(5)
     end
+    if params['location'] != '' && params['doctor_speciality'] != ''
+      @res = @result.where(specialities: {name: [params['doctor_speciality']]}, user: {state: [params['location']]}).page(page).per(5)
+    end
+    @doctors = @res.map { |doctor| DoctorPresenter.new(doctor).show_card_details }
     respond_to do |format|
       format.html
       format.json do

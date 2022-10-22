@@ -1,6 +1,6 @@
 import React from "react";
 import DoctorCard from "../DoctorCard";
-const Items = ({ currentItems }) => {
+const Items = ({ currentItems, getID }) => {
   return (
     <>
       {currentItems &&
@@ -11,7 +11,8 @@ const Items = ({ currentItems }) => {
             fullname={item.doctor_name}
             speciality={item.doctor_speciality}
             address={item.doctor_address}
-            image={item.doctor_image} />
+            doctor_id={item.doctor_id}
+            image={item.doctor_image} getID={getID} />
         ))}
     </>
   );

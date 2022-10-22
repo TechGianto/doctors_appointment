@@ -4,7 +4,7 @@ import Items from "./cardi_tems";
 import axios from "axios"
 
 
-const PaginatedItems = ({ doctors, total_pages, updateDocotor }) => {
+const PaginatedItems = ({ doctors, total_pages, updateDocotor, getID }) => {
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
@@ -21,22 +21,21 @@ const PaginatedItems = ({ doctors, total_pages, updateDocotor }) => {
       .catch(function (error) {
         console.log(error);
       });
-
   };
 
   return (
     <div className="pagination-item">
       <div className="doctor-search-output">
-        <Items currentItems={doctors} />
+        <Items currentItems={doctors} getID={getID} />
       </div>
       <ReactPaginate
         breakLabel="..."
-        nextLabel="< next >"
+        nextLabel="next"
         onPageChange={handlePageClick}
         pageRangeDisplayed={4}
         marginPagesDisplayed={2}
         pageCount={total_pages / 5}
-        previousLabel="< previous >"
+        previousLabel="previous"
         renderOnZeroPageCount={null}
         pageClassName="page-item"
         pageLinkClassName="page-link"

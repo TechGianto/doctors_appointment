@@ -4,7 +4,7 @@ import Locations from "../../../../assets/images/patient_svgs/location.svg";
 import Search from "../../../../assets/images/header_svgs/search.svg";
 import axios from "axios";
 
-const SearchOption = ({ speciality, location }) => {
+const SearchOption = ({ speciality, location, updateDocotor }) => {
   const [options, setOption] = useState({
     doctor_speciality: "",
     doctor_name: "",
@@ -30,7 +30,7 @@ const SearchOption = ({ speciality, location }) => {
       }
     )
 
-    console.log(reponse)
+    updateDocotor(reponse.data.doctors)
   }
 
   console.log(options)
@@ -39,7 +39,7 @@ const SearchOption = ({ speciality, location }) => {
       <div className ="search-design end">
         <img src={Doc} alt="search icon" className="sidebar-icons" />
         <select className="form-select speciality" name="doctor_speciality" onChange={handleChange} aria-label=".form-select example">
-          <option defaultValue>Speciality</option>
+          <option defaultValue = "">Speciality</option>
           {
             speciality.map(s => {
               return <option value={s.name} key={s.name}>{ s.name }</option>
@@ -53,7 +53,7 @@ const SearchOption = ({ speciality, location }) => {
       <div className ="search-design">
         <img src={Locations} alt="message" />
         <select className="form-select " name="locations" onChange={handleChange} aria-label=".form-select example">
-          <option defaultValue>Locations</option>
+          <option value = "">Locations</option>
           {
             location.map(l => {
               return <option value={l.state} key={l.state}>{ l.state }</option>

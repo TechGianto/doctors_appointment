@@ -273,11 +273,12 @@
 }
 
 .doctor-card-img {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif");
   width: 128px;
   height: 128px;
-  margin: 8px;
-  border: 1px solid #d4af37;
+  background-repeat: no-repeat;
   border-radius: 100%;
+  background-size: contain;
 }
 
 .doctor-speciality {
@@ -349,10 +350,10 @@
 
 .doctor-card .doctor-rating {
   background-color: #d4af37;
-  width: 75px;
+  width: 46px;
   display: flex;
   align-items: center;
-  justify-content: column;
+  justify-content: center;
   position: absolute;
   left: 0;
   top: 10%;
@@ -394,4 +395,52 @@
 .searchbox-container .patient-search-options {
   width: 100%;
   height: 64px;
+}
+
+.cicular-bar {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cicular-bar svg {
+  position: absolute;
+  width: 68%;
+  top: -4%;
+  left: 50%;
+  transform: translate(-40%, -2%);
+}
+
+.cicular-bar svg circle {
+  fill: transparent;
+  stroke: #ccc;
+  stroke-width: 4;
+  transform: translate(10px, 5px);
+  stroke-dasharray: 472;
+}
+
+.cicular-bar svg circle:nth-child(2) {
+  stroke: var(--col);
+  stroke-dasharray: 472;
+  stroke-dashoffset: calc(472 - ((472 * var(--num)) / 100));
+}
+
+.dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 1;
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: 75%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  background-color: var(--col);
 }
