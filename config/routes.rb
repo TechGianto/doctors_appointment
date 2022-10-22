@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   controller :search do
     get :search, action: :index
+    get 'search/:id', action: :show
+    get :filter, action: :filter
   end
 
   # resources :doctor, only: [:index, :show] do

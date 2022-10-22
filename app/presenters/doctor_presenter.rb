@@ -22,7 +22,6 @@ class DoctorPresenter < SimpleDelegator
       doctor_image: Rails.application.routes.url_helpers.rails_blob_path(profile_pic, only_path: true),
       doctor_speciality: specialities,
       doctor_testemonial: doctor_ratings,
-      doctor_raters: doctor_ratings.map(&:user).map(&:full_name),
     }
   end
 end
