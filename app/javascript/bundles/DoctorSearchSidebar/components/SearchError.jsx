@@ -22,10 +22,6 @@ const SearchError = () => {
               busy sleeping. We pride ourselves on meeting expectations, so to
               make it up to you, we are going to fire Doggy.
             </p>
-            {/* <div className="btn-container"> */}
-            {/* <%= link_to "Back to Search", new_user_registration_path , className: "btn btn-back-search" %>
-                        <%= link_to "Fire Doggy", new_user_registration_path , className: "btn btn-fire-dog" %>
-                </div> */}
           </div>
           <div className="col-6"></div>
         </div>
