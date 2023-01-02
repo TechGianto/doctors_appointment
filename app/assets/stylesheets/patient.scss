@@ -65,6 +65,7 @@
 .side-bar {
   background-color: #e8e8e8;
   width: 350px;
+  border-right: 1px solid #898989;
 }
 
 .user-info {
@@ -108,7 +109,6 @@
   flex-direction: column;
   justify-content: center;
   color: #898989;
-  border-right: 1px solid #898989;
 }
 
 .menu-head {
@@ -188,7 +188,7 @@
   flex-direction: column;
   background-color: #f5f5f5;
   width: 100%;
-  padding: 33px 102px 0 62px;
+  padding-top: 33px;
 }
 
 .patient-search-options {
