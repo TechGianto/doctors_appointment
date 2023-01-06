@@ -27,7 +27,7 @@ default_environment: &default_environment
         POSTGRES_PASSWORD: ""
         POSTGRES_USER: circleci
     - image: redis
-    - image: circleci/node:12
+    - image: cimg/node:16.18.1
 
 jobs:
   create_git_tag:
@@ -168,7 +168,7 @@ jobs:
       - run: ./node_modules/.bin/stylelint "**/*.scss"
   eslint:
     docker:
-      - image: circleci/node:12
+      - image: cimg/node:16.18.1
     steps:
       - checkout
       - attach_workspace:
