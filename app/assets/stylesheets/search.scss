@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @import "variables";
 
 .search-container.container {
@@ -41,7 +42,6 @@
 .search-error-info.container {
   background-image: url("search/error.svg");
   background-repeat: no-repeat;
-  background-position: center;
   height: 332px;
   width: 80%;
   margin: 0 auto;
@@ -90,7 +90,7 @@
   height: 367px;
   background: $primary_green_blue;
   width: 100%;
-  padding: 3%;
+  padding: 1%;
 }
 
 .search-header h2 {
@@ -98,7 +98,7 @@
   font-family: "Lora";
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 59px;
   line-height: 82px;
   color: $white;
   text-align: center;
@@ -235,4 +235,20 @@
 .form-check-input:checked {
   background-color: $primary_green_blue !important;
   border: 0;
+}
+
+.filter-speciality::-webkit-scrollbar {
+  width: 10px;
+}
+
+.filter-speciality::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.filter-speciality::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.filter-speciality::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
