@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :patient_medication do
     medication_name { Faker::Name.name }
-    association :user
+    association :patient
     association :doctor
     dose { rand(1..3) }
     dosage { rand(1..12).hours }
