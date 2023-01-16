@@ -17,7 +17,7 @@ class PatientController < ApplicationController
       roles: current_user.roles[0].name.to_s,
       signed_in: user_signed_in?, id: current_user.id,
       speciality: @speciality, location: @location,
-      medications: @medications
+      medications: @medications,
     }
   end
 end

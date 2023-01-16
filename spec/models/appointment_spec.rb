@@ -4,7 +4,7 @@ RSpec.describe Appointment, type: :model do
   let(:appointment1) { create(:appointment) }
 
   describe 'Associations' do
-    it { is_expected.to belong_to(:user).without_validating_presence }
+    it { is_expected.to belong_to(:patient).without_validating_presence }
     it { is_expected.to belong_to(:doctor).without_validating_presence }
   end
 
