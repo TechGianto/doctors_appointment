@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     def user
       current_user
     end
+    
+    def patient
+        @patient  = Patient.find(current_user.id)
+    end
 
     def after_sign_in_path_for(*)
       patient_index_path

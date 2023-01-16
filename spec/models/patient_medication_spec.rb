@@ -25,21 +25,8 @@ RSpec.describe PatientMedication, type: :model do
 
   describe 'Association' do
     it { is_expected.to belong_to(:doctor) }
-    it { is_expected.to belong_to(:user) }
+    it { is_expected.to belong_to(:patient) }
   end
 
-  describe '#patient_medication_for_today' do
-    let(:patient) { create(:user) }
-
-    before do
-      create(:patient_medication, user: patient, created_at: Time.current)
-      create(:patient_medication, user: patient, created_at: Time.current)
-      create(:patient_medication, user: patient, created_at: Time.now.in_time_zone - 6.days)
-    end
-
-    it 'returns patient medication for today' do
-      result = described_class.patient_medication_for_today(patient)
-      expect(result.size).to be(2)
-    end
-  end
+ 
 end

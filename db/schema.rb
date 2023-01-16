@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_22_185317) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_16_113616) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,7 +50,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_185317) do
     t.bigint "doctor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "patient_id", null: false
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
@@ -122,12 +124,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_185317) do
     t.interval "dosage"
     t.integer "no_of_days"
     t.integer "status", default: 1
-    t.bigint "user_id", null: false
     t.bigint "doctor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "patient_id", null: false
     t.index ["doctor_id"], name: "index_patient_medications_on_doctor_id"
-    t.index ["user_id"], name: "index_patient_medications_on_user_id"
+    t.index ["patient_id"], name: "index_patient_medications_on_patient_id"
   end
 
   create_table "qualifications", force: :cascade do |t|
@@ -198,5 +200,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_185317) do
   add_foreign_key "doctors_qualifications", "doctors"
   add_foreign_key "doctors_qualifications", "qualifications"
   add_foreign_key "patient_medications", "doctors"
-  add_foreign_key "patient_medications", "users"
 end

@@ -14,7 +14,7 @@ class User < ApplicationRecord
   validates :phone, length: {minimum: 11, maximum: 15}, format: {with: /\A[+-]?\d+\z/}, allow_nil: true
   validates :state, :gender, :middle_name, :nationality, :LGA, :status, presence: true, allow_nil: true
 
-  has_many :patient_medications, dependent: :destroy
+
   #validates :gender, inclusion: {in: ['Male', 'Female']}, allow_nil: false
 
   def self.from_omniauth(access_token)
