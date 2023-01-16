@@ -1,6 +1,6 @@
 class Patient < User
   has_many :patient_medications, dependent: :destroy
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   has_many :doctors, through: :appointments
 
 
