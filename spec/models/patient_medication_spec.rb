@@ -27,6 +27,4 @@ RSpec.describe PatientMedication, type: :model do
     it { is_expected.to belong_to(:doctor) }
     it { is_expected.to belong_to(:patient) }
   end
-
- 
 end

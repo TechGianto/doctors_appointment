@@ -17,4 +17,3 @@ FactoryBot.define do
     status { rand(1..3) }
   end
 end
-
