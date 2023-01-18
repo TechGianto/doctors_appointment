@@ -83,7 +83,7 @@
                 <div class="activities-doc">
                     <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
                     <div class="activities-doc-details">
-                        <h2>Dr. Alexandra Bada</h2>
+                        <h2><%= @appointment.doctor.first_name %></h2>
                         <h3>April 05, 2022</h3>
                     </div>
                 </div>

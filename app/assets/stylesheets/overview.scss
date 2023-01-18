@@ -131,13 +131,17 @@
   width: 54%;
   flex-direction: column;
 
-  @include viewdisplay(flex-start);
+  @include viewdisplay(flex-start, space-between);
 
   & > div {
     background-color: #fbfbfb;
     box-shadow: 0 0 4px 0.1px #898989;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 16px;
+    min-height: 498px;
+    justify-content: space-between;
   }
 }
 
@@ -282,8 +286,11 @@
 .medications-table {
   flex-direction: column;
   width: 100%;
+  display: flex;
   border-radius: 16px;
   box-shadow: 0 0 4px 0.1px #898989;
+  min-height: 389px;
+  justify-content: space-between;
 }
 
 .medications-cap {
@@ -377,6 +384,7 @@
   flex-wrap: wrap;
   width: 100%;
   box-shadow: 0 0 4px 0.1px #898989;
+  min-height: 389px;
 
   @include viewdisplay(center, space-around);
 }
@@ -600,7 +608,11 @@
     background-color: #fbfbfb;
     box-shadow: 0 0 4px 0.1px #898989;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 16px;
+    min-height: 498px;
+    justify-content: space-between;
   }
 }
 
