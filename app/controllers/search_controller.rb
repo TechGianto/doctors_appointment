@@ -42,19 +42,49 @@ class SearchController < ApplicationController
   end
 
   def filter
-    page = params['page'] || 1
-    @res = @result.where(specialities: {name: [params['doctor_speciality']]}).page(page).per(5)
-    if params['location'] != ''
-      @res = @result.where(user: {state: [params['location']]}).page(page).per(5)
+    @doctors = Doctor.approved.joins(:user)
+    name = params[:doctor_name]
+    if params[:doctor_name].present?
+       name = params[:doctor_name]
+       firstname = User.arel_table[:first_name]
+       lastname = User.arel_table[:last_name]
+       users = User.where(firstname.matches("%#{name}%"))
+         .or(User.where(lastname.matches("%#{name}%")))
+       @doctors = @doctors.merge(users)
     end
-    if params['location'] != '' && params['doctor_speciality'] != ''
-      @res = @result.where(specialities: {name: [params['doctor_speciality']]}, user: {state: [params['location']]}).page(page).per(5)
+
+    if params[:doctor_speciality].present?
+       speciality_param = params[:doctor_speciality]
+       speciality = Speciality.find_by_name(speciality_param)
+       doctor_speciality = DoctorSpeciality.where(speciality_id: speciality.id)
+
+       @doctors = @doctors.joins(:specialities).merge(doctor_speciality)
     end
-    @doctors = @res.map { |doctor| DoctorPresenter.new(doctor).show_card_details }
+
+    if params[:location].present?
+      location_param = params[:location]
+      location = User.where(state: location_param)
+      @doctors = @doctors.merge(location)
+    end
+    # page = params['page'] || 1
+    # @res = @result.where(specialities: {name: [params['doctor_speciality']]}).page(page).per(5)
+    # if params['location'] != ''
+    #   @res = @result.where(user: {state: [params['location']]}).page(page).per(5)
+    # end
+    # if params['location'] != '' && params['doctor_speciality'] != ''
+    #   @res = @result.where(specialities: {name: [params['doctor_speciality']]}, user: {state: [params['location']]}).page(page).per(5)
+    # end
+    # binding.pry
+    results = @doctors.includes(
+      :user,
+      :doctor_ratings,
+      :specialities,
+      user: [:profile_pic_attachment, :profile_pic_blob],
+    ).map { |doctor| DoctorPresenter.new(doctor).show_card_details }
     respond_to do |format|
       format.html
       format.json do
-        render json: {doctors: @doctors}.to_json
+        render json: {doctors: results, total_pages: results.count}.to_json
       end
     end
   end
@@ -66,7 +96,7 @@ class SearchController < ApplicationController
       :user,
       :doctor_ratings,
       :specialities,
-      user: [:profile_pic_attachment, :profile_pic_blob],
+      # user: [:profile_pic_attachment, :profile_pic_blob],
     ).approved
   end
 

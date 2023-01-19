@@ -4,7 +4,7 @@ import Items from "./cardi_tems";
 import axios from "axios"
 
 
-const PaginatedItems = ({ doctors, total_pages, updateDocotor, getID }) => {
+const PaginatedItems = ({ doctors, total_pages, updateDoctor, getID }) => {
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
@@ -16,7 +16,7 @@ const PaginatedItems = ({ doctors, total_pages, updateDocotor, getID }) => {
     })
       .then(function (response) {
         console.log(response);
-        updateDocotor(response.data.doctors)
+        updateDoctor(response.data.doctors)
       })
       .catch(function (error) {
         console.log(error);

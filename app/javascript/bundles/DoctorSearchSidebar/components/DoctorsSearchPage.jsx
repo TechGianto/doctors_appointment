@@ -14,7 +14,8 @@ const DoctorsSearchPage = ({
   qualifications,
   doctors,
   total_pages,
-  updateDocotor,
+  updateDoctor,
+  updateTotalPage,
 }) => {
 
   const [doc, setDoctor] = useState([])
@@ -39,7 +40,7 @@ const DoctorsSearchPage = ({
 
   return (
     <div>
-      <Header speciality={specialities} location={states} updateDocotor={updateDocotor} />
+      <Header speciality={specialities} location={states} updateDoctor={updateDoctor} updateTotalPage={updateTotalPage} />
       <div className="search-container container">
         <div className="row search-row">
           <div className="col-3" id="sidebar-toggle">
@@ -63,7 +64,7 @@ const DoctorsSearchPage = ({
                   total_pages={total_pages}
                   getID={getID}
                   setDoctor={setDoctor}
-                  updateDocotor={updateDocotor} />
+                  updateDoctor={updateDoctor} />
             }
           </div>
         </div>

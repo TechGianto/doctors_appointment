@@ -49,7 +49,7 @@ const doctors = (state = "", action) => {
 const total_pages = (state = "", action) => {
   switch (action.type) {
   case TOTAL_PAGES:
-    return action.text;
+    return action.total_pages;
   default:
     return state;
   }
