@@ -43,7 +43,6 @@ class SearchController < ApplicationController
 
   def filter
     @doctors = Doctor.approved.joins(:user)
-    name = params[:doctor_name]
     if params[:doctor_name].present?
        name = params[:doctor_name]
        firstname = User.arel_table[:first_name]
