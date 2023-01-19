@@ -4,7 +4,7 @@ import Locations from "../../../../assets/images/patient_svgs/location.svg";
 import Search from "../../../../assets/images/header_svgs/search.svg";
 import axios from "axios";
 
-const SearchOption = ({ speciality, location, updateDocotor }) => {
+const SearchOption = ({ speciality, location, updateDoctor, updateTotalPage }) => {
   const [options, setOption] = useState({
     doctor_speciality: "",
     doctor_name: "",
@@ -19,7 +19,7 @@ const SearchOption = ({ speciality, location, updateDocotor }) => {
   };
 
   const filter = async () => {
-    const reponse = await axios.get("/filter",
+    const response = await axios.get("/filter",
       {
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         params: {
@@ -29,8 +29,9 @@ const SearchOption = ({ speciality, location, updateDocotor }) => {
         }
       }
     )
-
-    updateDocotor(reponse.data.doctors)
+    console.log(response.data.total_pages)
+    updateDoctor(response.data.doctors)
+    updateTotalPage(response.data.total_pages || 0)
   }
 
   console.log(options)
@@ -39,7 +40,7 @@ const SearchOption = ({ speciality, location, updateDocotor }) => {
       <div className ="search-design end">
         <img src={Doc} alt="search icon" className="sidebar-icons" />
         <select className="form-select speciality" name="doctor_speciality" onChange={handleChange} aria-label=".form-select example">
-          <option defaultValue = "">Speciality</option>
+          <option value = "">Speciality</option>
           {
             speciality.map(s => {
               return <option value={s.name} key={s.name}>{ s.name }</option>
