@@ -62,11 +62,12 @@ gem 'bootsnap', require: false
 gem 'faker'
 
 gem 'factory_bot_rails', '~> 6.2'
-gem 'pry-byebug'
-gem 'pry-rescue'
 gem 'fakeredis'
+gem 'kaminari'
 gem 'pry'
+gem 'pry-byebug'
 gem 'pry-rails'
+gem 'pry-rescue'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -109,7 +110,7 @@ end
 
 gem 'rolify'
 
-gem "webpacker", "~> 5.4"
+gem 'webpacker', '~> 5.4'
 
-gem "react_on_rails", "= 12.0.4"
-gem "mini_racer", platforms: :ruby
+gem 'mini_racer', platforms: :ruby
+gem 'react_on_rails', '= 12.0.4'

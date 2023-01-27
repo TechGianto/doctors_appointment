@@ -4,6 +4,7 @@ class Doctor < ApplicationRecord
   has_many :patients, through: :appointments
   belongs_to :hospital, optional: true
   has_many :doctor_specialities, dependent: :destroy
+  has_many :specialities, through: :doctor_specialities
   has_many :doctor_ratings, dependent: :destroy
   has_many :patient_medications, dependent: :destroy
   has_many :appointments, dependent: :destroy
@@ -15,4 +16,16 @@ class Doctor < ApplicationRecord
 
   delegate :first_name, to: :user # This allow us call doctor.first_name
   delegate :last_name, to: :user  # This allows us call doctor.last_name
+
+  def speciality_names
+    return self.specialities.map(&:name)
+  end
+
+  def doctor_rate
+    self.doctor_ratings.sum(&:rating) / self.doctor_ratings.size
+  end
+
+  # def doctor_count
+  #   self.doctor_ratings.count
+  # end
 end

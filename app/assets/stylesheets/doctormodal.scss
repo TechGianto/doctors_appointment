@@ -143,7 +143,7 @@
           gap: 16px;
 
           .speciality {
-            width: 143px;
+            min-width: 143px;
             height: 40px;
             display: flex;
             align-items: center;
@@ -153,6 +153,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 19px;
+            padding: 0 5px;
           }
         }
 
