@@ -31,8 +31,9 @@ module DoctorsAppointment
     # config.time_zone = "Central Time (US & Canada)"
     config.eager_load_paths += Dir["#{config.root}/lib"]
     config.eager_load_paths += Dir["#{config.root}/lib/utilities"]
+    config.eager_load_paths += Dir["#{config.root}/lib/calendar_providers"]
+    config.eager_load_paths += Dir["#{config.root}/lib/calendar_providers/providers"]
     config.eager_load_paths += Dir["#{config.root}/app/presenters"]
-    config.eager_load_paths += Dir["#{config.root}/app/queries"]
     config.eager_load_paths += Dir["#{config.root}/app/queries"]
 
     # Don't generate system test files.

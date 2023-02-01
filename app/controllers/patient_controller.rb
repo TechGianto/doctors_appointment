@@ -18,6 +18,8 @@ class PatientController < ApplicationController
       signed_in: user_signed_in?, id: current_user.id,
       speciality: @speciality, location: @location,
       medications: @medications,
+      last_name: current_user.last_name.to_s,
+      email: current_user.email.to_s,
     }
   end
 end

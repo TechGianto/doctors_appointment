@@ -38,5 +38,51 @@ module CalendlyService
       endpoint = to_endpoint_path(__method__, organization_uuid: organization_uuid)
       return call(__method__, endpoint: endpoint)
     end
+
+    InviteResponse = Struct.new(:resource) do
+      include JsonResponseHelper
+
+      def success?
+        self.resource&.present? && self.resource&.status&.present?
+      end
+    end
+
+    def self.invite(data)
+      endpoint = to_endpoint_path(__method__, organization_uuid: CALENDLY_ORGANIZATION_UUID)
+      return call(__method__, endpoint: endpoint, body: data)
+    end
+
+    GetInviteResponse = Struct.new(:resource) do
+      include JsonResponseHelper
+
+      def success?
+        self.resource&.present? && self.resource&.status&.present?
+      end
+    end
+
+    def self.get_invite(reference)
+      endpoint = to_endpoint_path(__method__, organization_uuid: CALENDLY_ORGANIZATION_UUID, invite_id: reference)
+      return call(__method__, endpoint: endpoint)
+    end
+  end
+
+  module EventTypes
+    include ApiModule
+
+    ENDPOINTS = {
+      get_event_types: { get: '/event_types'.freeze },
+    }
+
+    GetEventTypesResponse = Struct.new(:collection) do
+      include JsonResponseHelper
+
+      def success?
+        !self.collection.empty?
+      end
+    end
+
+    def self.get_event_types(user)
+      return call(__method__, query: { user: user, organization: "#{CALENDLY_BASE_URL}/organizations/#{CALENDLY_ORGANIZATION_UUID}" })
+    end
   end
 end
