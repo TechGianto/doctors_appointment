@@ -107,9 +107,9 @@ group :development do
   gem 'spring-commands-rubocop', require: false
 end
 
+gem 'mini_racer', platforms: :ruby
+gem 'react_on_rails', '= 12.0.4'
+
 gem 'rolify'
 
 gem 'webpacker', '~> 5.4'
-
-gem 'react_on_rails', '= 12.0.4'
-gem 'mini_racer', platforms: :ruby
