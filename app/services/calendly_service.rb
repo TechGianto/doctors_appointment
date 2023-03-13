@@ -2,7 +2,7 @@ module CalendlyService
   class ApiError < StandardError; end
 
   def self.api_modules
-    return self.constants.map(&self.method(:const_get)).select do |api_module|
+    return self.constants.map(&:const_get).select do |api_module|
       api_module.is_a?(Module) && api_module.included_modules.include?(self::ApiModule)
     end
   end
@@ -36,7 +36,7 @@ module CalendlyService
       organization_uuid = CALENDLY_ORGANIZATION_UUID
 
       endpoint = to_endpoint_path(__method__, organization_uuid: organization_uuid)
-        return call(__method__, endpoint: endpoint)
+      return call(__method__, endpoint: endpoint)
     end
 
     InviteResponse = Struct.new(:resource) do

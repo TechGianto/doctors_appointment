@@ -23,7 +23,7 @@ class CalendlyProvider
   end
 
   def self.get_event_types(doctor)
-    # TODO add unique index to calender_invite table on Provider and user_id
+    #TODO: add unique index to calender_invite table on Provider and user_id
     calendar_invite = doctor.calendar_invites.where(provider: self.name).take
     return if calendar_invite.nil?
 

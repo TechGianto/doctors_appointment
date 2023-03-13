@@ -9,7 +9,7 @@ module CalendlyService::JsonResponseHelper
   # Allow case comparison with Hash.
   def ===(rhs)
     return super if !rhs.is_a?(Hash)
-    return rhs.all? { |key, value| value === self[key] || value === self[key].to_s }
+    return rhs.all? { |key, value| value.is_a?(self[key]) || value == self[key].to_s }
   end
 
   def parse(response)
@@ -19,7 +19,7 @@ module CalendlyService::JsonResponseHelper
     self.members.each do |member|
       # Every expected member should be present.
       # This doesn't work for expected error messages
-      raise ::CalendlyService::ApiError.new(response) if !result.key?(member) && result[:status] != false
+      raise ::CalendlyService::ApiError, response if !result.key?(member) && result[:status] != false
 
       self[member] = result[member]
     end
