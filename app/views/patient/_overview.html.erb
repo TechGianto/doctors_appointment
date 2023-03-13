@@ -77,44 +77,44 @@
                 </div>
             </div> 
         <% end %>
-        <div class="activities">
-            <h2 class="activities-heading">Recent Activities</h2>
-            <div>
-                <div class="activities-doc">
-                    <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
-                    <div class="activities-doc-details">
-                        <h2><%= @appointment.doctor.first_name %></h2>
-                        <h3>April 05, 2022</h3>
+
+        <% if @activities.present? %>
+            <div class="activities">
+                <h2 class="activities-heading">Recent Activities</h2>
+                <div>
+                    <div class="activities-doc">
+                        <%= image_tag("patient_svgs/doctorImg.svg", alt: "doctor for appointment") %>
+                        <div class="activities-doc-details">
+                            <h2><%= @appointment.doctor.first_name %></h2>
+                            <h3>April 05, 2022</h3>
+                        </div>
+                    </div>
+                    <h3 class="prescription">Dr. Alexander has updated the prescription of Exymobin from 100mg to 200mg.</h3>
+                    <h3 class="notice"><strong>NOTE:</strong> ipsum dolor sit amet, consectetur adipiscing elit. Eget risus maecenas dignissim sapien. A et eu, vitae, semper sem et in turpis placerat. Praesent nibh imperdiet duis odio</h3>
+                    <hr />
+                    <div class="activities-doc">
+                        <%= image_tag("patient_svgs/hospitalLogo.svg", alt: "hospital logo") %>
+                        <div class="activities-doc-details">
+                            <h2>AB. Pharmaceuticals</h2>
+                            <h3>March 05, 2022</h3>
+                        </div>
+                    </div>
+                    <h3 class="prescription">Dr. Alexander Bada has updated the prescription of Exymobin from 100mg to 200mg.</h3>
+                    <div class="activities-button">
+                        <h2>View all activities</h2>
                     </div>
                 </div>
-                <h3 class="prescription">Dr. Alexander has updated the prescription of Exymobin from 100mg to 200mg.</h3>
-                <h3 class="notice"><strong>NOTE:</strong> ipsum dolor sit amet, consectetur adipiscing elit. Eget risus maecenas dignissim sapien. A et eu, vitae, semper sem et in turpis placerat. Praesent nibh imperdiet duis odio</h3>
-                <hr />
-                <div class="activities-doc">
-                    <%= image_tag("patient_svgs/hospitalLogo.svg", alt: "hospital logo") %>
-                    <div class="activities-doc-details">
-                        <h2>AB. Pharmaceuticals</h2>
-                        <h3>March 05, 2022</h3>
-                    </div>
-                </div>
-                <h3 class="prescription">Dr. Alexander Bada has updated the prescription of Exymobin from 100mg to 200mg.</h3>
-                <div class="activities-button">
-                    <h2>View all activities</h2>
+            </div>
+        <% else %>
+            <div class="empty-activities">
+                <h2>Recent Activities</h2>
+                <div class="activity-info">
+                    <h4>Your next recent activities will appear hear</h4>
+                    <%= image_tag("patient_svgs/activity.svg", alt: "appointment icon", class: "info-icon") %>
+                    <div class="lower-part"></div>
                 </div>
             </div>
-        </div>
-        <%
-=begin%>
- <div class="empty-activities">
-            <h2>Recent Activities</h2>
-            <div class="activity-info">
-                <h4>Your next recent activities will appear hear</h4>
-                <%= image_tag("patient_svgs/activity.svg", alt: "appointment icon", class: "info-icon") %>
-                <div class="lower-part"></div>
-            </div>
-        </div> 
-<%
-=end%>
+        <% end %>
     </div>
     <div class="health">
         <% if @medications.present? %>
