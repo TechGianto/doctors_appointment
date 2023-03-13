@@ -23,7 +23,6 @@ class Doctor < ApplicationRecord
   scope :with_calendar_setup, lambda { joins(:calendar_invites).where.not(calendar_invites: { id: nil }) }
   scope :with_active_calendar, lambda { with_calendar_setup.where(calendar_invites: { status: :accepted }) }
 
-  after_create :send_calendar_invitation
   after_commit :run_commit_hooks
 
   delegate :first_name, to: :user # This allow us call doctor.first_name
@@ -48,7 +47,7 @@ class Doctor < ApplicationRecord
   end
 
   def run_commit_hooks
-    send_calendar_invitation
+    # send_calendar_invitation
   end
 
   def send_calendar_invitation

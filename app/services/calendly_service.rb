@@ -36,7 +36,7 @@ module CalendlyService
       organization_uuid = CALENDLY_ORGANIZATION_UUID
 
       endpoint = to_endpoint_path(__method__, organization_uuid: organization_uuid)
-      return call(__method__, endpoint: endpoint)
+        return call(__method__, endpoint: endpoint)
     end
 
     InviteResponse = Struct.new(:resource) do
