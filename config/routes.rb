@@ -21,6 +21,11 @@ Rails.application.routes.draw do
   #   post :sack
   # end
 
+  resources :doctors
   resources :patient, only: [:index]
+
+  controller :patient do
+    get 'patient/appointment/:id', action: :index
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end

@@ -28,7 +28,7 @@ class SearchDoctorQuery
   end
 
   def self.call(filters)
-    scope = Doctor.approved.extending(Scopes)
+    scope = Doctor.approved.approved.extending(Scopes)
       .by_name(filters[:doctor_name])
       .by_location(filters[:location])
       .by_speciality(filters[:doctor_speciality])

@@ -127,7 +127,9 @@ const DoctorModal = (props) => {
                         </p>
                       </div>
                     </div>
-                    <button className="appointment-btn">Book Appointment</button>
+                    <a className="appointment-btn" href={`/patient/appointment/${props.doctor.doctor_id}`}>
+                      Book Appointment
+                    </a>
                   </div>
                 </div>
                 <hr/>
