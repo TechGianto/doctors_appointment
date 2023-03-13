@@ -69,7 +69,7 @@ gem 'pry'
 gem 'pry-rails'
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+# gem 'sassc-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
@@ -109,7 +109,7 @@ end
 
 gem 'rolify'
 
-gem "webpacker", "~> 5.4"
+gem 'webpacker', '~> 5.4'
 
-gem "react_on_rails", "= 12.0.4"
-gem "mini_racer", platforms: :ruby
+gem 'react_on_rails', '= 12.0.4'
+gem 'mini_racer', platforms: :ruby
