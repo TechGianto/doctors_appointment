@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   root 'home#index'
+  get 'appointment/list'
   controller :home do
     get :services, action: :services
     get :hello, action: :test
@@ -15,6 +16,10 @@ Rails.application.routes.draw do
     get :search, action: :index
     get 'search/:id', action: :show
     get :filter, action: :filter
+  end
+
+  controller :appointment do
+    post :appointment, action: :create_appointment
   end
 
   # resources :doctor, only: [:index, :show] do
