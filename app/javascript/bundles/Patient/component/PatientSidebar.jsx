@@ -32,7 +32,7 @@ const PatientSideBar = ({ profile_pic, first_name, id }) => {
             </NavLink>
           </li>
           <li className="list-item">
-            <NavLink to="/patient" className= "list-link">
+            <NavLink reloadDocument to="/search" className= "list-link">
               <Svg Icons={DocIcon} classN="sidebar-icons" />
               Doctor Search
             </NavLink>
