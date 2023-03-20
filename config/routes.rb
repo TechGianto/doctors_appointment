@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   controller :appointment do
-    post :appointment, action: :create_appointment
+    post :appointment, action: :create
   end
 
   # resources :doctor, only: [:index, :show] do

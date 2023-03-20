@@ -17,16 +17,21 @@ RSpec.describe 'Appointments', type: :request do
         {
           date: '2023-10-23',
           time: '09:35:06',
-          no_of_session: 1,
           doctor_id: 1,
-          patient_id: 3,
-          status: 'pending',
         }
       end
 
       it 'create a new appointment' do
         post '/appointment', params: valid_params
         expect(response).to have_http_status(:success)
+      end
+    end
+
+    context 'without params' do
+
+      it 'fail to create a new appointment' do
+        post '/appointment'
+        expect(response).to have_http_status(:bad_request)
       end
     end
   end
