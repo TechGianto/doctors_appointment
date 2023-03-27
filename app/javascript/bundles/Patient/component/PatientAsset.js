@@ -31,6 +31,13 @@ import Vitaltwo from "../../../../assets/images/patient_svgs/vitalstwo.svg";
 import VitalThree from "../../../../assets/images/patient_svgs/vitalsthree.svg";
 import VitalFour from "../../../../assets/images/patient_svgs/vitalsfour.svg";
 import Billing from "../../../../assets/images/patient_svgs/billing.svg";
+import HumanInner from "../../../../assets/images/patient_svgs/human_inner.svg"
+import HeartWave from "../../../../assets/images/patient_svgs/heart_wave.svg"
+import Mcad from "../../../../assets/images/patient_svgs/mcad.svg"
+import Print from "../../../../assets/images/patient_svgs/print.svg"
+import Share from "../../../../assets/images/patient_svgs/share.svg"
+import Download from "../../../../assets/images/patient_svgs/download.svg"
+import BigHeartWave from "../../../../assets/images/patient_svgs/big-heart-wave.svg"
 
 const patientAssets = {
   Doc,
@@ -66,6 +73,13 @@ const patientAssets = {
   Thumb,
   Setting,
   Logout,
+  HumanInner,
+  HeartWave,
+  Mcad,
+  Print,
+  Share,
+  Download,
+  BigHeartWave
 };
 
 export default patientAssets;

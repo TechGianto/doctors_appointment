@@ -14,6 +14,8 @@ class PatientController < ApplicationController
     @patient_header_props = {
       profile_pic: picture,
       first_name: current_user.first_name.to_s,
+      last_name: current_user.last_name.to_s,
+      middle_name: current_user.middle_name.to_s,
       roles: current_user.roles[0].name.to_s,
       signed_in: user_signed_in?, id: current_user.id,
       speciality: @speciality, location: @location,

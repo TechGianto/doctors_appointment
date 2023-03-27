@@ -22,5 +22,9 @@ Rails.application.routes.draw do
   # end
 
   resources :patient, only: [:index]
+
+  controller :patient do
+    get 'patient/health_record', action: :index
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
