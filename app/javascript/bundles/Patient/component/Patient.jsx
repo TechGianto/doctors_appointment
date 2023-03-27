@@ -4,15 +4,17 @@ import PatientSideBar from "./PatientSidebar"
 import Overview from "./Overview"
 import PropTypes from "prop-types";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import HealthRecord from "./HealthRecord";
 
-const Patient = ({ profile_pic, first_name, roles, signed_in, id, speciality, location}) => {
+const Patient = ({ profile_pic, first_name, last_name, middle_name, roles, signed_in, id, speciality, location}) => {
   return (
     <BrowserRouter>
       <PatientHeader profile_pic={profile_pic} first_name={first_name} roles={roles} signed_in={signed_in} />
       <div className="patient-page">
         <PatientSideBar profile_pic={profile_pic} first_name={first_name} id={id} />
         <Routes>
-          <Route path='/patient' element={<Overview speciality={speciality} location={location} fristname={first_name}  />} />
+          <Route path='/patient' element={<Overview speciality={speciality} location={location} fristname={first_name} />} />
+          <Route path='/patient/health_record' element={<HealthRecord id={id} first_name={first_name} last_name={last_name} middle_name={middle_name} /> }/>
         </Routes>
       </div>
     </BrowserRouter>

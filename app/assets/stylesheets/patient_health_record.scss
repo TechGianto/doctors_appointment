@@ -1,0 +1,85 @@
+@import "variables";
+
+.header-2 {
+  font-size: 20px;
+  color: $primary_green_blue;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bg-green-primary {
+  background-color: $primary_green_blue;
+}
+
+.border-radius-16 {
+  border-radius: 16px;
+}
+
+.color-white {
+  color: $white;
+}
+
+.position-left-11 {
+  left: 11%;
+}
+
+.position-right-11 {
+  right: 11%;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.width-200 {
+  width: 200px;
+}
+
+.md-100 {
+  margin-top: 100px;
+}
+
+.line-divider {
+  height: 4px;
+  background-color: $primary_green_blue;
+}
+
+.health-record-h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.health-record-h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.health-record-data {
+  color: $primary_purple;
+}
+
+.drug-allergies-color {
+  background-color: #d5f3ee;
+}
+
+.share {
+  border-radius: 1rem;
+
+  img {
+    cursor: pointer;
+  }
+}

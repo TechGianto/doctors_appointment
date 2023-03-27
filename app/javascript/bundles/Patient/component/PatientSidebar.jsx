@@ -71,7 +71,7 @@ const PatientSideBar = ({ profile_pic, first_name, id }) => {
             </NavLink>
           </li>
           <li className="list-item">
-            <NavLink to="/patient" className= "list-link">
+            <NavLink to="/patient/health_record" className= "list-link">
               <Svg Icons={Record} classN="sidebar-icons" />
               Health Records
             </NavLink>
